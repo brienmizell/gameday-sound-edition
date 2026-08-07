@@ -1,0 +1,11 @@
+{
+	"_comment": "Written by the music system. An empty issues array is a valid state — see SCHEMA.md.",
+	"issues": [
+		{
+			"slug": "2026-w01-colorado-at-georgia-tech",
+			"title": "SAMPLE — GameDay No. 1: the ranch and the parking deck",
+			"trackCount": 12,
+			"status": "pressed"
+		}
+	]
+}

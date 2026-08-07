@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>GameDay — 2018 vs 2026</title>
+		<meta name="robots" content="noindex" />
+		<link rel="stylesheet" href="assets/app.css" />
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🏈</text></svg>"
+		/>
+		<style>
+			.cmp {
+				max-width: 1400px;
+				margin: 0 auto;
+			}
+			.cmp-intro {
+				max-width: 62ch;
+				margin: 1.5rem 0 2.5rem;
+				font-size: 1.02rem;
+				color: var(--ink-2);
+			}
+			.cmp-intro strong {
+				color: var(--ink);
+			}
+			.panes {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 1.25rem;
+			}
+			@media (min-width: 1000px) {
+				.panes {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+			.pane {
+				display: flex;
+				flex-direction: column;
+				border: 1px solid var(--line);
+				border-radius: var(--radius);
+				overflow: hidden;
+				background: var(--surface);
+				box-shadow: var(--shadow);
+			}
+			.pane-head {
+				padding: 0.85rem 1rem;
+				border-bottom: 1px solid var(--line);
+				background: var(--surface-2);
+			}
+			.pane-head h2 {
+				margin: 0;
+				font-size: 1.05rem;
+			}
+			.pane-head p {
+				margin: 0.2rem 0 0;
+				color: var(--ink-3);
+				font-size: 0.82rem;
+			}
+			.pane iframe {
+				width: 100%;
+				height: 620px;
+				border: 0;
+				background: #fff;
+			}
+			.pane-2018 iframe {
+				filter: saturate(0.92);
+			}
+			table.diff {
+				width: 100%;
+				margin: 3rem 0 0;
+				border-collapse: collapse;
+				font-size: 0.9rem;
+			}
+			table.diff caption {
+				margin-bottom: 0.75rem;
+				color: var(--ink-3);
+				font-size: 0.75rem;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-align: left;
+				text-transform: uppercase;
+			}
+			table.diff th,
+			table.diff td {
+				padding: 0.6rem 0.7rem;
+				border-bottom: 1px solid var(--line);
+				text-align: left;
+				vertical-align: top;
+			}
+			table.diff th {
+				color: var(--ink-3);
+				font-size: 0.74rem;
+				font-weight: 700;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+			}
+			table.diff td:first-child {
+				font-weight: 650;
+				white-space: nowrap;
+			}
+			.dead {
+				color: var(--live);
+			}
+			.alive {
+				color: #2e8b57;
+			}
+			@media (prefers-color-scheme: dark) {
+				.alive {
+					color: #4ade80;
+				}
+			}
+			.note-box {
+				margin: 2.5rem 0 0;
+				padding: 1rem 1.25rem;
+				border-left: 3px solid var(--accent);
+				background: var(--surface-2);
+				border-radius: 0 8px 8px 0;
+				font-size: 0.92rem;
+			}
+			.note-box p {
+				margin: 0.4rem 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cmp">
+			<header class="masthead">
+				<div class="brand">
+					<h1>2018 → 2026</h1>
+					<p class="tagline">The first app, and the same app eight years later.</p>
+				</div>
+				<nav class="weeknav"><a class="issue-link issue-link-quiet" href="index.html">← Back to GameDay</a></nav>
+			</header>
+
+			<p class="cmp-intro">
+				<strong>gameDay</strong> was built in October 2018 over eight days at DigitalCrafts by Brien Mizell and
+				Evan Procter — 119 commits, four files, the first thing either of them shipped. It fetched a week of
+				college football and chased the weather at every stadium: <em>stadium name → Google Geocode → latitude
+				and longitude → Dark Sky</em>. That three-hop chain was the idea, and it was a good one.
+				<br /><br />
+				Every service it depended on is now gone. The panel on the left is the original code, unmodified,
+				running against real 2018 Week&nbsp;10 results — the exact week it was hardcoded to.
+			</p>
+
+			<div class="panes">
+				<section class="pane pane-2018">
+					<div class="pane-head">
+						<h2>2018 — the original</h2>
+						<p>Original <code>index.js</code>, unmodified. Its three dead APIs are stubbed.</p>
+					</div>
+					<iframe src="legacy/demo.html" title="The 2018 version of gameDay" loading="lazy"></iframe>
+				</section>
+
+				<section class="pane pane-2026">
+					<div class="pane-head">
+						<h2>2026 — the rebuild</h2>
+						<p>Live data. No API keys, no proxy, no backend.</p>
+					</div>
+					<iframe src="index.html" title="The 2026 rebuild of GameDay" loading="lazy"></iframe>
+				</section>
+			</div>
+
+			<table class="diff">
+				<caption>What actually changed</caption>
+				<thead>
+					<tr>
+						<th></th>
+						<th>2018</th>
+						<th>2026</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Schedule</td>
+						<td><span class="dead">FantasyData v3</span>, via a Heroku CORS proxy</td>
+						<td>Public ESPN scoreboard — keyless, CORS-open</td>
+					</tr>
+					<tr>
+						<td>Geocoding</td>
+						<td><span class="dead">Google Geocode</span>, key in source</td>
+						<td>Open-Meteo geocoder, and it disambiguates by state</td>
+					</tr>
+					<tr>
+						<td>Weather</td>
+						<td><span class="dead">Dark Sky</span> — Apple shut it down in March 2023</td>
+						<td>Open-Meteo, keyless</td>
+					</tr>
+					<tr>
+						<td>CORS</td>
+						<td><span class="dead">my-little-cors-proxy.herokuapp.com</span> — died with Heroku's free tier</td>
+						<td>None needed; both APIs send <code>access-control-allow-origin: *</code></td>
+					</tr>
+					<tr>
+						<td>API keys in source</td>
+						<td><span class="dead">3</span>, committed to a public repo</td>
+						<td><span class="alive">0</span></td>
+					</tr>
+					<tr>
+						<td>Week</td>
+						<td><code>var page = 10</code>. Prev/Next buttons commented out, never wired</td>
+						<td>Full season calendar, arrow keys, linkable in the URL</td>
+					</tr>
+					<tr>
+						<td>Which day's weather</td>
+						<td><span class="dead"><code>daily.data[4]</code></span> — the 5th day of a rolling forecast, whatever day the game was</td>
+						<td>Matched to the game's own date; says so when the game is past the 16-day horizon</td>
+					</tr>
+					<tr>
+						<td>Conference filter</td>
+						<td>Built, then deleted before submission</td>
+						<td>Power 4 by default, all eleven FBS conferences available</td>
+					</tr>
+					<tr>
+						<td>Team search</td>
+						<td>Threw on every keystroke — its list was commented out</td>
+						<td>Filters teams, stadiums, and cities</td>
+					</tr>
+					<tr>
+						<td>Per game</td>
+						<td>8 fields: two names, two scores, stadium, city, state, date</td>
+						<td>Adds rank, record, logo, team colors, TV, betting line, dome and neutral-site flags, kickoff in your timezone, countdown</td>
+					</tr>
+					<tr>
+						<td>Cupcakes</td>
+						<td>—</td>
+						<td>FCS opponents and 21+ spreads marked, and hideable</td>
+					</tr>
+					<tr>
+						<td>Failure</td>
+						<td>A slow geocode took the whole card with it</td>
+						<td>Weather fills in after the slate renders; a card never waits on it</td>
+					</tr>
+					<tr>
+						<td>Music</td>
+						<td>—</td>
+						<td>A Sound slot on every card, waiting on the music system</td>
+					</tr>
+					<tr>
+						<td>Code</td>
+						<td>608 lines, 133 of them commented-out</td>
+						<td>~2,500 lines across 8 modules, no build step, no dependencies</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="note-box">
+				<p><strong>On the left panel.</strong> The 2018 JavaScript is untouched — it still chains its promises the
+				same way and still reads <code>daily.data[4]</code>. Only its answers are stubbed, from
+				<code>legacy/fixture.json</code>.</p>
+				<p>Scores and matchups there are the real 2018 Week 10. The temperatures are stand-ins: Dark Sky's
+				historical data went offline with the service and cannot be recovered.</p>
+			</div>
+
+			<footer class="foot">
+				<p>This page is a showcase, not part of the app. Nothing links to it except the footer of the main page.</p>
+			</footer>
+		</div>
+	</body>
+</html>

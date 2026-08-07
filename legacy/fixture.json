@@ -1,0 +1,1061 @@
+{
+ "_note": "Real 2018 Week 10 results (via ESPN), reshaped into the FantasyData schema the 2018 app expected. Weather is deterministic stand-in data: Dark Sky is gone and its history is unrecoverable.",
+ "games": [
+  {
+   "HomeTeamName": "Bowling Green Falcons",
+   "HomeTeamScore": 28,
+   "AwayTeamName": "Kent State Golden Flashes",
+   "AwayTeamScore": 35,
+   "Stadium": {
+    "Name": "Doyt L. Perry Stadium",
+    "City": "Bowling Green",
+    "State": "OH"
+   },
+   "DateTime": "2018-10-31T00:00"
+  },
+  {
+   "HomeTeamName": "Buffalo Bulls",
+   "HomeTeamScore": 51,
+   "AwayTeamName": "Miami (OH) RedHawks",
+   "AwayTeamScore": 42,
+   "Stadium": {
+    "Name": "Broadview Stadium",
+    "City": "Buffalo",
+    "State": "NY"
+   },
+   "DateTime": "2018-10-31T00:00"
+  },
+  {
+   "HomeTeamName": "Toledo Rockets",
+   "HomeTeamScore": 45,
+   "AwayTeamName": "Ball State Cardinals",
+   "AwayTeamScore": 13,
+   "Stadium": {
+    "Name": "Glass Bowl",
+    "City": "Toledo",
+    "State": "OH"
+   },
+   "DateTime": "2018-10-31T23:30"
+  },
+  {
+   "HomeTeamName": "UCF Knights",
+   "HomeTeamScore": 52,
+   "AwayTeamName": "Temple Owls",
+   "AwayTeamScore": 40,
+   "Stadium": {
+    "Name": "Acrisure Bounce House",
+    "City": "Orlando",
+    "State": "FL"
+   },
+   "DateTime": "2018-11-01T23:30"
+  },
+  {
+   "HomeTeamName": "Akron Zips",
+   "HomeTeamScore": 26,
+   "AwayTeamName": "Northern Illinois Huskies",
+   "AwayTeamScore": 36,
+   "Stadium": {
+    "Name": "InfoCision Stadium",
+    "City": "Akron",
+    "State": "OH"
+   },
+   "DateTime": "2018-11-01T23:00"
+  },
+  {
+   "HomeTeamName": "Western Michigan Broncos",
+   "HomeTeamScore": 14,
+   "AwayTeamName": "Ohio Bobcats",
+   "AwayTeamScore": 59,
+   "Stadium": {
+    "Name": "Waldo Stadium",
+    "City": "Kalamazoo",
+    "State": "MI"
+   },
+   "DateTime": "2018-11-01T23:00"
+  },
+  {
+   "HomeTeamName": "Virginia Cavaliers",
+   "HomeTeamScore": 13,
+   "AwayTeamName": "Pittsburgh Panthers",
+   "AwayTeamScore": 23,
+   "Stadium": {
+    "Name": "Scott Stadium",
+    "City": "Charlottesville",
+    "State": "VA"
+   },
+   "DateTime": "2018-11-02T23:30"
+  },
+  {
+   "HomeTeamName": "Middle Tennessee Blue Raiders",
+   "HomeTeamScore": 29,
+   "AwayTeamName": "Western Kentucky Hilltoppers",
+   "AwayTeamScore": 10,
+   "Stadium": {
+    "Name": "Johnny \"Red\" Floyd Stadium",
+    "City": "Murfreesboro",
+    "State": "TN"
+   },
+   "DateTime": "2018-11-03T00:00"
+  },
+  {
+   "HomeTeamName": "Arizona Wildcats",
+   "HomeTeamScore": 42,
+   "AwayTeamName": "Colorado Buffaloes",
+   "AwayTeamScore": 34,
+   "Stadium": {
+    "Name": "Casino Del Sol Stadium",
+    "City": "Tucson",
+    "State": "AZ"
+   },
+   "DateTime": "2018-11-03T02:30"
+  },
+  {
+   "HomeTeamName": "LSU Tigers",
+   "HomeTeamScore": 0,
+   "AwayTeamName": "Alabama Crimson Tide",
+   "AwayTeamScore": 29,
+   "Stadium": {
+    "Name": "Tiger Stadium (LA)",
+    "City": "Baton Rouge",
+    "State": "LA"
+   },
+   "DateTime": "2018-11-04T00:00"
+  },
+  {
+   "HomeTeamName": "Northwestern Wildcats",
+   "HomeTeamScore": 21,
+   "AwayTeamName": "Notre Dame Fighting Irish",
+   "AwayTeamScore": 31,
+   "Stadium": {
+    "Name": "Ryan Field (1926)",
+    "City": "Evanston",
+    "State": "IL"
+   },
+   "DateTime": "2018-11-03T23:15"
+  },
+  {
+   "HomeTeamName": "Michigan Wolverines",
+   "HomeTeamScore": 42,
+   "AwayTeamName": "Penn State Nittany Lions",
+   "AwayTeamScore": 7,
+   "Stadium": {
+    "Name": "Michigan Stadium",
+    "City": "Ann Arbor",
+    "State": "MI"
+   },
+   "DateTime": "2018-11-03T19:45"
+  },
+  {
+   "HomeTeamName": "Kentucky Wildcats",
+   "HomeTeamScore": 17,
+   "AwayTeamName": "Georgia Bulldogs",
+   "AwayTeamScore": 34,
+   "Stadium": {
+    "Name": "Kroger Field",
+    "City": "Lexington",
+    "State": "KY"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Texas Tech Red Raiders",
+   "HomeTeamScore": 46,
+   "AwayTeamName": "Oklahoma Sooners",
+   "AwayTeamScore": 51,
+   "Stadium": {
+    "Name": "Galaxy Stadium",
+    "City": "Lubbock",
+    "State": "TX"
+   },
+   "DateTime": "2018-11-04T00:00"
+  },
+  {
+   "HomeTeamName": "Washington State Cougars",
+   "HomeTeamScore": 19,
+   "AwayTeamName": "California Golden Bears",
+   "AwayTeamScore": 13,
+   "Stadium": {
+    "Name": "Martin Stadium",
+    "City": "Pullman",
+    "State": "WA"
+   },
+   "DateTime": "2018-11-04T02:45"
+  },
+  {
+   "HomeTeamName": "Ohio State Buckeyes",
+   "HomeTeamScore": 36,
+   "AwayTeamName": "Nebraska Cornhuskers",
+   "AwayTeamScore": 31,
+   "Stadium": {
+    "Name": "Ohio Stadium",
+    "City": "Columbus",
+    "State": "OH"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Florida Gators",
+   "HomeTeamScore": 17,
+   "AwayTeamName": "Missouri Tigers",
+   "AwayTeamScore": 38,
+   "Stadium": {
+    "Name": "Ben Hill Griffin Stadium",
+    "City": "Gainesville",
+    "State": "FL"
+   },
+   "DateTime": "2018-11-03T20:00"
+  },
+  {
+   "HomeTeamName": "Texas Longhorns",
+   "HomeTeamScore": 41,
+   "AwayTeamName": "West Virginia Mountaineers",
+   "AwayTeamScore": 42,
+   "Stadium": {
+    "Name": "DKR-Texas Memorial Stadium",
+    "City": "Austin",
+    "State": "TX"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Arizona State Sun Devils",
+   "HomeTeamScore": 38,
+   "AwayTeamName": "Utah Utes",
+   "AwayTeamScore": 20,
+   "Stadium": {
+    "Name": "Mountain America Stadium",
+    "City": "Tempe",
+    "State": "AZ"
+   },
+   "DateTime": "2018-11-03T20:00"
+  },
+  {
+   "HomeTeamName": "Purdue Boilermakers",
+   "HomeTeamScore": 38,
+   "AwayTeamName": "Iowa Hawkeyes",
+   "AwayTeamScore": 36,
+   "Stadium": {
+    "Name": "Ross-Ade Stadium",
+    "City": "West Lafayette",
+    "State": "IN"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Mississippi State Bulldogs",
+   "HomeTeamScore": 45,
+   "AwayTeamName": "Louisiana Tech Bulldogs",
+   "AwayTeamScore": 3,
+   "Stadium": {
+    "Name": "Davis Wade Stadium",
+    "City": "Starkville",
+    "State": "MS"
+   },
+   "DateTime": "2018-11-03T23:30"
+  },
+  {
+   "HomeTeamName": "Wake Forest Demon Deacons",
+   "HomeTeamScore": 24,
+   "AwayTeamName": "Syracuse Orange",
+   "AwayTeamScore": 41,
+   "Stadium": {
+    "Name": "Allegacy Federal Credit Union Stadium",
+    "City": "Winston-Salem",
+    "State": "NC"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Auburn Tigers",
+   "HomeTeamScore": 28,
+   "AwayTeamName": "Texas A&M Aggies",
+   "AwayTeamScore": 24,
+   "Stadium": {
+    "Name": "Jordan-Hare Stadium",
+    "City": "Auburn",
+    "State": "AL"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "NC State Wolfpack",
+   "HomeTeamScore": 47,
+   "AwayTeamName": "Florida State Seminoles",
+   "AwayTeamScore": 28,
+   "Stadium": {
+    "Name": "Carter-Finley Stadium",
+    "City": "Raleigh",
+    "State": "NC"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Virginia Tech Hokies",
+   "HomeTeamScore": 21,
+   "AwayTeamName": "Boston College Eagles",
+   "AwayTeamScore": 31,
+   "Stadium": {
+    "Name": "Lane Stadium",
+    "City": "Blacksburg",
+    "State": "VA"
+   },
+   "DateTime": "2018-11-03T19:45"
+  },
+  {
+   "HomeTeamName": "UNLV Rebels",
+   "HomeTeamScore": 3,
+   "AwayTeamName": "Fresno State Bulldogs",
+   "AwayTeamScore": 48,
+   "Stadium": {
+    "Name": "Sam Boyd Stadium",
+    "City": "Las Vegas",
+    "State": "NV"
+   },
+   "DateTime": "2018-11-04T02:30"
+  },
+  {
+   "HomeTeamName": "Kansas Jayhawks",
+   "HomeTeamScore": 3,
+   "AwayTeamName": "Iowa State Cyclones",
+   "AwayTeamScore": 27,
+   "Stadium": {
+    "Name": "David Booth Kansas Memorial Stadium",
+    "City": "Lawrence",
+    "State": "KS"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Ole Miss Rebels",
+   "HomeTeamScore": 44,
+   "AwayTeamName": "South Carolina Gamecocks",
+   "AwayTeamScore": 48,
+   "Stadium": {
+    "Name": "Vaught-Hemingway Stadium",
+    "City": "Oxford",
+    "State": "MS"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Wisconsin Badgers",
+   "HomeTeamScore": 31,
+   "AwayTeamName": "Rutgers Scarlet Knights",
+   "AwayTeamScore": 17,
+   "Stadium": {
+    "Name": "Camp Randall Stadium",
+    "City": "Madison",
+    "State": "WI"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Maryland Terrapins",
+   "HomeTeamScore": 3,
+   "AwayTeamName": "Michigan State Spartans",
+   "AwayTeamScore": 24,
+   "Stadium": {
+    "Name": "SECU Stadium",
+    "City": "College Park",
+    "State": "MD"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Baylor Bears",
+   "HomeTeamScore": 35,
+   "AwayTeamName": "Oklahoma State Cowboys",
+   "AwayTeamScore": 31,
+   "Stadium": {
+    "Name": "McLane Stadium",
+    "City": "Waco",
+    "State": "TX"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Clemson Tigers",
+   "HomeTeamScore": 77,
+   "AwayTeamName": "Louisville Cardinals",
+   "AwayTeamScore": 16,
+   "Stadium": {
+    "Name": "Memorial Stadium (Clemson, SC)",
+    "City": "Clemson",
+    "State": "SC"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Army Black Knights",
+   "HomeTeamScore": 17,
+   "AwayTeamName": "Air Force Falcons",
+   "AwayTeamScore": 14,
+   "Stadium": {
+    "Name": "Michie Stadium",
+    "City": "West Point",
+    "State": "NY"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "East Carolina Pirates",
+   "HomeTeamScore": 41,
+   "AwayTeamName": "Memphis Tigers",
+   "AwayTeamScore": 59,
+   "Stadium": {
+    "Name": "Dowdy-Ficklen Stadium",
+    "City": "Greenville",
+    "State": "NC"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "Eastern Michigan Eagles",
+   "HomeTeamScore": 17,
+   "AwayTeamName": "Central Michigan Chippewas",
+   "AwayTeamScore": 7,
+   "Stadium": {
+    "Name": "Rynearson Stadium",
+    "City": "Ypsilanti",
+    "State": "MI"
+   },
+   "DateTime": "2018-11-03T16:00"
+  },
+  {
+   "HomeTeamName": "North Carolina Tar Heels",
+   "HomeTeamScore": 28,
+   "AwayTeamName": "Georgia Tech Yellow Jackets",
+   "AwayTeamScore": 38,
+   "Stadium": {
+    "Name": "Kenan Stadium",
+    "City": "Chapel Hill",
+    "State": "NC"
+   },
+   "DateTime": "2018-11-03T16:15"
+  },
+  {
+   "HomeTeamName": "Georgia State Panthers",
+   "HomeTeamScore": 31,
+   "AwayTeamName": "Texas State Bobcats",
+   "AwayTeamScore": 40,
+   "Stadium": {
+    "Name": "Center Parc Stadium",
+    "City": "Atlanta",
+    "State": "GA"
+   },
+   "DateTime": "2018-11-03T18:00"
+  },
+  {
+   "HomeTeamName": "Wyoming Cowboys",
+   "HomeTeamScore": 24,
+   "AwayTeamName": "San Jose State Spartans",
+   "AwayTeamScore": 9,
+   "Stadium": {
+    "Name": "War Memorial Stadium",
+    "City": "Laramie",
+    "State": "WY"
+   },
+   "DateTime": "2018-11-03T18:00"
+  },
+  {
+   "HomeTeamName": "Southern Mississippi Golden Eagles",
+   "HomeTeamScore": 26,
+   "AwayTeamName": "Marshall Thundering Herd",
+   "AwayTeamScore": 24,
+   "Stadium": {
+    "Name": "M. M. Roberts Stadium",
+    "City": "Hattiesburg",
+    "State": "MS"
+   },
+   "DateTime": "2018-11-03T19:00"
+  },
+  {
+   "HomeTeamName": "Arkansas State Red Wolves",
+   "HomeTeamScore": 38,
+   "AwayTeamName": "South Alabama Jaguars",
+   "AwayTeamScore": 14,
+   "Stadium": {
+    "Name": "Centennial Bank Stadium",
+    "City": "Jonesboro",
+    "State": "AR"
+   },
+   "DateTime": "2018-11-03T19:00"
+  },
+  {
+   "HomeTeamName": "UL Monroe Warhawks",
+   "HomeTeamScore": 44,
+   "AwayTeamName": "Georgia Southern Eagles",
+   "AwayTeamScore": 25,
+   "Stadium": {
+    "Name": "Malone Stadium",
+    "City": "Monroe",
+    "State": "LA"
+   },
+   "DateTime": "2018-11-03T19:00"
+  },
+  {
+   "HomeTeamName": "Illinois Fighting Illini",
+   "HomeTeamScore": 55,
+   "AwayTeamName": "Minnesota Golden Gophers",
+   "AwayTeamScore": 31,
+   "Stadium": {
+    "Name": "Gies Memorial Stadium",
+    "City": "Champaign",
+    "State": "IL"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "TCU Horned Frogs",
+   "HomeTeamScore": 14,
+   "AwayTeamName": "Kansas State Wildcats",
+   "AwayTeamScore": 13,
+   "Stadium": {
+    "Name": "Amon G. Carter Stadium",
+    "City": "Fort Worth",
+    "State": "TX"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Massachusetts Minutemen",
+   "HomeTeamScore": 62,
+   "AwayTeamName": "Liberty Flames",
+   "AwayTeamScore": 59,
+   "Stadium": {
+    "Name": "Warren McGuirk Alumni Stadium",
+    "City": "Amherst",
+    "State": "MA"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Rice Owls",
+   "HomeTeamScore": 26,
+   "AwayTeamName": "UTEP Miners",
+   "AwayTeamScore": 34,
+   "Stadium": {
+    "Name": "Rice Stadium",
+    "City": "Houston",
+    "State": "TX"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Cincinnati Bearcats",
+   "HomeTeamScore": 42,
+   "AwayTeamName": "Navy Midshipmen",
+   "AwayTeamScore": 0,
+   "Stadium": {
+    "Name": "Nippert Stadium",
+    "City": "Cincinnati",
+    "State": "OH"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "South Florida Bulls",
+   "HomeTeamScore": 15,
+   "AwayTeamName": "Tulane Green Wave",
+   "AwayTeamScore": 41,
+   "Stadium": {
+    "Name": "Raymond James Stadium",
+    "City": "Tampa",
+    "State": "FL"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Troy Trojans",
+   "HomeTeamScore": 26,
+   "AwayTeamName": "Louisiana Ragin' Cajuns",
+   "AwayTeamScore": 16,
+   "Stadium": {
+    "Name": "Veterans Memorial Stadium (AL)",
+    "City": "Troy",
+    "State": "AL"
+   },
+   "DateTime": "2018-11-03T19:30"
+  },
+  {
+   "HomeTeamName": "Tennessee Volunteers",
+   "HomeTeamScore": 14,
+   "AwayTeamName": "Charlotte 49ers",
+   "AwayTeamScore": 3,
+   "Stadium": {
+    "Name": "Neyland Stadium",
+    "City": "Knoxville",
+    "State": "TN"
+   },
+   "DateTime": "2018-11-03T20:00"
+  },
+  {
+   "HomeTeamName": "New Mexico State Aggies",
+   "HomeTeamScore": 52,
+   "AwayTeamName": "Alcorn State Braves",
+   "AwayTeamScore": 42,
+   "Stadium": {
+    "Name": "Aggie Memorial Stadium",
+    "City": "Las Cruces",
+    "State": "NM"
+   },
+   "DateTime": "2018-11-03T20:00"
+  },
+  {
+   "HomeTeamName": "Coastal Carolina Chanticleers",
+   "HomeTeamScore": 7,
+   "AwayTeamName": "Appalachian State Mountaineers",
+   "AwayTeamScore": 23,
+   "Stadium": {
+    "Name": "Brooks Stadium (SC)",
+    "City": "Conway",
+    "State": "SC"
+   },
+   "DateTime": "2018-11-03T21:00"
+  },
+  {
+   "HomeTeamName": "Miami Hurricanes",
+   "HomeTeamScore": 12,
+   "AwayTeamName": "Duke Blue Devils",
+   "AwayTeamScore": 20,
+   "Stadium": {
+    "Name": "Hard Rock Stadium",
+    "City": "Miami Gardens",
+    "State": "FL"
+   },
+   "DateTime": "2018-11-03T23:00"
+  },
+  {
+   "HomeTeamName": "Tulsa Golden Hurricane",
+   "HomeTeamScore": 49,
+   "AwayTeamName": "UConn Huskies",
+   "AwayTeamScore": 19,
+   "Stadium": {
+    "Name": "H. A. Chapman Stadium",
+    "City": "Tulsa",
+    "State": "OK"
+   },
+   "DateTime": "2018-11-03T23:00"
+  },
+  {
+   "HomeTeamName": "SMU Mustangs",
+   "HomeTeamScore": 45,
+   "AwayTeamName": "Houston Cougars",
+   "AwayTeamScore": 31,
+   "Stadium": {
+    "Name": "Gerald J. Ford Stadium",
+    "City": "Dallas",
+    "State": "TX"
+   },
+   "DateTime": "2018-11-03T23:00"
+  },
+  {
+   "HomeTeamName": "Oregon Ducks",
+   "HomeTeamScore": 42,
+   "AwayTeamName": "UCLA Bruins",
+   "AwayTeamScore": 21,
+   "Stadium": {
+    "Name": "Autzen Stadium",
+    "City": "Eugene",
+    "State": "OR"
+   },
+   "DateTime": "2018-11-03T23:30"
+  },
+  {
+   "HomeTeamName": "Florida International Panthers",
+   "HomeTeamScore": 14,
+   "AwayTeamName": "Florida Atlantic Owls",
+   "AwayTeamScore": 49,
+   "Stadium": {
+    "Name": "Riccardo Silva Stadium",
+    "City": "Miami",
+    "State": "FL"
+   },
+   "DateTime": "2018-11-03T23:30"
+  },
+  {
+   "HomeTeamName": "UAB Blazers",
+   "HomeTeamScore": 52,
+   "AwayTeamName": "UTSA Roadrunners",
+   "AwayTeamScore": 3,
+   "Stadium": {
+    "Name": "Legion Field (AL)",
+    "City": "Birmingham",
+    "State": "AL"
+   },
+   "DateTime": "2018-11-03T23:30"
+  },
+  {
+   "HomeTeamName": "Washington Huskies",
+   "HomeTeamScore": 27,
+   "AwayTeamName": "Stanford Cardinal",
+   "AwayTeamScore": 23,
+   "Stadium": {
+    "Name": "Husky Stadium",
+    "City": "Seattle",
+    "State": "WA"
+   },
+   "DateTime": "2018-11-04T01:00"
+  },
+  {
+   "HomeTeamName": "Oregon State Beavers",
+   "HomeTeamScore": 21,
+   "AwayTeamName": "USC Trojans",
+   "AwayTeamScore": 38,
+   "Stadium": {
+    "Name": "Reser Stadium",
+    "City": "Corvallis",
+    "State": "OR"
+   },
+   "DateTime": "2018-11-04T02:00"
+  },
+  {
+   "HomeTeamName": "Boise State Broncos",
+   "HomeTeamScore": 21,
+   "AwayTeamName": "BYU Cougars",
+   "AwayTeamScore": 16,
+   "Stadium": {
+    "Name": "Albertsons Stadium",
+    "City": "Boise",
+    "State": "ID"
+   },
+   "DateTime": "2018-11-04T02:15"
+  },
+  {
+   "HomeTeamName": "New Mexico Lobos",
+   "HomeTeamScore": 23,
+   "AwayTeamName": "San Diego State Aztecs",
+   "AwayTeamScore": 31,
+   "Stadium": {
+    "Name": "University Stadium (NM)",
+    "City": "Albuquerque",
+    "State": "NM"
+   },
+   "DateTime": "2018-11-04T02:15"
+  },
+  {
+   "HomeTeamName": "Hawai'i Rainbow Warriors",
+   "HomeTeamScore": 17,
+   "AwayTeamName": "Utah State Aggies",
+   "AwayTeamScore": 56,
+   "Stadium": {
+    "Name": "Aloha Stadium",
+    "City": "Honolulu",
+    "State": "HI"
+   },
+   "DateTime": "2018-11-04T03:59"
+  }
+ ],
+ "weather": {
+  "Doyt L. Perry Stadium": {
+   "high": 57,
+   "low": 46,
+   "precip": 0.61
+  },
+  "Broadview Stadium": {
+   "high": 55,
+   "low": 32,
+   "precip": 0.66
+  },
+  "Glass Bowl": {
+   "high": 64,
+   "low": 32,
+   "precip": 0.46
+  },
+  "Acrisure Bounce House": {
+   "high": 84,
+   "low": 34,
+   "precip": 0.38
+  },
+  "InfoCision Stadium": {
+   "high": 68,
+   "low": 52,
+   "precip": 0.2
+  },
+  "Waldo Stadium": {
+   "high": 83,
+   "low": 31,
+   "precip": 0.58
+  },
+  "Scott Stadium": {
+   "high": 55,
+   "low": 45,
+   "precip": 0.58
+  },
+  "Johnny \"Red\" Floyd Stadium": {
+   "high": 83,
+   "low": 50,
+   "precip": 0.18
+  },
+  "Casino Del Sol Stadium": {
+   "high": 68,
+   "low": 39,
+   "precip": 0.33
+  },
+  "Tiger Stadium (LA)": {
+   "high": 79,
+   "low": 47,
+   "precip": 0.97
+  },
+  "Ryan Field (1926)": {
+   "high": 54,
+   "low": 31,
+   "precip": 0.79
+  },
+  "Michigan Stadium": {
+   "high": 61,
+   "low": 38,
+   "precip": 0.03
+  },
+  "Kroger Field": {
+   "high": 64,
+   "low": 30,
+   "precip": 0.6
+  },
+  "Galaxy Stadium": {
+   "high": 74,
+   "low": 49,
+   "precip": 0.21
+  },
+  "Martin Stadium": {
+   "high": 81,
+   "low": 30,
+   "precip": 0.05
+  },
+  "Ohio Stadium": {
+   "high": 73,
+   "low": 40,
+   "precip": 0.22
+  },
+  "Ben Hill Griffin Stadium": {
+   "high": 67,
+   "low": 51,
+   "precip": 0.19
+  },
+  "DKR-Texas Memorial Stadium": {
+   "high": 82,
+   "low": 31,
+   "precip": 0.73
+  },
+  "Mountain America Stadium": {
+   "high": 69,
+   "low": 30,
+   "precip": 0.06
+  },
+  "Ross-Ade Stadium": {
+   "high": 63,
+   "low": 36,
+   "precip": 0.42
+  },
+  "Davis Wade Stadium": {
+   "high": 56,
+   "low": 46,
+   "precip": 0.07
+  },
+  "Allegacy Federal Credit Union Stadium": {
+   "high": 62,
+   "low": 32,
+   "precip": 0.87
+  },
+  "Jordan-Hare Stadium": {
+   "high": 62,
+   "low": 40,
+   "precip": 0.63
+  },
+  "Carter-Finley Stadium": {
+   "high": 64,
+   "low": 30,
+   "precip": 0.93
+  },
+  "Lane Stadium": {
+   "high": 77,
+   "low": 33,
+   "precip": 0.6
+  },
+  "Sam Boyd Stadium": {
+   "high": 76,
+   "low": 42,
+   "precip": 0.05
+  },
+  "David Booth Kansas Memorial Stadium": {
+   "high": 66,
+   "low": 49,
+   "precip": 0.21
+  },
+  "Vaught-Hemingway Stadium": {
+   "high": 82,
+   "low": 41,
+   "precip": 0.08
+  },
+  "Camp Randall Stadium": {
+   "high": 57,
+   "low": 45,
+   "precip": 0.0
+  },
+  "SECU Stadium": {
+   "high": 83,
+   "low": 51,
+   "precip": 0.8
+  },
+  "McLane Stadium": {
+   "high": 84,
+   "low": 47,
+   "precip": 0.12
+  },
+  "Memorial Stadium (Clemson, SC)": {
+   "high": 63,
+   "low": 49,
+   "precip": 0.57
+  },
+  "Michie Stadium": {
+   "high": 80,
+   "low": 51,
+   "precip": 0.91
+  },
+  "Dowdy-Ficklen Stadium": {
+   "high": 65,
+   "low": 55,
+   "precip": 0.99
+  },
+  "Rynearson Stadium": {
+   "high": 58,
+   "low": 47,
+   "precip": 0.68
+  },
+  "Kenan Stadium": {
+   "high": 82,
+   "low": 38,
+   "precip": 0.18
+  },
+  "Center Parc Stadium": {
+   "high": 60,
+   "low": 42,
+   "precip": 0.23
+  },
+  "War Memorial Stadium": {
+   "high": 74,
+   "low": 32,
+   "precip": 0.15
+  },
+  "M. M. Roberts Stadium": {
+   "high": 69,
+   "low": 31,
+   "precip": 0.52
+  },
+  "Centennial Bank Stadium": {
+   "high": 54,
+   "low": 37,
+   "precip": 0.7
+  },
+  "Malone Stadium": {
+   "high": 57,
+   "low": 38,
+   "precip": 0.32
+  },
+  "Gies Memorial Stadium": {
+   "high": 72,
+   "low": 43,
+   "precip": 0.68
+  },
+  "Amon G. Carter Stadium": {
+   "high": 52,
+   "low": 44,
+   "precip": 0.79
+  },
+  "Warren McGuirk Alumni Stadium": {
+   "high": 60,
+   "low": 31,
+   "precip": 0.17
+  },
+  "Rice Stadium": {
+   "high": 83,
+   "low": 50,
+   "precip": 0.81
+  },
+  "Nippert Stadium": {
+   "high": 78,
+   "low": 44,
+   "precip": 0.37
+  },
+  "Raymond James Stadium": {
+   "high": 58,
+   "low": 37,
+   "precip": 0.81
+  },
+  "Veterans Memorial Stadium (AL)": {
+   "high": 84,
+   "low": 55,
+   "precip": 0.28
+  },
+  "Neyland Stadium": {
+   "high": 60,
+   "low": 31,
+   "precip": 0.87
+  },
+  "Aggie Memorial Stadium": {
+   "high": 56,
+   "low": 44,
+   "precip": 0.26
+  },
+  "Brooks Stadium (SC)": {
+   "high": 83,
+   "low": 34,
+   "precip": 0.95
+  },
+  "Hard Rock Stadium": {
+   "high": 74,
+   "low": 38,
+   "precip": 0.64
+  },
+  "H. A. Chapman Stadium": {
+   "high": 79,
+   "low": 41,
+   "precip": 0.98
+  },
+  "Gerald J. Ford Stadium": {
+   "high": 62,
+   "low": 45,
+   "precip": 0.56
+  },
+  "Autzen Stadium": {
+   "high": 77,
+   "low": 47,
+   "precip": 0.11
+  },
+  "Riccardo Silva Stadium": {
+   "high": 76,
+   "low": 38,
+   "precip": 0.27
+  },
+  "Legion Field (AL)": {
+   "high": 60,
+   "low": 50,
+   "precip": 0.95
+  },
+  "Husky Stadium": {
+   "high": 66,
+   "low": 51,
+   "precip": 0.95
+  },
+  "Reser Stadium": {
+   "high": 71,
+   "low": 30,
+   "precip": 0.96
+  },
+  "Albertsons Stadium": {
+   "high": 76,
+   "low": 36,
+   "precip": 0.98
+  },
+  "University Stadium (NM)": {
+   "high": 64,
+   "low": 45,
+   "precip": 0.56
+  },
+  "Aloha Stadium": {
+   "high": 70,
+   "low": 49,
+   "precip": 0.88
+  }
+ }
+}

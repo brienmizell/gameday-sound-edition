@@ -1,0 +1,170 @@
+{
+	"_sample": "DEMONSTRATION DATA. Hand-written to exercise the schema and prove the seam works — it was NOT produced by the music system, has no Spotify playlist behind it, and carries no ledger playcounts. Real issues come from ~/musicsystem on the Mini. Delete this file and its index.json row once the first real issue lands.",
+
+	"slug": "2026-w01-colorado-at-georgia-tech",
+	"title": "SAMPLE — GameDay No. 1: the ranch and the parking deck",
+	"masthead": "12 tracks · 2026 Week 1 · Thu 3 Sep, Bobby Dodd Stadium, Atlanta GA · SAMPLE ISSUE, no playlist placed",
+	"status": "pressed",
+	"playlistUrl": null,
+	"writeupUrl": null,
+
+	"declaration": "SAMPLE ISSUE — schema demonstration only. Two towns that each built their sound inside one room, and then lost the room. Boulder's was a cattle ranch turned studio at 8,500 feet that burned in 1985. Atlanta's was a basement under a parking deck on Ponce. The argument is that a scene is a building before it is a genre, and that both of these programs play in the oldest stadium their conference has.",
+
+	"sides": {
+		"away": {
+			"school": "Colorado",
+			"town": "Boulder, CO",
+			"scene": "Boulder's music history is a university town's: bands that formed because their members were enrolled, and one studio in the mountains above it that pulled the rest of the world in. Caribou Ranch sat in Nederland, twenty minutes up the canyon, and between 1972 and 1985 Elton John, Chicago, Earth Wind & Fire, Waylon Jennings and Rod Stewart all cut records at 8,500 feet. A control-room fire ended it in 1985. What Boulder kept was its own bands — Firefall, The Samples, Leftover Salmon, and later two CU students who called themselves 3OH!3 after the area code.",
+			"plays": null
+		},
+		"home": {
+			"school": "Georgia Tech",
+			"town": "Atlanta, GA",
+			"scene": "Georgia Tech sits in Midtown, which means its campus is inside one of the most productive music cities in America rather than adjacent to one. The Dungeon Family built Southern hip-hop a few miles southwest in East Point; Organized Noize produced it. In the other direction Atlanta's guitar underground ran through Cabbagetown and East Atlanta — Black Lips, Deerhunter, Mastodon — and its clubs, MJQ Concourse in a basement off Ponce among them, were where those two Atlantas actually met.",
+			"plays": null
+		}
+	},
+
+	"neutralField": "India.Arie was born in Denver, Colorado, where her father played for the Nuggets, and became a musician in Atlanta after her family moved south. She is the one artist on this list who belongs to both sides of the field without a reach, and she is why the running order has a middle.",
+
+	"tracks": [
+		{
+			"n": 1,
+			"artist": "Georgia Tech Marching Band",
+			"title": "Ramblin' Wreck from Georgia Tech",
+			"year": null,
+			"side": "home",
+			"tier": "T3",
+			"receipt": "The Georgia Tech fight song, in continuous stadium use; among the most widely recognized in college football.",
+			"plays": null,
+			"note": "The home side opens with its liturgy, because that is what the stadium actually plays first. One per side is the cap, and this issue spends the home slot here."
+		},
+		{
+			"n": 2,
+			"artist": "Firefall",
+			"title": "You Are the Woman",
+			"year": 1976,
+			"side": "away",
+			"tier": "T0",
+			"receipt": "Firefall formed in Boulder, Colorado, in 1974.",
+			"plays": null,
+			"note": "The first Boulder band to sell records nationally, and the sound the town exported before anyone called it a scene."
+		},
+		{
+			"n": 3,
+			"artist": "OutKast",
+			"title": "ATLiens",
+			"year": 1996,
+			"side": "home",
+			"tier": "T0",
+			"receipt": "André 3000 and Big Boi met at Tri-Cities High School in East Point, Georgia, in the Atlanta metro.",
+			"plays": null,
+			"note": "The record that stopped Atlanta from being a satellite of New York or Los Angeles and made it the third place. Everything the home side does after this is downstream of it."
+		},
+		{
+			"n": 4,
+			"artist": "Elton John",
+			"title": "The Bitch Is Back",
+			"year": 1974,
+			"side": "away",
+			"tier": "T2",
+			"receipt": "Recorded at Caribou Ranch, Nederland, Colorado; the album Caribou is named for the studio.",
+			"plays": null,
+			"note": "The room, not the town. Boulder's biggest contribution to the century's records was a converted barn up the canyon that visiting musicians came to, and this is the most famous thing cut in it."
+		},
+		{
+			"n": 5,
+			"artist": "Indigo Girls",
+			"title": "Closer to Fine",
+			"year": 1989,
+			"side": "home",
+			"tier": "T1",
+			"receipt": "Amy Ray and Emily Saliers met in Decatur, Georgia, and both attended Emory University in Atlanta.",
+			"plays": null,
+			"note": "The enrollment tier: a band that exists because two people were students in the same city. Atlanta's folk republic, running parallel to everything else on this list and rarely touching it."
+		},
+		{
+			"n": 6,
+			"artist": "The Samples",
+			"title": "Did You Ever Look So Nice",
+			"year": 1989,
+			"side": "away",
+			"tier": "T0",
+			"receipt": "Formed in Boulder, Colorado, in 1987.",
+			"plays": null,
+			"note": "Boulder's college-town sound in its purest form — a band that was a local institution for a decade before the rest of the country was asked to care."
+		},
+		{
+			"n": 7,
+			"artist": "India.Arie",
+			"title": "Video",
+			"year": 2001,
+			"side": "neutral",
+			"tier": "T0",
+			"receipt": "Born in Denver, Colorado; moved to Atlanta as a teenager and began her career there.",
+			"plays": null,
+			"note": "The neutral field, and the only track here that both towns can claim without a reach. Colorado-born, Atlanta-made — the exact shape of the game being played, one side leaving home and arriving in the other's building."
+		},
+		{
+			"n": 8,
+			"artist": "Earth, Wind & Fire",
+			"title": "Shining Star",
+			"year": 1975,
+			"side": "away",
+			"tier": "T2",
+			"receipt": "Recorded at Caribou Ranch, Nederland, Colorado.",
+			"plays": null,
+			"note": "The second and last visit to the ranch, and the argument for why a studio counts as musical history: no one in this band was from Colorado, and the record is still partly a Colorado record."
+		},
+		{
+			"n": 9,
+			"artist": "Deerhunter",
+			"title": "Desire Lines",
+			"year": 2010,
+			"side": "home",
+			"tier": "T0",
+			"receipt": "Formed in Atlanta, Georgia.",
+			"plays": null,
+			"note": "The other Atlanta — the one that played the small rooms off Ponce and Moreland rather than the studios, and that a Georgia Tech student in the 2000s would have actually been able to walk to."
+		},
+		{
+			"n": 10,
+			"artist": "3OH!3",
+			"title": "DONTTRUSTME",
+			"year": 2008,
+			"side": "away",
+			"tier": "T1",
+			"receipt": "Sean Foreman and Nathaniel Motte met at the University of Colorado Boulder; the name is the Colorado area code 303.",
+			"plays": null,
+			"note": "The away side's enrollment tier, and the only band on this list named after its own telephone prefix. Boulder's students stopped forming jam bands and formed this instead."
+		},
+		{
+			"n": 11,
+			"artist": "Mastodon",
+			"title": "Blood and Thunder",
+			"year": 2004,
+			"side": "home",
+			"tier": "T0",
+			"receipt": "Formed in Atlanta, Georgia, in 2000.",
+			"plays": null,
+			"note": "Atlanta's heaviest export, and the fourth distinct Atlanta on this card — after the Dungeon Family's, the Emory folk singers', and Deerhunter's. A city large enough to hold four scenes that never had to agree."
+		},
+		{
+			"n": 12,
+			"artist": "Big Head Todd and the Monsters",
+			"title": "Bittersweet",
+			"year": 1993,
+			"side": "away",
+			"tier": "T0",
+			"receipt": "Formed by Colorado high-school classmates and based in Boulder while its members attended the University of Colorado.",
+			"plays": null,
+			"note": "The closer belongs to the visitors, because the visitors are the ones who have to travel. A Boulder band playing the last song in an Atlanta building is the whole premise of the format, stated once and then left alone."
+		}
+	],
+
+	"sources": [
+		"SAMPLE DATA — hand-assembled for schema demonstration, not produced by the music system and not fact-checked to musicsystem SOURCE-1 standard.",
+		"Schedule and venue: public ESPN scoreboard endpoint.",
+		"Prose register: written in imitation of the musicsystem write-up voice; see briens-mac-mini.local:~/musicsystem/writeups/ for the real thing."
+	]
+}
