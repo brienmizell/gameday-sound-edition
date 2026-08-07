@@ -5,34 +5,48 @@
 // This adds rank, record, logo, team color, TV, line, venue flags, kickoff in
 // the viewer's own timezone, a countdown, and the Sound slot.
 
-import { weatherLabel, kickoff, countdown, temp, teamColor, readableOn } from '../util/fmt.js';
+import { weatherLabel, kickoff, countdown, temp, teamColor, logoUrl } from '../util/fmt.js';
 import { matchupSlug } from '../sound.js';
 
-export function cardFor(game, { issue = null, favorites = new Set() } = {}) {
+export function cardFor(game, { issue = null, favorites = new Set(), myTeamId = null } = {}) {
 	const el = document.createElement('article');
 	el.className = 'game';
 	el.dataset.gameId = game.id;
 	el.dataset.slug = matchupSlug(game);
 
+	const isMine = myTeamId != null && (game.home.id === myTeamId || game.away.id === myTeamId);
 	const isFav = favorites.has(game.home.id) || favorites.has(game.away.id);
+	if (isMine) el.classList.add('is-mine');
 	if (isFav) el.classList.add('is-fav');
 	if (game.status.state === 'in') el.classList.add('is-live');
 	if (game.mismatch?.cupcake) el.classList.add('is-cupcake');
 
 	el.style.setProperty('--home-color', teamColor(game.home.color));
 	el.style.setProperty('--away-color', teamColor(game.away.color));
+	if (isMine) {
+		const mine = game.home.id === myTeamId ? game.home : game.away;
+		el.style.setProperty('--mine-color', teamColor(mine.color, 'var(--accent)'));
+	}
 
-	el.append(header(game), teams(game), meta(game), soundSlot(game, issue));
+	el.append(header(game, isMine), teams(game, myTeamId), meta(game), soundSlot(game, issue));
 	return el;
 }
 
-function header(game) {
+function header(game, isMine) {
 	const h = document.createElement('div');
 	h.className = 'game-head';
 
-	const k = kickoff(game.date);
+	if (isMine) {
+		const m = document.createElement('span');
+		m.className = 'mine-mark';
+		m.textContent = 'Your team';
+		h.append(m);
+	}
+
+	const k = kickoff(game.date, game.timeValid);
 	const when = document.createElement('span');
 	when.className = 'when';
+	if (k.tba) when.classList.add('when-tba');
 	when.textContent = game.status.state === 'post' ? 'Final' : `${k.day} · ${k.time}`;
 	h.append(when);
 
@@ -73,29 +87,31 @@ function chip(text, kind) {
 	return s;
 }
 
-function teams(game) {
+function teams(game, myTeamId) {
 	const wrap = document.createElement('div');
 	wrap.className = 'teams';
-	wrap.append(teamRow(game.away, game, 'away'), teamRow(game.home, game, 'home'));
+	wrap.append(teamRow(game.away, game, 'away', myTeamId), teamRow(game.home, game, 'home', myTeamId));
 	return wrap;
 }
 
-function teamRow(team, game, which) {
+function teamRow(team, game, which, myTeamId) {
 	const row = document.createElement('div');
 	row.className = `team team-${which}`;
 	if (game.status.completed && team.winner) row.classList.add('won');
+	if (myTeamId != null && team.id === myTeamId) row.classList.add('is-mine-row');
 
 	const bar = document.createElement('span');
 	bar.className = 'team-bar';
 	bar.style.background = teamColor(team.color);
 	row.append(bar);
 
-	if (team.logo) {
+	const src = logoUrl(team.logo);
+	if (src) {
 		const img = document.createElement('img');
 		img.className = 'logo';
-		img.src = team.logo;
+		img.src = src;
 		img.alt = '';
-		img.loading = 'lazy';
+		img.decoding = 'async';
 		img.width = 28;
 		img.height = 28;
 		row.append(img);

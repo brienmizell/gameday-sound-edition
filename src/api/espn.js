@@ -149,6 +149,10 @@ function normalizeGame(ev) {
 		name: ev.name,
 		shortName: ev.shortName,
 		date: comp.date ?? ev.date,
+		// ESPN parks an unscheduled game at midnight UTC and flags it here.
+		// Mid-season most of the slate is TBA — week 6 of 2026 is 37 of 58 —
+		// so rendering that placeholder as a kickoff time would be a lie.
+		timeValid: comp.timeValid !== false,
 		week: ev.week?.number ?? null,
 		season: ev.season?.year ?? null,
 

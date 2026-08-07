@@ -37,15 +37,30 @@ export function weatherLabel(code) {
 	return hit ? { label: hit[0], icon: hit[1] } : { label: '—', icon: '·' };
 }
 
-/** Kickoff in the VIEWER's local zone, which the 2018 version never did. */
-export function kickoff(iso) {
+/**
+ * Kickoff in the VIEWER's local zone, which the 2018 version never did.
+ * When `timeValid` is false the date is real but the hour is a placeholder,
+ * so the hour is withheld rather than invented.
+ */
+export function kickoff(iso, timeValid = true) {
 	const d = new Date(iso);
-	if (Number.isNaN(d.getTime())) return { day: 'TBA', time: '', iso: '' };
+	if (Number.isNaN(d.getTime())) return { day: 'Date TBA', time: '', tba: true };
 	return {
 		day: d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }),
-		time: d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }),
+		time: timeValid ? d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : 'Time TBA',
+		tba: !timeValid,
 		iso: d.toISOString(),
 	};
+}
+
+/**
+ * ESPN's image combiner. Team logos are 500px PNGs — about 32KB each, and a
+ * full slate wants 120 of them. Asking for 56px drops that to ~2KB.
+ */
+export function logoUrl(logo, size = 56) {
+	if (!logo) return null;
+	const path = logo.replace(/^https?:\/\/[^/]+/, '');
+	return `https://a.espncdn.com/combiner/i?img=${encodeURIComponent(path)}&w=${size}&h=${size}`;
 }
 
 /** "in 3 days" / "in 2h" / "live" / "final". Null when it is not worth showing. */

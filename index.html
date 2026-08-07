@@ -21,17 +21,28 @@
 				<p class="tagline">The slate, the sky, and the sound.</p>
 			</div>
 
-			<nav class="weeknav" aria-label="Week">
-				<button id="prev-week" type="button" aria-label="Previous week">‹</button>
-				<div class="weekbox">
-					<span id="week-label">…</span>
-					<small id="week-detail"></small>
-				</div>
-				<button id="next-week" type="button" aria-label="Next week">›</button>
-			</nav>
+			<div class="head-right">
+				<button id="my-team" type="button" class="myteam">Pick your team</button>
+				<nav class="weeknav" aria-label="Week">
+					<button id="prev-week" type="button" aria-label="Previous week">‹</button>
+					<div class="weekbox">
+						<span id="week-label">…</span>
+						<small id="week-detail"></small>
+					</div>
+					<button id="next-week" type="button" aria-label="Next week">›</button>
+				</nav>
+			</div>
 		</header>
 
 		<div class="controls">
+			<label class="ctl">
+				<span class="ctl-label">Sort</span>
+				<select id="sort">
+					<option value="rank">Ranking</option>
+					<option value="time">Kickoff time</option>
+				</select>
+			</label>
+
 			<label class="ctl">
 				<span class="ctl-label">Conference</span>
 				<select id="conf"></select>
@@ -52,7 +63,10 @@
 				<span>Hide cupcakes</span>
 			</label>
 
-			<span id="count" class="count"></span>
+			<span class="tally">
+				<span id="count" class="count"></span>
+				<small id="poll" class="poll"></small>
+			</span>
 		</div>
 
 		<p id="status" class="status" role="status" aria-live="polite"></p>

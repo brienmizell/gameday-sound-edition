@@ -5,10 +5,12 @@
 // concept of navigation at all.
 
 import { CONFERENCES, fetchCalendar, fetchWeek, weekFor, inConference } from './api/espn.js';
+import { fetchRankings, applyRankings, byRanking, byKickoff } from './api/rankings.js';
 import { forecastFor } from './api/weather.js';
 import { cardFor, paintWeather } from './ui/card.js';
 import { loadIndex, matchupSlug, loadIssue } from './sound.js';
 import { openIssue } from './ui/issue.js';
+import { openPicker, getTeam, hasBeenAsked, markAsked } from './ui/teampicker.js';
 
 const SEASON = 2026;
 
@@ -22,6 +24,9 @@ const el = {
 	search: document.getElementById('search'),
 	favOnly: document.getElementById('fav-only'),
 	hideCupcakes: document.getElementById('hide-cupcakes'),
+	sort: document.getElementById('sort'),
+	myTeam: document.getElementById('my-team'),
+	poll: document.getElementById('poll'),
 	status: document.getElementById('status'),
 	count: document.getElementById('count'),
 };
@@ -31,11 +36,14 @@ const state = {
 	week: null,
 	conf: 'power4', // the Power 4 is the default view
 	q: '',
+	sort: 'rank', // open sorted by ranking
 	favOnly: false,
 	hideCupcakes: false,
 	calendar: null,
 	games: [],
 	favorites: loadFavorites(),
+	team: getTeam(), // the reader's own team, pinned to the top
+	poll: null,
 };
 
 // ---------- favorites ----------
@@ -66,6 +74,7 @@ function readUrl() {
 	if (p.get('q')) state.q = p.get('q');
 	if (p.get('fav') === '1') state.favOnly = true;
 	if (p.get('nocupcakes') === '1') state.hideCupcakes = true;
+	if (p.get('sort') === 'time') state.sort = 'time';
 }
 
 function writeUrl() {
@@ -76,6 +85,7 @@ function writeUrl() {
 	if (state.q) p.set('q', state.q);
 	if (state.favOnly) p.set('fav', '1');
 	if (state.hideCupcakes) p.set('nocupcakes', '1');
+	if (state.sort !== 'rank') p.set('sort', state.sort);
 	history.replaceState(null, '', `?${p}`);
 }
 
@@ -94,6 +104,8 @@ async function boot() {
 	el.search.value = state.q;
 	el.favOnly.checked = state.favOnly;
 	el.hideCupcakes.checked = state.hideCupcakes;
+	el.sort.value = state.sort;
+	paintMyTeam();
 
 	try {
 		state.calendar = await fetchCalendar(state.year);
@@ -104,6 +116,38 @@ async function boot() {
 	if (!state.week) state.week = weekFor(state.calendar);
 	wire();
 	await load();
+
+	// Ask once, after the slate is up, so the app is never a wall on arrival.
+	if (!hasBeenAsked() && !state.team) {
+		const picked = await openPicker({ firstRun: true });
+		if (picked) {
+			state.team = picked;
+			paintMyTeam();
+			render();
+		} else {
+			markAsked();
+		}
+	}
+}
+
+function paintMyTeam() {
+	if (state.team) {
+		el.myTeam.textContent = state.team.short ?? state.team.name;
+		el.myTeam.classList.add('has-team');
+		el.myTeam.style.setProperty('--tc', state.team.color ? `#${state.team.color}` : 'var(--accent)');
+		el.myTeam.title = `Your team: ${state.team.name}. Click to change.`;
+	} else {
+		el.myTeam.textContent = 'Pick your team';
+		el.myTeam.classList.remove('has-team');
+		el.myTeam.style.removeProperty('--tc');
+		el.myTeam.title = 'Pin one team to the top of every week';
+	}
+}
+
+/** Is this the reader's team, or one they starred? */
+function isMine(game) {
+	const ids = [game.home.id, game.away.id];
+	return (state.team && ids.includes(state.team.id)) || ids.some((id) => state.favorites.has(id));
 }
 
 function wire() {
@@ -124,6 +168,16 @@ function wire() {
 		state.hideCupcakes = el.hideCupcakes.checked;
 		render();
 		writeUrl();
+	});
+	el.sort.addEventListener('change', () => {
+		state.sort = el.sort.value;
+		render();
+		writeUrl();
+	});
+	el.myTeam.addEventListener('click', async () => {
+		state.team = await openPicker({ firstRun: false });
+		paintMyTeam();
+		render();
 	});
 
 	let t;
@@ -197,8 +251,10 @@ async function load() {
 	updateWeekLabel();
 
 	try {
-		const [games] = await Promise.all([fetchWeek(state.year, state.week), loadIndex()]);
-		state.games = games.sort((a, b) => new Date(a.date) - new Date(b.date));
+		const [games, ranks] = await Promise.all([fetchWeek(state.year, state.week), fetchRankings(), loadIndex()]);
+		state.games = applyRankings(games, ranks.byTeam);
+		state.poll = ranks.poll;
+		el.poll.textContent = ranks.poll ? `Ranked by ${ranks.poll}${ranks.occurrence ? ` · ${ranks.occurrence}` : ''}` : '';
 	} catch (err) {
 		return fail(`Could not load week ${state.week}. ${err.message}`);
 	}
@@ -222,7 +278,7 @@ function visible() {
 	return state.games.filter((g) => {
 		if (!inConference(g, state.conf)) return false;
 		if (state.hideCupcakes && g.mismatch.cupcake) return false;
-		if (state.favOnly && !state.favorites.has(g.home.id) && !state.favorites.has(g.away.id)) return false;
+		if (state.favOnly && !isMine(g)) return false;
 		if (!q) return true;
 		return [g.home.name, g.away.name, g.venue.name, g.venue.city, g.venue.state]
 			.join(' ')
@@ -231,9 +287,22 @@ function visible() {
 	});
 }
 
+/**
+ * Sort order. Your team first, always — that is the whole point of choosing
+ * one. Then by rank (the default) or by kickoff.
+ */
+function sorted(games) {
+	const base = state.sort === 'time' ? byKickoff : byRanking;
+	return [...games].sort((a, b) => {
+		const ma = isMine(a) ? 0 : 1;
+		const mb = isMine(b) ? 0 : 1;
+		return ma !== mb ? ma - mb : base(a, b);
+	});
+}
+
 async function render() {
 	const index = await loadIndex();
-	const games = visible();
+	const games = sorted(visible());
 
 	el.slate.replaceChildren();
 	if (!games.length) {
@@ -241,7 +310,13 @@ async function render() {
 	} else {
 		const frag = document.createDocumentFragment();
 		for (const g of games) {
-			frag.append(cardFor(g, { issue: index.get(matchupSlug(g)) ?? null, favorites: state.favorites }));
+			frag.append(
+				cardFor(g, {
+					issue: index.get(matchupSlug(g)) ?? null,
+					favorites: state.favorites,
+					myTeamId: state.team?.id ?? null,
+				})
+			);
 		}
 		el.slate.append(frag);
 	}

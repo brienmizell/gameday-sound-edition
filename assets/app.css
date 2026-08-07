@@ -72,6 +72,49 @@ body {
 	font-size: 0.95rem;
 }
 
+.head-right {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.75rem 1.25rem;
+}
+
+.myteam {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.4rem 0.9rem;
+	border: 1px dashed var(--ink-3);
+	border-radius: 999px;
+	background: transparent;
+	color: var(--ink-2);
+	font: inherit;
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: border-color 0.15s, color 0.15s;
+}
+
+.myteam:hover {
+	border-color: var(--ink);
+	color: var(--ink);
+}
+
+.myteam.has-team {
+	border-style: solid;
+	border-color: var(--tc, var(--accent));
+	color: var(--ink);
+}
+
+.myteam.has-team::before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--tc, var(--accent));
+}
+
 .weeknav {
 	display: flex;
 	align-items: center;
@@ -178,12 +221,24 @@ button:focus-visible {
 	cursor: pointer;
 }
 
-.count {
+.tally {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	margin-left: auto;
-	padding-bottom: 0.55rem;
+	padding-bottom: 0.5rem;
+}
+
+.count {
 	color: var(--ink-3);
 	font-size: 0.85rem;
 	font-variant-numeric: tabular-nums;
+}
+
+.poll {
+	color: var(--ink-3);
+	font-size: 0.72rem;
+	opacity: 0.8;
 }
 
 .status {
@@ -240,6 +295,31 @@ button:focus-visible {
 	box-shadow: 0 0 0 1px var(--accent), var(--shadow);
 }
 
+/* The reader's own team, pinned to the front of every week. */
+.game.is-mine {
+	border-color: var(--mine-color, var(--accent));
+	box-shadow: 0 0 0 2px var(--mine-color, var(--accent)), var(--shadow);
+}
+
+.game.is-mine.is-cupcake {
+	opacity: 1; /* your team's cupcake is still your team's game */
+}
+
+.mine-mark {
+	padding: 0.1rem 0.45rem;
+	border-radius: 999px;
+	background: var(--mine-color, var(--accent));
+	color: #fff;
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+
+.team.is-mine-row .team-name {
+	font-weight: 800;
+}
+
 .game.is-live {
 	border-color: var(--live);
 }
@@ -257,6 +337,14 @@ button:focus-visible {
 
 .when {
 	font-weight: 700;
+}
+
+.when-tba {
+	font-weight: 600;
+}
+
+.when-tba::after {
+	content: "";
 }
 
 .countdown {
@@ -723,6 +811,153 @@ button:focus-visible {
 	margin-top: 1.5rem;
 	color: var(--ink-3);
 	font-size: 0.8rem;
+}
+
+/* ---------- the team picker ---------- */
+
+.picker {
+	width: min(520px, 92vw);
+	max-height: 82vh;
+	padding: 0;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--surface);
+	color: var(--ink);
+}
+
+.picker::backdrop {
+	background: rgb(4 8 12 / 62%);
+	backdrop-filter: blur(2px);
+}
+
+.picker-body {
+	display: flex;
+	flex-direction: column;
+	max-height: 82vh;
+	padding: 1.75rem 1.5rem 1.25rem;
+}
+
+.picker-body h2 {
+	margin: 0 0 0.3rem;
+	font-size: 1.4rem;
+	letter-spacing: -0.02em;
+}
+
+.picker-sub {
+	margin: 0 0 1rem;
+	color: var(--ink-2);
+	font-size: 0.87rem;
+}
+
+.picker-search {
+	padding: 0.6rem 0.8rem;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--bg);
+	color: var(--ink);
+	font: inherit;
+}
+
+.picker-results {
+	flex: 1;
+	overflow-y: auto;
+	margin: 0.9rem -0.4rem 0;
+	padding: 0 0.4rem;
+}
+
+.picker-conf {
+	position: sticky;
+	top: 0;
+	margin: 0.9rem 0 0.35rem;
+	padding: 0.25rem 0;
+	background: var(--surface);
+	color: var(--ink-3);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.picker-conf:first-child {
+	margin-top: 0;
+}
+
+.picker-team {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	width: 100%;
+	padding: 0.42rem 0.5rem;
+	border: 0;
+	border-left: 3px solid var(--tc);
+	border-radius: 0 6px 6px 0;
+	background: transparent;
+	color: var(--ink);
+	font: inherit;
+	font-size: 0.9rem;
+	text-align: left;
+	cursor: pointer;
+}
+
+.picker-team:hover {
+	background: var(--surface-2);
+}
+
+.picker-team.is-current {
+	background: color-mix(in srgb, var(--tc) 15%, transparent);
+	font-weight: 700;
+}
+
+.picker-team img {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+}
+
+.picker-dot {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: var(--tc);
+}
+
+.picker-none {
+	padding: 1.5rem 0;
+	color: var(--ink-3);
+	text-align: center;
+}
+
+.picker-foot {
+	display: flex;
+	gap: 0.6rem;
+	justify-content: flex-end;
+	margin-top: 1rem;
+	padding-top: 0.9rem;
+	border-top: 1px solid var(--line);
+}
+
+.picker-skip,
+.picker-clear {
+	padding: 0.45rem 0.9rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	background: transparent;
+	color: var(--ink-2);
+	font: inherit;
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+
+.picker-clear {
+	margin-right: auto;
+	border-color: transparent;
+	color: var(--ink-3);
+}
+
+.picker-skip:hover,
+.picker-clear:hover {
+	border-color: var(--ink-3);
+	color: var(--ink);
 }
 
 /* ---------- foot ---------- */
