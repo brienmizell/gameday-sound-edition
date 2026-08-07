@@ -1,0 +1,84 @@
+{
+	"_note": "The build plan. This file is the record — the dashboard at roadmap.html only renders it. Edit status here, commit, reload.",
+	"kickoff": "2026-08-22T00:00:00-04:00",
+	"kickoffLabel": "Week 1 · Sat 22 Aug 2026",
+	"updated": "2026-08-07",
+	"statuses": {
+		"done": { "label": "Done", "icon": "✓", "tone": "good" },
+		"now": { "label": "In progress", "icon": "◐", "tone": "warning" },
+		"next": { "label": "Not started", "icon": "○", "tone": "neutral" },
+		"blocked": { "label": "Blocked on Brien", "icon": "▲", "tone": "critical" }
+	},
+	"phases": [
+		{
+			"id": "shipped",
+			"title": "Shipped",
+			"blurb": "Done on 2026-08-07. Listed so the burn-down is honest about where the line started.",
+			"tasks": [
+				{ "id": "S1", "title": "Rebuild on keyless APIs (ESPN + Open-Meteo)", "est": 4, "status": "done", "note": "Kills the dead CORS proxy, dead Dark Sky, and 3 committed keys at once." },
+				{ "id": "S2", "title": "Week navigation across the full season calendar", "est": 1.5, "status": "done", "note": "The Prev/Next buttons that were commented out in 2018." },
+				{ "id": "S3", "title": "Power 4 default + all 11 FBS conferences", "est": 1, "status": "done" },
+				{ "id": "S4", "title": "Cupcake detection (FCS opponent or 21+ line)", "est": 1, "status": "done", "note": "Week 1 Power 4 is 44 of 60." },
+				{ "id": "S5", "title": "Weather matched to the game's date, honest past the horizon", "est": 2, "status": "done", "note": "Fixes the daily.data[4] bug." },
+				{ "id": "S6", "title": "Sort by ranking, CFP → AP → Coaches", "est": 2, "status": "done" },
+				{ "id": "S7", "title": "Team picker, pinned team, localStorage", "est": 2.5, "status": "done" },
+				{ "id": "S8", "title": "TBA kickoffs instead of a fabricated midnight", "est": 0.5, "status": "done" },
+				{ "id": "S9", "title": "The Sound seam: schema, validator, issue reader", "est": 3, "status": "done" },
+				{ "id": "S10", "title": "Revive the 2018 app + the compare page", "est": 2.5, "status": "done" },
+				{ "id": "S11", "title": "New repo, old repo pointing forward", "est": 1, "status": "done" },
+				{ "id": "S12", "title": "Redact the three 2018 keys at HEAD", "est": 0.5, "status": "done" }
+			]
+		},
+		{
+			"id": "security",
+			"title": "Security — do this first",
+			"blurb": "A Google API key sat in a public repo for eight years. GitHub could not confirm it is dead.",
+			"tasks": [
+				{ "id": "K1", "title": "Revoke the 2018 Google API key in Google Cloud Console", "est": 0.25, "status": "blocked", "owner": "brien", "note": "Only Brien can do this. APIs & Services → Credentials → delete the key. It is a Maps/Geocoding key; if unrestricted, anyone can bill his account.", "required": true },
+				{ "id": "K2", "title": "Close the GitHub secret-scanning alert as revoked", "est": 0.1, "status": "blocked", "owner": "brien", "note": "github.com/brienmizell/gameday-sound-edition/security/secret-scanning/1 — after K1.", "required": true },
+				{ "id": "K3", "title": "Turn on push protection so this cannot recur", "est": 0.25, "status": "next", "required": true }
+			]
+		},
+		{
+			"id": "kickoff",
+			"title": "Must ship before kickoff",
+			"blurb": "The season starts whether or not this is done. These are the things that break or embarrass on day one.",
+			"tasks": [
+				{ "id": "A1", "title": "Deploy to GitHub Pages", "est": 0.5, "status": "next", "note": "Static repo, public — Pages is free and needs no build step.", "required": true },
+				{ "id": "A2", "title": "Live score refresh while games are in progress", "est": 2, "status": "next", "note": "Poll every 30s only when a game on screen has state=in. Nothing on the page updates itself right now, which is the one thing a Saturday actually needs.", "required": true },
+				{ "id": "A3", "title": "Mobile layout pass", "est": 1.5, "status": "next", "note": "Never opened below 1288px. This gets read on a phone in a parking lot.", "required": true },
+				{ "id": "A4", "title": "Loading skeletons and an error retry path", "est": 1, "status": "next", "note": "A failed ESPN call currently leaves a sentence and nothing to click.", "required": true },
+				{ "id": "A5", "title": "Register in bookmarks.json + rerun dashboard.py", "est": 0.25, "status": "next", "note": "The standing rule: every deployed URL gets filed.", "required": true },
+				{ "id": "A6", "title": "Final pass on the compare page copy", "est": 0.5, "status": "next", "note": "Now that keys are redacted, the '3 → 0' row is true at HEAD. Say so precisely." }
+			]
+		},
+		{
+			"id": "sound",
+			"title": "The Sound Edition — the actual point",
+			"blurb": "The Conference Series has been an open promise since 2026-08-02, docked by Brien to kickoff week, SEC first. Shipping the schedule app alone does not discharge it.",
+			"tasks": [
+				{ "id": "M1", "title": "Scaffold gameday/ inside ~/musicsystem on the Mini", "est": 3, "status": "next", "note": "Plus docs/GAMEDAY.md as the format charter.", "required": true },
+				{ "id": "M2", "title": "Curate canon.yml for the SEC", "est": 3, "status": "next", "note": "~10 lines per program: fight song, the room, the enrolled bands. No database holds this.", "required": true },
+				{ "id": "M3", "title": "Write ONE issue by hand, end to end", "est": 4, "status": "next", "note": "Week 1. Proves the format before any automation.", "required": true },
+				{ "id": "M4", "title": "push_gameday.py — place the playlist deterministically", "est": 1.5, "status": "next", "note": "spotify_push.py, never the generative connector. The July matchday run is the evidence.", "required": true },
+				{ "id": "M5", "title": "Emit the issue JSON, delete the sample, view it in the card", "est": 0.5, "status": "next", "required": true },
+				{ "id": "M6", "title": "Decide the matchup-of-the-week rule", "est": 1, "status": "next", "note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md." }
+			]
+		},
+		{
+			"id": "after",
+			"title": "After kickoff",
+			"blurb": "Real features, but the season does not wait on them and none of them breaks day one.",
+			"tasks": [
+				{ "id": "B1", "title": "Rivalry and trophy-game labels", "est": 1.5, "status": "next", "note": "Iron Bowl, Red River, The Game. A hand-kept list; ESPN does not mark them." },
+				{ "id": "B2", "title": "Team season view — click a team, get its year", "est": 3, "status": "next" },
+				{ "id": "B3", "title": "Conference standings", "est": 2, "status": "next" },
+				{ "id": "B4", "title": "Bowls and the playoff (seasontype=3)", "est": 2, "status": "next", "note": "Needed by mid-December, not August." },
+				{ "id": "B5", "title": "Previous seasons (year selector)", "est": 1.5, "status": "next", "note": "ESPN serves 2018 fine — the compare page already proves it." },
+				{ "id": "B6", "title": "Automate the weekly Sound pipeline", "est": 5, "status": "next", "note": "Only after 3–4 issues have been written by hand." },
+				{ "id": "B7", "title": "Shareable matchup card image", "est": 2.5, "status": "next" },
+				{ "id": "B8", "title": "Offline / PWA", "est": 2, "status": "next" }
+			]
+		}
+	]
+}

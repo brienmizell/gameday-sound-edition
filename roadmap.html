@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>GameDay — road to kickoff</title>
+		<meta name="robots" content="noindex" />
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🏈</text></svg>"
+		/>
+		<style>
+			:root {
+				color-scheme: light;
+				--surface-1: #fcfcfb;
+				--surface-2: #f1f1ee;
+				--line: #dfe0da;
+				--text-primary: #0b0b0b;
+				--text-secondary: #52514e;
+				--text-muted: #78776f;
+
+				/* status palette — fixed, never themed, always with icon + label */
+				--good: #0ca30c;
+				--warning: #fab219;
+				--critical: #d03b3b;
+				--neutral: #9a9992;
+
+				/* the meter: one hue, fill dark on a lighter step of the same ramp */
+				--meter-fill: #2a78d6;
+				--meter-track: #d3e3f7;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				:root:not([data-theme="light"]) {
+					color-scheme: dark;
+					--surface-1: #1a1a19;
+					--surface-2: #232322;
+					--line: #33332f;
+					--text-primary: #ffffff;
+					--text-secondary: #c3c2b7;
+					--text-muted: #8d8c83;
+					--good: #0ca30c;
+					--warning: #fab219;
+					--critical: #d03b3b;
+					--neutral: #6f6e67;
+					--meter-fill: #3987e5;
+					--meter-track: #22364c;
+				}
+			}
+
+			:root[data-theme="dark"] {
+				color-scheme: dark;
+				--surface-1: #1a1a19;
+				--surface-2: #232322;
+				--line: #33332f;
+				--text-primary: #ffffff;
+				--text-secondary: #c3c2b7;
+				--text-muted: #8d8c83;
+				--neutral: #6f6e67;
+				--meter-fill: #3987e5;
+				--meter-track: #22364c;
+			}
+
+			* { box-sizing: border-box; }
+
+			body {
+				margin: 0;
+				padding: 0 clamp(1rem, 4vw, 3rem) 5rem;
+				background: var(--surface-1);
+				color: var(--text-primary);
+				font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			.wrap { max-width: 1080px; margin: 0 auto; }
+
+			header { padding: 2.5rem 0 1.5rem; }
+			h1 { margin: 0; font-size: 1.6rem; letter-spacing: -0.02em; }
+			.sub { margin: 0.3rem 0 0; color: var(--text-secondary); font-size: 0.92rem; }
+			.sub a { color: var(--text-secondary); }
+
+			/* ---- hero figure: exactly one per view ---- */
+			.hero {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				gap: 0.75rem;
+				padding: 1.75rem 0 1.25rem;
+				border-top: 1px solid var(--line);
+				border-bottom: 1px solid var(--line);
+				margin-top: 1rem;
+			}
+			.hero-num {
+				font-size: clamp(3.25rem, 11vw, 5rem);
+				font-weight: 650;
+				line-height: 0.95;
+				letter-spacing: -0.04em;
+			}
+			.hero-label { font-size: 1.05rem; color: var(--text-secondary); }
+			.hero-when { margin-left: auto; text-align: right; color: var(--text-muted); font-size: 0.85rem; }
+
+			/* ---- stat tiles ---- */
+			.tiles {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+				gap: 1px;
+				margin: 0;
+				background: var(--line);
+				border-bottom: 1px solid var(--line);
+			}
+			.tile { padding: 1.1rem 1.15rem; background: var(--surface-1); }
+			.tile-label {
+				margin: 0 0 0.35rem;
+				color: var(--text-muted);
+				font-size: 0.74rem;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+			.tile-value { font-size: 1.75rem; font-weight: 620; line-height: 1.1; letter-spacing: -0.02em; }
+			.tile-note { margin: 0.3rem 0 0; color: var(--text-secondary); font-size: 0.8rem; }
+			.tile-value.is-alarm { color: var(--critical); }
+
+			/* ---- meter: severity in the fill, lighter step of the same hue behind ---- */
+			.meter-block { padding: 1.5rem 0 1.75rem; border-bottom: 1px solid var(--line); }
+			.meter-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				margin-bottom: 0.5rem;
+				font-size: 0.85rem;
+				color: var(--text-secondary);
+			}
+			.meter {
+				position: relative;
+				height: 14px;
+				background: var(--meter-track);
+				border-radius: 4px;
+				overflow: hidden;
+			}
+			.meter-fill {
+				height: 100%;
+				background: var(--meter-fill);
+				border-radius: 4px;
+				transition: width 0.4s ease;
+			}
+			.meter-legend {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4rem 1.1rem;
+				margin-top: 0.65rem;
+				font-size: 0.8rem;
+				color: var(--text-secondary);
+			}
+			.swatch {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin-right: 0.35rem;
+				border-radius: 2px;
+				vertical-align: -1px;
+			}
+
+			/* ---- phases ---- */
+			.phase { margin-top: 2.5rem; }
+			.phase-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem; }
+			.phase h2 { margin: 0; font-size: 1.12rem; letter-spacing: -0.01em; }
+			.phase-count { color: var(--text-muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+			.phase-blurb { margin: 0.4rem 0 1rem; max-width: 68ch; color: var(--text-secondary); font-size: 0.89rem; }
+
+			ul.tasks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+			li.task {
+				display: grid;
+				grid-template-columns: 1.6rem 1fr auto;
+				gap: 0.15rem 0.7rem;
+				align-items: start;
+				padding: 0.7rem 0.2rem;
+				border-bottom: 1px solid var(--line);
+			}
+			li.task.is-done { opacity: 0.55; }
+			.mark {
+				grid-row: span 2;
+				padding: 0;
+				border: 0;
+				background: none;
+				color: var(--st, var(--neutral));
+				font-size: 1rem;
+				line-height: 1.5;
+				cursor: pointer;
+				text-align: center;
+			}
+			.t-title { font-size: 0.94rem; font-weight: 550; }
+			.is-done .t-title { text-decoration: line-through; text-decoration-thickness: 1px; }
+			.t-note { grid-column: 2; color: var(--text-secondary); font-size: 0.82rem; }
+			.t-right { grid-row: span 2; text-align: right; white-space: nowrap; }
+			.t-est { color: var(--text-muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+			.t-status {
+				display: block;
+				margin-top: 0.15rem;
+				color: var(--st, var(--neutral));
+				font-size: 0.7rem;
+				font-weight: 650;
+				letter-spacing: 0.03em;
+				text-transform: uppercase;
+			}
+			.pill-req {
+				margin-left: 0.4rem;
+				padding: 0.05rem 0.35rem;
+				border: 1px solid var(--line);
+				border-radius: 3px;
+				color: var(--text-muted);
+				font-size: 0.66rem;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				vertical-align: 1px;
+			}
+
+			.foot {
+				margin-top: 3rem;
+				padding-top: 1.25rem;
+				border-top: 1px solid var(--line);
+				color: var(--text-muted);
+				font-size: 0.82rem;
+			}
+			.foot code { font-size: 0.78rem; }
+			button.export {
+				margin-top: 0.6rem;
+				padding: 0.4rem 0.85rem;
+				border: 1px solid var(--line);
+				border-radius: 999px;
+				background: var(--surface-2);
+				color: var(--text-secondary);
+				font: inherit;
+				font-size: 0.82rem;
+				cursor: pointer;
+			}
+			@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<header>
+				<h1>GameDay — road to kickoff</h1>
+				<p class="sub">
+					Rendered from <code>data/roadmap.json</code>, which is the record.
+					<a href="index.html">← the app</a> · <a href="compare.html">2018 vs 2026</a>
+				</p>
+			</header>
+
+			<section class="hero">
+				<span class="hero-num" id="days">—</span>
+				<span class="hero-label" id="days-label">days to kickoff</span>
+				<span class="hero-when" id="kickoff-when"></span>
+			</section>
+
+			<section class="tiles" id="tiles"></section>
+
+			<section class="meter-block">
+				<div class="meter-head">
+					<span id="meter-label">Work remaining</span>
+					<span id="meter-pct"></span>
+				</div>
+				<div class="meter"><div class="meter-fill" id="meter-fill" style="width: 0%"></div></div>
+				<div class="meter-legend" id="legend"></div>
+			</section>
+
+			<div id="phases"></div>
+
+			<footer class="foot">
+				<p>
+					Pace assumes work happens every remaining day including weekends. "Required" tasks are the
+					ones that break or embarrass on day one — the rest can land during the season.
+				</p>
+				<p>
+					Ticking a box here is a local scratch note only; <code>data/roadmap.json</code> stays the
+					truth. Export and paste it back to make a change stick.
+				</p>
+				<button class="export" id="export" type="button">Copy updated JSON</button>
+			</footer>
+		</div>
+
+		<script type="module">
+			const TONE = { good: 'var(--good)', warning: 'var(--warning)', critical: 'var(--critical)', neutral: 'var(--neutral)' };
+			const OVERLAY = 'gd:roadmap-overlay';
+
+			const data = await fetch('data/roadmap.json').then((r) => r.json());
+			const overlay = load();
+
+			function load() {
+				try { return JSON.parse(localStorage.getItem(OVERLAY) ?? '{}'); } catch { return {}; }
+			}
+			function save() {
+				try { localStorage.setItem(OVERLAY, JSON.stringify(overlay)); } catch {}
+			}
+
+			const statusOf = (t) => overlay[t.id] ?? t.status;
+			const allTasks = () => data.phases.flatMap((p) => p.tasks);
+
+			function render() {
+				const tasks = allTasks();
+				const open = tasks.filter((t) => statusOf(t) !== 'done');
+				const required = open.filter((t) => t.required);
+				const blocked = open.filter((t) => statusOf(t) === 'blocked');
+
+				const hoursOpen = open.reduce((s, t) => s + t.est, 0);
+				const hoursReq = required.reduce((s, t) => s + t.est, 0);
+				const hoursAll = tasks.reduce((s, t) => s + t.est, 0);
+				const hoursDone = hoursAll - hoursOpen;
+
+				// Whole days left, floored — a partial day is not a day you can plan.
+				const ms = new Date(data.kickoff) - Date.now();
+				const days = Math.max(0, Math.floor(ms / 86400000));
+
+				document.getElementById('days').textContent = days;
+				document.getElementById('days-label').textContent = days === 1 ? 'day to kickoff' : 'days to kickoff';
+				document.getElementById('kickoff-when').innerHTML =
+					`${data.kickoffLabel}<br>roadmap updated ${data.updated}`;
+
+				const perDay = days > 0 ? hoursReq / days : hoursReq;
+				const tight = perDay > 3;
+
+				document.getElementById('tiles').innerHTML = [
+					tile('Required before kickoff', `${fmt(hoursReq)} h`, `${required.length} tasks still open`),
+					tile('Pace needed', `${fmt(perDay)} h/day`, days > 0 ? `across ${days} days, required only` : 'kickoff has passed', tight),
+					tile('Everything open', `${fmt(hoursOpen)} h`, `${open.length} of ${tasks.length} tasks`),
+					tile('Blocked', String(blocked.length), blocked.length ? 'waiting on Brien' : 'nothing waiting', blocked.length > 0),
+				].join('');
+
+				const pct = hoursAll ? Math.round((hoursDone / hoursAll) * 100) : 0;
+				document.getElementById('meter-fill').style.width = `${pct}%`;
+				document.getElementById('meter-pct').textContent = `${pct}% of ${fmt(hoursAll)} h logged`;
+				document.getElementById('meter-label').textContent =
+					`${fmt(hoursDone)} h done · ${fmt(hoursOpen)} h to go`;
+
+				document.getElementById('legend').innerHTML = Object.entries(data.statuses)
+					.map(([k, s]) => {
+						const n = tasks.filter((t) => statusOf(t) === k).length;
+						return `<span><span class="swatch" style="background:${TONE[s.tone]}"></span>${s.icon} ${s.label} · ${n}</span>`;
+					})
+					.join('');
+
+				document.getElementById('phases').innerHTML = data.phases.map(phase).join('');
+
+				for (const btn of document.querySelectorAll('.mark')) {
+					btn.addEventListener('click', () => {
+						const t = tasks.find((x) => x.id === btn.dataset.id);
+						overlay[t.id] = statusOf(t) === 'done' ? (t.status === 'done' ? 'next' : t.status) : 'done';
+						if (overlay[t.id] === t.status) delete overlay[t.id];
+						save();
+						render();
+					});
+				}
+			}
+
+			function tile(label, value, note, alarm = false) {
+				return `<div class="tile">
+					<p class="tile-label">${label}</p>
+					<div class="tile-value${alarm ? ' is-alarm' : ''}">${value}</div>
+					<p class="tile-note">${note}</p>
+				</div>`;
+			}
+
+			function phase(p) {
+				const open = p.tasks.filter((t) => statusOf(t) !== 'done');
+				const hrs = open.reduce((s, t) => s + t.est, 0);
+				return `<section class="phase">
+					<div class="phase-head">
+						<h2>${esc(p.title)}</h2>
+						<span class="phase-count">${p.tasks.length - open.length}/${p.tasks.length} done${hrs ? ` · ${fmt(hrs)} h left` : ''}</span>
+					</div>
+					<p class="phase-blurb">${esc(p.blurb)}</p>
+					<ul class="tasks">${p.tasks.map(task).join('')}</ul>
+				</section>`;
+			}
+
+			function task(t) {
+				const st = statusOf(t);
+				const meta = data.statuses[st] ?? data.statuses.next;
+				const color = TONE[meta.tone];
+				return `<li class="task${st === 'done' ? ' is-done' : ''}" style="--st:${color}">
+					<button class="mark" data-id="${t.id}" type="button"
+						aria-label="Toggle ${esc(t.title)}" title="${esc(meta.label)}">${meta.icon}</button>
+					<div class="t-title">${esc(t.title)}${t.required ? '<span class="pill-req">required</span>' : ''}</div>
+					<div class="t-right">
+						<span class="t-est">${fmt(t.est)} h</span>
+						<span class="t-status">${esc(meta.label)}</span>
+					</div>
+					${t.note ? `<div class="t-note">${esc(t.note)}</div>` : ''}
+				</li>`;
+			}
+
+			const fmt = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(1));
+			const esc = (s) =>
+				String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+			document.getElementById('export').addEventListener('click', async (e) => {
+				const out = structuredClone(data);
+				for (const p of out.phases) for (const t of p.tasks) t.status = overlay[t.id] ?? t.status;
+				delete out._overlay;
+				await navigator.clipboard.writeText(JSON.stringify(out, null, '\t'));
+				e.target.textContent = 'Copied — paste into data/roadmap.json';
+				setTimeout(() => (e.target.textContent = 'Copy updated JSON'), 2500);
+			});
+
+			render();
+			setInterval(render, 60000); // the countdown should not go stale on an open tab
+		</script>
+	</body>
+</html>

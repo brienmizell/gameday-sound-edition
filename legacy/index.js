@@ -63,7 +63,11 @@ function topFunction() {
 }
 
 let pulledSportsData;
-sportsKey = 'c72fe47dccf64d6f932fcfaa1c3bbc47';
+// REDACTED 2026-08-07. The three keys this file shipped with in 2018 were
+// committed to a public repo and sat there for eight years. They are replaced
+// with placeholders here; the originals remain in git history, which is the
+// honest record. demo.js stubs all three services, so nothing needs them.
+sportsKey = 'REDACTED_FANTASYDATA_KEY';
 fetch(sportsAPI, {
 	headers: {
 		'Ocp-Apim-Subscription-Key': sportsKey
@@ -220,7 +224,7 @@ function geocode(stadiumName) {
 			.get('https://maps.googleapis.com/maps/api/geocode/json', {
 				params: {
 					address: stadiumName,
-					key: 'AIzaSyB3cRW6zO8D3INc-NHDFA-0ck77gQAYpOU'
+					key: 'REDACTED_GOOGLE_GEOCODE_KEY'
 				}
 			})
 			// .then(whatsFetched)
@@ -283,7 +287,7 @@ function geocode(stadiumName) {
 // 		+ ${gameCity + "+" + gameState};
 function getDarksky(latLng) {
 	let darksky = 'https://my-little-cors-proxy.herokuapp.com/https://api.darksky.net/forecast/';
-	let darkSkykey = '15a54349e1825485061f645acebcc9c3';
+	let darkSkykey = 'REDACTED_DARKSKY_KEY';
 	// let lat = response.data.results[0].geometry.location.lat;
 	// let lng = -84.373313;
 	let uri = darksky + darkSkykey + '/' + latLng;
