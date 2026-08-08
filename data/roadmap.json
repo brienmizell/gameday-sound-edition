@@ -113,6 +113,13 @@
 					"est": 0.5,
 					"status": "done",
 					"note": "Browsing 2018 was printing 2026 preseason ranks on teams ESPN left unranked \u2014 a 4-5 Tennessee showed as #18 because that is its 2026 preseason spot, sitting next to a genuinely #18 Mississippi State. Fixed by asking the DATA, not the date: ESPN fills 99 for every team in an unplayed week and backfills real ranks once it is played, so a rank in 1-25 anywhere in the week means that week has its own poll and it wins. A season-equality check would still have been wrong in November, looking back at Week 3."
+				},
+				{
+					"id": "S14",
+					"title": "Winsipedia head-to-head link on every card",
+					"est": 1,
+					"status": "done",
+					"note": "Link-out, not a scrape: their robots.txt Disallows /api/ and their pages send no CORS headers. Slugs come from the sitemap they publish; 138/138 FBS teams mapped by tools/build-winsipedia.py."
 				}
 			]
 		},
@@ -259,6 +266,14 @@
 					"est": 1,
 					"status": "next",
 					"note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md."
+				},
+				{
+					"id": "M7",
+					"title": "Series numbers from CFBD /teams/matchup at build time",
+					"est": 2,
+					"status": "blocked",
+					"owner": "brien",
+					"note": "Needs a free CollegeFootballData key (register at collegefootballdata.com). Returns team1Wins/team2Wins/ties/startYear/endYear plus every meeting \u2014 that is the raw material for the write-up's series paragraph and for a 'Georgia leads 44-25-4' line on the card. Fetched at BUILD time into data/series.json so the deployed site stays keyless; the key never enters the repo."
 				}
 			]
 		},

@@ -29,6 +29,7 @@ for wk in WEEKS:
             if cid in FBS:
                 teams[t['id']] = {
                     'id': t['id'], 'name': t.get('displayName'),
+                    'location': t.get('location'),   # full school name — best base for external slugs
                     'short': t.get('shortDisplayName'), 'abbr': t.get('abbreviation'),
                     'color': t.get('color'), 'logo': t.get('logo'),
                     'conf': cid, 'confName': FBS[cid],

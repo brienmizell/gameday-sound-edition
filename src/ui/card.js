@@ -7,6 +7,7 @@
 
 import { weatherLabel, kickoff, countdown, temp, teamColor, logoUrl } from '../util/fmt.js';
 import { matchupSlug } from '../sound.js';
+import { seriesUrl } from '../series.js';
 
 export function cardFor(game, { issue = null, favorites = new Set(), myTeamId = null } = {}) {
 	const el = document.createElement('article');
@@ -207,6 +208,18 @@ function meta(game) {
 		n.className = 'note';
 		n.textContent = game.notes[0];
 		m.append(n);
+	}
+
+	const series = seriesUrl(game);
+	if (series) {
+		const a = document.createElement('a');
+		a.className = 'series-link';
+		a.href = series;
+		a.target = '_blank';
+		a.rel = 'noopener noreferrer';
+		a.textContent = 'All-time series';
+		a.title = `${game.away.name} vs ${game.home.name} on Winsipedia`;
+		m.append(a);
 	}
 
 	return m;

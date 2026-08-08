@@ -151,3 +151,24 @@ See [`SOUND_EDITION.md`](SOUND_EDITION.md) for where that work goes next.
 
 Original: Brien Mizell and Evan Procter, DigitalCrafts, October 2018.
 Rebuild: 2026, targeting the August 22 kickoff.
+
+---
+
+## Head-to-head history
+
+Every card carries an **All-time series** link to
+[Winsipedia](https://www.winsipedia.com), which has the best head-to-head pages
+anywhere — the all-time record, streaks, largest margins, every meeting.
+
+It is a **link-out, not a scrape**, for three reasons: their `robots.txt`
+disallows `/api/`, their pages send no CORS headers so a static page could not
+read them from the browser anyway, and a link costs them nothing and sends them
+traffic. The slug table is built once from the sitemap they publish —
+`tools/build-winsipedia.py`, 138/138 FBS teams mapped, one request, no crawling.
+
+The series *numbers* — "Georgia leads 44-25-4" — are a separate problem. Those
+want [CollegeFootballData](https://collegefootballdata.com)'s `/teams/matchup`
+endpoint, which returns `team1Wins`, `team2Wins`, `ties` and every meeting, and
+needs a free key. Because a series record does not change during a week, that
+call belongs at **build time**, written into a static `data/series.json` — so
+the deployed site keeps its no-keys property and the key never enters the repo.

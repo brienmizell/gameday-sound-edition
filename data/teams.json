@@ -1,10 +1,11 @@
 {
-"_note": "FBS teams for the team picker. Regenerate with tools/build-teams.py when conferences realign.",
+"_note": "FBS teams for the team picker. Regenerate with tools/build-teams.py.",
 "season": 2026,
 "teams": [
 {
 "id": "103",
 "name": "Boston College Eagles",
+"location": "Boston College",
 "short": "Boston College",
 "abbr": "BC",
 "color": "8c2232",
@@ -15,6 +16,7 @@
 {
 "id": "25",
 "name": "California Golden Bears",
+"location": "California",
 "short": "California",
 "abbr": "CAL",
 "color": "041e42",
@@ -25,6 +27,7 @@
 {
 "id": "228",
 "name": "Clemson Tigers",
+"location": "Clemson",
 "short": "Clemson",
 "abbr": "CLEM",
 "color": "f56600",
@@ -35,6 +38,7 @@
 {
 "id": "150",
 "name": "Duke Blue Devils",
+"location": "Duke",
 "short": "Duke",
 "abbr": "DUKE",
 "color": "00539b",
@@ -45,6 +49,7 @@
 {
 "id": "52",
 "name": "Florida State Seminoles",
+"location": "Florida State",
 "short": "Florida St",
 "abbr": "FSU",
 "color": "782f40",
@@ -55,6 +60,7 @@
 {
 "id": "59",
 "name": "Georgia Tech Yellow Jackets",
+"location": "Georgia Tech",
 "short": "Georgia Tech",
 "abbr": "GT",
 "color": "b3a369",
@@ -65,6 +71,7 @@
 {
 "id": "97",
 "name": "Louisville Cardinals",
+"location": "Louisville",
 "short": "Louisville",
 "abbr": "LOU",
 "color": "c9001f",
@@ -75,6 +82,7 @@
 {
 "id": "2390",
 "name": "Miami Hurricanes",
+"location": "Miami",
 "short": "Miami",
 "abbr": "MIA",
 "color": "f47423",
@@ -85,6 +93,7 @@
 {
 "id": "152",
 "name": "NC State Wolfpack",
+"location": "NC State",
 "short": "NC State",
 "abbr": "NCSU",
 "color": "cc0000",
@@ -95,6 +104,7 @@
 {
 "id": "153",
 "name": "North Carolina Tar Heels",
+"location": "North Carolina",
 "short": "North Carolina",
 "abbr": "UNC",
 "color": "7bafd4",
@@ -105,6 +115,7 @@
 {
 "id": "221",
 "name": "Pittsburgh Panthers",
+"location": "Pittsburgh",
 "short": "Pitt",
 "abbr": "PITT",
 "color": "003594",
@@ -115,6 +126,7 @@
 {
 "id": "2567",
 "name": "SMU Mustangs",
+"location": "SMU",
 "short": "SMU",
 "abbr": "SMU",
 "color": "a80000",
@@ -125,6 +137,7 @@
 {
 "id": "24",
 "name": "Stanford Cardinal",
+"location": "Stanford",
 "short": "Stanford",
 "abbr": "STAN",
 "color": "8c1515",
@@ -135,6 +148,7 @@
 {
 "id": "183",
 "name": "Syracuse Orange",
+"location": "Syracuse",
 "short": "Syracuse",
 "abbr": "SYR",
 "color": "000e54",
@@ -145,6 +159,7 @@
 {
 "id": "258",
 "name": "Virginia Cavaliers",
+"location": "Virginia",
 "short": "Virginia",
 "abbr": "UVA",
 "color": "232d4b",
@@ -155,6 +170,7 @@
 {
 "id": "259",
 "name": "Virginia Tech Hokies",
+"location": "Virginia Tech",
 "short": "Virginia Tech",
 "abbr": "VT",
 "color": "6a2c3e",
@@ -165,6 +181,7 @@
 {
 "id": "154",
 "name": "Wake Forest Demon Deacons",
+"location": "Wake Forest",
 "short": "Wake Forest",
 "abbr": "WAKE",
 "color": "ceb888",
@@ -175,6 +192,7 @@
 {
 "id": "349",
 "name": "Army Black Knights",
+"location": "Army",
 "short": "Army",
 "abbr": "ARMY",
 "color": "000000",
@@ -185,6 +203,7 @@
 {
 "id": "2429",
 "name": "Charlotte 49ers",
+"location": "Charlotte",
 "short": "Charlotte",
 "abbr": "CLT",
 "color": "005035",
@@ -195,6 +214,7 @@
 {
 "id": "151",
 "name": "East Carolina Pirates",
+"location": "East Carolina",
 "short": "East Carolina",
 "abbr": "ECU",
 "color": "582c83",
@@ -205,6 +225,7 @@
 {
 "id": "2226",
 "name": "Florida Atlantic Owls",
+"location": "Florida Atlantic",
 "short": "FAU",
 "abbr": "FAU",
 "color": "003366",
@@ -215,6 +236,7 @@
 {
 "id": "235",
 "name": "Memphis Tigers",
+"location": "Memphis",
 "short": "Memphis",
 "abbr": "MEM",
 "color": "004991",
@@ -225,6 +247,7 @@
 {
 "id": "2426",
 "name": "Navy Midshipmen",
+"location": "Navy",
 "short": "Navy",
 "abbr": "NAVY",
 "color": "00225b",
@@ -235,6 +258,7 @@
 {
 "id": "249",
 "name": "North Texas Mean Green",
+"location": "North Texas",
 "short": "North Texas",
 "abbr": "UNT",
 "color": "068f33",
@@ -245,6 +269,7 @@
 {
 "id": "242",
 "name": "Rice Owls",
+"location": "Rice",
 "short": "Rice",
 "abbr": "RICE",
 "color": "00205b",
@@ -255,6 +280,7 @@
 {
 "id": "58",
 "name": "South Florida Bulls",
+"location": "South Florida",
 "short": "South Florida",
 "abbr": "USF",
 "color": "006747",
@@ -265,6 +291,7 @@
 {
 "id": "218",
 "name": "Temple Owls",
+"location": "Temple",
 "short": "Temple",
 "abbr": "TEM",
 "color": "a41e35",
@@ -275,6 +302,7 @@
 {
 "id": "2655",
 "name": "Tulane Green Wave",
+"location": "Tulane",
 "short": "Tulane",
 "abbr": "TULN",
 "color": "006747",
@@ -285,6 +313,7 @@
 {
 "id": "202",
 "name": "Tulsa Golden Hurricane",
+"location": "Tulsa",
 "short": "Tulsa",
 "abbr": "TLSA",
 "color": "003595",
@@ -295,6 +324,7 @@
 {
 "id": "5",
 "name": "UAB Blazers",
+"location": "UAB",
 "short": "UAB",
 "abbr": "UAB",
 "color": "1a5632",
@@ -305,6 +335,7 @@
 {
 "id": "2636",
 "name": "UTSA Roadrunners",
+"location": "UTSA",
 "short": "UTSA",
 "abbr": "UTSA",
 "color": "0c2340",
@@ -315,6 +346,7 @@
 {
 "id": "9",
 "name": "Arizona State Sun Devils",
+"location": "Arizona State",
 "short": "Arizona St",
 "abbr": "ASU",
 "color": "ffc627",
@@ -325,6 +357,7 @@
 {
 "id": "12",
 "name": "Arizona Wildcats",
+"location": "Arizona",
 "short": "Arizona",
 "abbr": "ARIZ",
 "color": "cc0033",
@@ -335,6 +368,7 @@
 {
 "id": "252",
 "name": "BYU Cougars",
+"location": "BYU",
 "short": "BYU",
 "abbr": "BYU",
 "color": "0047ba",
@@ -345,6 +379,7 @@
 {
 "id": "239",
 "name": "Baylor Bears",
+"location": "Baylor",
 "short": "Baylor",
 "abbr": "BAY",
 "color": "154734",
@@ -355,6 +390,7 @@
 {
 "id": "2132",
 "name": "Cincinnati Bearcats",
+"location": "Cincinnati",
 "short": "Cincinnati",
 "abbr": "CIN",
 "color": "000000",
@@ -365,6 +401,7 @@
 {
 "id": "38",
 "name": "Colorado Buffaloes",
+"location": "Colorado",
 "short": "Colorado",
 "abbr": "COLO",
 "color": "cfb87c",
@@ -375,6 +412,7 @@
 {
 "id": "248",
 "name": "Houston Cougars",
+"location": "Houston",
 "short": "Houston",
 "abbr": "HOU",
 "color": "c8102e",
@@ -385,6 +423,7 @@
 {
 "id": "66",
 "name": "Iowa State Cyclones",
+"location": "Iowa State",
 "short": "Iowa State",
 "abbr": "ISU",
 "color": "ae192d",
@@ -395,6 +434,7 @@
 {
 "id": "2305",
 "name": "Kansas Jayhawks",
+"location": "Kansas",
 "short": "Kansas",
 "abbr": "KU",
 "color": "0051ba",
@@ -405,6 +445,7 @@
 {
 "id": "2306",
 "name": "Kansas State Wildcats",
+"location": "Kansas State",
 "short": "Kansas St",
 "abbr": "KSU",
 "color": "330a57",
@@ -415,6 +456,7 @@
 {
 "id": "197",
 "name": "Oklahoma State Cowboys",
+"location": "Oklahoma State",
 "short": "Oklahoma St",
 "abbr": "OKST",
 "color": "fe5c00",
@@ -425,6 +467,7 @@
 {
 "id": "2628",
 "name": "TCU Horned Frogs",
+"location": "TCU",
 "short": "TCU",
 "abbr": "TCU",
 "color": "4d1979",
@@ -435,6 +478,7 @@
 {
 "id": "2641",
 "name": "Texas Tech Red Raiders",
+"location": "Texas Tech",
 "short": "Texas Tech",
 "abbr": "TTU",
 "color": "da291c",
@@ -445,6 +489,7 @@
 {
 "id": "2116",
 "name": "UCF Knights",
+"location": "UCF",
 "short": "UCF",
 "abbr": "UCF",
 "color": "000000",
@@ -455,6 +500,7 @@
 {
 "id": "254",
 "name": "Utah Utes",
+"location": "Utah",
 "short": "Utah",
 "abbr": "UTAH",
 "color": "be0000",
@@ -465,6 +511,7 @@
 {
 "id": "277",
 "name": "West Virginia Mountaineers",
+"location": "West Virginia",
 "short": "West Virginia",
 "abbr": "WVU",
 "color": "eaaa00",
@@ -475,6 +522,7 @@
 {
 "id": "356",
 "name": "Illinois Fighting Illini",
+"location": "Illinois",
 "short": "Illinois",
 "abbr": "ILL",
 "color": "ff5f05",
@@ -485,6 +533,7 @@
 {
 "id": "84",
 "name": "Indiana Hoosiers",
+"location": "Indiana",
 "short": "Indiana",
 "abbr": "IU",
 "color": "970310",
@@ -495,6 +544,7 @@
 {
 "id": "2294",
 "name": "Iowa Hawkeyes",
+"location": "Iowa",
 "short": "Iowa",
 "abbr": "IOWA",
 "color": "231f20",
@@ -505,6 +555,7 @@
 {
 "id": "120",
 "name": "Maryland Terrapins",
+"location": "Maryland",
 "short": "Maryland",
 "abbr": "MD",
 "color": "ce1126",
@@ -515,6 +566,7 @@
 {
 "id": "127",
 "name": "Michigan State Spartans",
+"location": "Michigan State",
 "short": "Michigan St",
 "abbr": "MSU",
 "color": "173f35",
@@ -525,6 +577,7 @@
 {
 "id": "130",
 "name": "Michigan Wolverines",
+"location": "Michigan",
 "short": "Michigan",
 "abbr": "MICH",
 "color": "00274c",
@@ -535,6 +588,7 @@
 {
 "id": "135",
 "name": "Minnesota Golden Gophers",
+"location": "Minnesota",
 "short": "Minnesota",
 "abbr": "MINN",
 "color": "5e0a2f",
@@ -545,6 +599,7 @@
 {
 "id": "158",
 "name": "Nebraska Cornhuskers",
+"location": "Nebraska",
 "short": "Nebraska",
 "abbr": "NEB",
 "color": "e31937",
@@ -555,6 +610,7 @@
 {
 "id": "77",
 "name": "Northwestern Wildcats",
+"location": "Northwestern",
 "short": "Northwestern",
 "abbr": "NU",
 "color": "492f92",
@@ -565,6 +621,7 @@
 {
 "id": "194",
 "name": "Ohio State Buckeyes",
+"location": "Ohio State",
 "short": "Ohio State",
 "abbr": "OSU",
 "color": "ba0c2f",
@@ -575,6 +632,7 @@
 {
 "id": "2483",
 "name": "Oregon Ducks",
+"location": "Oregon",
 "short": "Oregon",
 "abbr": "ORE",
 "color": "00934b",
@@ -585,6 +643,7 @@
 {
 "id": "213",
 "name": "Penn State Nittany Lions",
+"location": "Penn State",
 "short": "Penn State",
 "abbr": "PSU",
 "color": "061440",
@@ -595,6 +654,7 @@
 {
 "id": "2509",
 "name": "Purdue Boilermakers",
+"location": "Purdue",
 "short": "Purdue",
 "abbr": "PUR",
 "color": "ceb888",
@@ -605,6 +665,7 @@
 {
 "id": "164",
 "name": "Rutgers Scarlet Knights",
+"location": "Rutgers",
 "short": "Rutgers",
 "abbr": "RUTG",
 "color": "ce0e2d",
@@ -615,6 +676,7 @@
 {
 "id": "26",
 "name": "UCLA Bruins",
+"location": "UCLA",
 "short": "UCLA",
 "abbr": "UCLA",
 "color": "2774ae",
@@ -625,6 +687,7 @@
 {
 "id": "30",
 "name": "USC Trojans",
+"location": "USC",
 "short": "USC",
 "abbr": "USC",
 "color": "9d2235",
@@ -635,6 +698,7 @@
 {
 "id": "264",
 "name": "Washington Huskies",
+"location": "Washington",
 "short": "Washington",
 "abbr": "WASH",
 "color": "33006f",
@@ -645,6 +709,7 @@
 {
 "id": "275",
 "name": "Wisconsin Badgers",
+"location": "Wisconsin",
 "short": "Wisconsin",
 "abbr": "WIS",
 "color": "a00000",
@@ -655,6 +720,7 @@
 {
 "id": "48",
 "name": "Delaware Blue Hens",
+"location": "Delaware",
 "short": "Delaware",
 "abbr": "DEL",
 "color": "00539f",
@@ -665,6 +731,7 @@
 {
 "id": "2229",
 "name": "Florida International Panthers",
+"location": "Florida International",
 "short": "FIU",
 "abbr": "FIU",
 "color": "091f3f",
@@ -675,6 +742,7 @@
 {
 "id": "55",
 "name": "Jacksonville State Gamecocks",
+"location": "Jacksonville State",
 "short": "Jax State",
 "abbr": "JVST",
 "color": "cc0000",
@@ -685,6 +753,7 @@
 {
 "id": "338",
 "name": "Kennesaw State Owls",
+"location": "Kennesaw State",
 "short": "Kennesaw St",
 "abbr": "KENN",
 "color": "fdbb30",
@@ -695,6 +764,7 @@
 {
 "id": "2335",
 "name": "Liberty Flames",
+"location": "Liberty",
 "short": "Liberty",
 "abbr": "LIB",
 "color": "0a254e",
@@ -705,6 +775,7 @@
 {
 "id": "2393",
 "name": "Middle Tennessee Blue Raiders",
+"location": "Middle Tennessee",
 "short": "MTSU",
 "abbr": "MTSU",
 "color": "036eb7",
@@ -715,6 +786,7 @@
 {
 "id": "2623",
 "name": "Missouri State Bears",
+"location": "Missouri State",
 "short": "Missouri St",
 "abbr": "MOST",
 "color": "5e0009",
@@ -725,6 +797,7 @@
 {
 "id": "166",
 "name": "New Mexico State Aggies",
+"location": "New Mexico State",
 "short": "New Mexico St",
 "abbr": "NMSU",
 "color": "7e141b",
@@ -735,6 +808,7 @@
 {
 "id": "2534",
 "name": "Sam Houston Bearkats",
+"location": "Sam Houston",
 "short": "Sam Houston",
 "abbr": "SHSU",
 "color": "f56423",
@@ -745,6 +819,7 @@
 {
 "id": "98",
 "name": "Western Kentucky Hilltoppers",
+"location": "Western Kentucky",
 "short": "Western KY",
 "abbr": "WKU",
 "color": "e13a3e",
@@ -755,6 +830,7 @@
 {
 "id": "87",
 "name": "Notre Dame Fighting Irish",
+"location": "Notre Dame",
 "short": "Notre Dame",
 "abbr": "ND",
 "color": "062340",
@@ -765,6 +841,7 @@
 {
 "id": "41",
 "name": "UConn Huskies",
+"location": "UConn",
 "short": "UConn",
 "abbr": "CONN",
 "color": "0c2340",
@@ -775,6 +852,7 @@
 {
 "id": "2006",
 "name": "Akron Zips",
+"location": "Akron",
 "short": "Akron",
 "abbr": "AKR",
 "color": "041e42",
@@ -785,6 +863,7 @@
 {
 "id": "2050",
 "name": "Ball State Cardinals",
+"location": "Ball State",
 "short": "Ball State",
 "abbr": "BALL",
 "color": "ba0c2f",
@@ -795,6 +874,7 @@
 {
 "id": "189",
 "name": "Bowling Green Falcons",
+"location": "Bowling Green",
 "short": "Bowling Green",
 "abbr": "BGSU",
 "color": "fd5000",
@@ -805,6 +885,7 @@
 {
 "id": "2084",
 "name": "Buffalo Bulls",
+"location": "Buffalo",
 "short": "Buffalo",
 "abbr": "BUFF",
 "color": "005bbb",
@@ -815,6 +896,7 @@
 {
 "id": "2117",
 "name": "Central Michigan Chippewas",
+"location": "Central Michigan",
 "short": "C Michigan",
 "abbr": "CMU",
 "color": "4c0027",
@@ -825,6 +907,7 @@
 {
 "id": "2199",
 "name": "Eastern Michigan Eagles",
+"location": "Eastern Michigan",
 "short": "E Michigan",
 "abbr": "EMU",
 "color": "006938",
@@ -835,6 +918,7 @@
 {
 "id": "2309",
 "name": "Kent State Golden Flashes",
+"location": "Kent State",
 "short": "Kent State",
 "abbr": "KENT",
 "color": "002664",
@@ -845,6 +929,7 @@
 {
 "id": "113",
 "name": "Massachusetts Minutemen",
+"location": "Massachusetts",
 "short": "UMass",
 "abbr": "MASS",
 "color": "881c1c",
@@ -855,6 +940,7 @@
 {
 "id": "193",
 "name": "Miami (OH) RedHawks",
+"location": "Miami (OH)",
 "short": "Miami OH",
 "abbr": "M-OH",
 "color": "c41230",
@@ -865,6 +951,7 @@
 {
 "id": "195",
 "name": "Ohio Bobcats",
+"location": "Ohio",
 "short": "Ohio",
 "abbr": "OHIO",
 "color": "154734",
@@ -875,6 +962,7 @@
 {
 "id": "16",
 "name": "Sacramento State Hornets",
+"location": "Sacramento State",
 "short": "Sacramento St",
 "abbr": "SAC",
 "color": "00573C",
@@ -885,6 +973,7 @@
 {
 "id": "2649",
 "name": "Toledo Rockets",
+"location": "Toledo",
 "short": "Toledo",
 "abbr": "TOL",
 "color": "0b2240",
@@ -895,6 +984,7 @@
 {
 "id": "2711",
 "name": "Western Michigan Broncos",
+"location": "Western Michigan",
 "short": "W Michigan",
 "abbr": "WMU",
 "color": "532e1f",
@@ -905,6 +995,7 @@
 {
 "id": "2005",
 "name": "Air Force Falcons",
+"location": "Air Force",
 "short": "Air Force",
 "abbr": "AFA",
 "color": "003594",
@@ -915,6 +1006,7 @@
 {
 "id": "62",
 "name": "Hawai'i Rainbow Warriors",
+"location": "Hawai'i",
 "short": "Hawai'i",
 "abbr": "HAW",
 "color": "005737",
@@ -925,6 +1017,7 @@
 {
 "id": "2440",
 "name": "Nevada Wolf Pack",
+"location": "Nevada",
 "short": "Nevada",
 "abbr": "NEV",
 "color": "041e42",
@@ -935,6 +1028,7 @@
 {
 "id": "167",
 "name": "New Mexico Lobos",
+"location": "New Mexico",
 "short": "New Mexico",
 "abbr": "UNM",
 "color": "ba0c2f",
@@ -945,6 +1039,7 @@
 {
 "id": "2449",
 "name": "North Dakota State Bison",
+"location": "North Dakota State",
 "short": "N Dakota St",
 "abbr": "NDSU",
 "color": "01402A",
@@ -955,6 +1050,7 @@
 {
 "id": "2459",
 "name": "Northern Illinois Huskies",
+"location": "Northern Illinois",
 "short": "N Illinois",
 "abbr": "NIU",
 "color": "c8102e",
@@ -965,6 +1061,7 @@
 {
 "id": "23",
 "name": "San Jos\u00e9 State Spartans",
+"location": "San Jos\u00e9 State",
 "short": "San Jos\u00e9 St",
 "abbr": "SJSU",
 "color": "0038a8",
@@ -975,6 +1072,7 @@
 {
 "id": "2439",
 "name": "UNLV Rebels",
+"location": "UNLV",
 "short": "UNLV",
 "abbr": "UNLV",
 "color": "cf0a2c",
@@ -985,6 +1083,7 @@
 {
 "id": "2638",
 "name": "UTEP Miners",
+"location": "UTEP",
 "short": "UTEP",
 "abbr": "UTEP",
 "color": "ff8200",
@@ -995,6 +1094,7 @@
 {
 "id": "2751",
 "name": "Wyoming Cowboys",
+"location": "Wyoming",
 "short": "Wyoming",
 "abbr": "WYO",
 "color": "492f24",
@@ -1005,6 +1105,7 @@
 {
 "id": "68",
 "name": "Boise State Broncos",
+"location": "Boise State",
 "short": "Boise St",
 "abbr": "BOIS",
 "color": "0033a0",
@@ -1015,6 +1116,7 @@
 {
 "id": "36",
 "name": "Colorado State Rams",
+"location": "Colorado State",
 "short": "Colorado St",
 "abbr": "CSU",
 "color": "004c23",
@@ -1025,6 +1127,7 @@
 {
 "id": "278",
 "name": "Fresno State Bulldogs",
+"location": "Fresno State",
 "short": "Fresno St",
 "abbr": "FRES",
 "color": "b1102b",
@@ -1035,6 +1138,7 @@
 {
 "id": "204",
 "name": "Oregon State Beavers",
+"location": "Oregon State",
 "short": "Oregon St",
 "abbr": "ORST",
 "color": "dc4405",
@@ -1045,6 +1149,7 @@
 {
 "id": "21",
 "name": "San Diego State Aztecs",
+"location": "San Diego State",
 "short": "San Diego St",
 "abbr": "SDSU",
 "color": "a6192e",
@@ -1055,6 +1160,7 @@
 {
 "id": "326",
 "name": "Texas State Bobcats",
+"location": "Texas State",
 "short": "Texas St",
 "abbr": "TXST",
 "color": "501214",
@@ -1065,6 +1171,7 @@
 {
 "id": "328",
 "name": "Utah State Aggies",
+"location": "Utah State",
 "short": "Utah State",
 "abbr": "USU",
 "color": "0f2439",
@@ -1075,6 +1182,7 @@
 {
 "id": "265",
 "name": "Washington State Cougars",
+"location": "Washington State",
 "short": "Washington St",
 "abbr": "WSU",
 "color": "a60f2d",
@@ -1085,6 +1193,7 @@
 {
 "id": "333",
 "name": "Alabama Crimson Tide",
+"location": "Alabama",
 "short": "Alabama",
 "abbr": "ALA",
 "color": "9e1b32",
@@ -1095,6 +1204,7 @@
 {
 "id": "8",
 "name": "Arkansas Razorbacks",
+"location": "Arkansas",
 "short": "Arkansas",
 "abbr": "ARK",
 "color": "a32136",
@@ -1105,6 +1215,7 @@
 {
 "id": "2",
 "name": "Auburn Tigers",
+"location": "Auburn",
 "short": "Auburn",
 "abbr": "AUB",
 "color": "002b5c",
@@ -1115,6 +1226,7 @@
 {
 "id": "57",
 "name": "Florida Gators",
+"location": "Florida",
 "short": "Florida",
 "abbr": "FLA",
 "color": "0021a5",
@@ -1125,6 +1237,7 @@
 {
 "id": "61",
 "name": "Georgia Bulldogs",
+"location": "Georgia",
 "short": "Georgia",
 "abbr": "UGA",
 "color": "ba0c2f",
@@ -1135,6 +1248,7 @@
 {
 "id": "96",
 "name": "Kentucky Wildcats",
+"location": "Kentucky",
 "short": "Kentucky",
 "abbr": "UK",
 "color": "0033a0",
@@ -1145,6 +1259,7 @@
 {
 "id": "99",
 "name": "LSU Tigers",
+"location": "LSU",
 "short": "LSU",
 "abbr": "LSU",
 "color": "461d76",
@@ -1155,6 +1270,7 @@
 {
 "id": "344",
 "name": "Mississippi State Bulldogs",
+"location": "Mississippi State",
 "short": "Mississippi St",
 "abbr": "MSST",
 "color": "5d1725",
@@ -1165,6 +1281,7 @@
 {
 "id": "142",
 "name": "Missouri Tigers",
+"location": "Missouri",
 "short": "Missouri",
 "abbr": "MIZ",
 "color": "f1b82d",
@@ -1175,6 +1292,7 @@
 {
 "id": "201",
 "name": "Oklahoma Sooners",
+"location": "Oklahoma",
 "short": "Oklahoma",
 "abbr": "OU",
 "color": "990000",
@@ -1185,6 +1303,7 @@
 {
 "id": "145",
 "name": "Ole Miss Rebels",
+"location": "Ole Miss",
 "short": "Ole Miss",
 "abbr": "MISS",
 "color": "13294b",
@@ -1195,6 +1314,7 @@
 {
 "id": "2579",
 "name": "South Carolina Gamecocks",
+"location": "South Carolina",
 "short": "South Carolina",
 "abbr": "SC",
 "color": "73000a",
@@ -1205,6 +1325,7 @@
 {
 "id": "2633",
 "name": "Tennessee Volunteers",
+"location": "Tennessee",
 "short": "Tennessee",
 "abbr": "TENN",
 "color": "ff8200",
@@ -1215,6 +1336,7 @@
 {
 "id": "245",
 "name": "Texas A&M Aggies",
+"location": "Texas A&M",
 "short": "Texas A&M",
 "abbr": "TA&M",
 "color": "500000",
@@ -1225,6 +1347,7 @@
 {
 "id": "251",
 "name": "Texas Longhorns",
+"location": "Texas",
 "short": "Texas",
 "abbr": "TEX",
 "color": "af5c37",
@@ -1235,6 +1358,7 @@
 {
 "id": "238",
 "name": "Vanderbilt Commodores",
+"location": "Vanderbilt",
 "short": "Vanderbilt",
 "abbr": "VAN",
 "color": "000000",
@@ -1245,6 +1369,7 @@
 {
 "id": "2026",
 "name": "App State Mountaineers",
+"location": "App State",
 "short": "App State",
 "abbr": "APP",
 "color": "000000",
@@ -1255,6 +1380,7 @@
 {
 "id": "2032",
 "name": "Arkansas State Red Wolves",
+"location": "Arkansas State",
 "short": "Arkansas St",
 "abbr": "ARST",
 "color": "cc092f",
@@ -1265,6 +1391,7 @@
 {
 "id": "324",
 "name": "Coastal Carolina Chanticleers",
+"location": "Coastal Carolina",
 "short": "Coastal",
 "abbr": "CCU",
 "color": "006f71",
@@ -1275,6 +1402,7 @@
 {
 "id": "290",
 "name": "Georgia Southern Eagles",
+"location": "Georgia Southern",
 "short": "GA Southern",
 "abbr": "GASO",
 "color": "041e42",
@@ -1285,6 +1413,7 @@
 {
 "id": "2247",
 "name": "Georgia State Panthers",
+"location": "Georgia State",
 "short": "Georgia St",
 "abbr": "GAST",
 "color": "0039a6",
@@ -1295,6 +1424,7 @@
 {
 "id": "256",
 "name": "James Madison Dukes",
+"location": "James Madison",
 "short": "James Madison",
 "abbr": "JMU",
 "color": "450084",
@@ -1305,6 +1435,7 @@
 {
 "id": "309",
 "name": "Louisiana Ragin' Cajuns",
+"location": "Louisiana",
 "short": "Louisiana",
 "abbr": "UL",
 "color": "ce181e",
@@ -1315,6 +1446,7 @@
 {
 "id": "2348",
 "name": "Louisiana Tech Bulldogs",
+"location": "Louisiana Tech",
 "short": "Louisiana Tech",
 "abbr": "LT",
 "color": "003087",
@@ -1325,6 +1457,7 @@
 {
 "id": "276",
 "name": "Marshall Thundering Herd",
+"location": "Marshall",
 "short": "Marshall",
 "abbr": "MRSH",
 "color": "00b140",
@@ -1335,6 +1468,7 @@
 {
 "id": "295",
 "name": "Old Dominion Monarchs",
+"location": "Old Dominion",
 "short": "Old Dominion",
 "abbr": "ODU",
 "color": "003768",
@@ -1345,6 +1479,7 @@
 {
 "id": "6",
 "name": "South Alabama Jaguars",
+"location": "South Alabama",
 "short": "South Alabama",
 "abbr": "USA",
 "color": "00205b",
@@ -1355,6 +1490,7 @@
 {
 "id": "2572",
 "name": "Southern Miss Golden Eagles",
+"location": "Southern Miss",
 "short": "Southern Miss",
 "abbr": "USM",
 "color": "ffc72c",
@@ -1365,6 +1501,7 @@
 {
 "id": "2653",
 "name": "Troy Trojans",
+"location": "Troy",
 "short": "Troy",
 "abbr": "TROY",
 "color": "862633",
@@ -1375,6 +1512,7 @@
 {
 "id": "2433",
 "name": "UL Monroe Warhawks",
+"location": "UL Monroe",
 "short": "UL Monroe",
 "abbr": "ULM",
 "color": "840029",

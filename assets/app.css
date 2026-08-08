@@ -591,6 +591,25 @@ button:focus-visible {
 	font-size: 0.8rem;
 }
 
+.series-link {
+	align-self: flex-start;
+	margin-top: 0.15rem;
+	color: var(--ink-2);
+	font-size: 0.8rem;
+	text-decoration-color: var(--line);
+	text-underline-offset: 2px;
+}
+
+.series-link::after {
+	content: " ↗";
+	color: var(--ink-3);
+}
+
+.series-link:hover {
+	color: var(--accent);
+	text-decoration-color: currentColor;
+}
+
 /* the sound slot */
 
 .sound {

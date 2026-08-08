@@ -11,6 +11,7 @@ import { cardFor, paintWeather, patchCard } from './ui/card.js';
 import { loadIndex, matchupSlug, loadIssue } from './sound.js';
 import { openIssue } from './ui/issue.js';
 import { openPicker, getTeam, hasBeenAsked, markAsked } from './ui/teampicker.js';
+import { loadSeries } from './series.js';
 
 const SEASON = 2026;
 
@@ -252,7 +253,12 @@ async function load() {
 	updateWeekLabel();
 
 	try {
-		const [games, ranks] = await Promise.all([fetchWeek(state.year, state.week), fetchRankings(), loadIndex()]);
+		const [games, ranks] = await Promise.all([
+			fetchWeek(state.year, state.week),
+			fetchRankings(),
+			loadIndex(),
+			loadSeries(),
+		]);
 
 		// The rankings endpoint serves only the CURRENT poll, so it may only be
 		// used on a week that has no poll of its own. A played week carries the
