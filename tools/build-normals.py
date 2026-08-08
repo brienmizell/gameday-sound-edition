@@ -35,6 +35,10 @@ SEASON = 2026
 YEARS = range(2015, 2025)          # ten complete years
 WINDOW = 3                         # +/- days folded into each normal
 WET_INCHES = 0.01                  # what counts as "it rained"
+PACE = 8                           # seconds between venues; a decade-wide archive
+                                   # pull is a heavy request and Open-Meteo weights
+                                   # it accordingly. Fighting the throttle cost 35
+                                   # retries and 82 dropped venues; pacing does not.
 DATA = pathlib.Path('data')
 ESPN = ('https://site.api.espn.com/apis/site/v2/sports/football/college-football'
         '/scoreboard?dates={y}&seasontype=2&week={w}&groups=80&limit=300')
@@ -55,6 +59,10 @@ STATES = {'Alabama': 'AL', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA'
           'Wyoming': 'WY', 'District of Columbia': 'DC'}
 
 
+class RateLimitWindow(Exception):
+    """The hour's (or day's) budget is gone. Waiting minutes cannot fix it."""
+
+
 def get(url, timeout=90, tries=5):
     """Open-Meteo throttles a burst of decade-wide archive pulls. Back off and
     retry rather than dropping the venue — the first run lost 93 of 144 to 429s."""
@@ -64,9 +72,22 @@ def get(url, timeout=90, tries=5):
             with urllib.request.urlopen(url, timeout=timeout) as r:
                 return json.load(r)
         except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < tries:
-                wait = 10 * attempt
-                print(f'      throttled — waiting {wait}s ({attempt}/{tries - 1})', flush=True)
+            if e.code != 429:
+                raise
+            # Two different 429s, and conflating them wastes the run. Open-Meteo
+            # says "Hourly API request limit exceeded" when the HOUR is spent —
+            # no amount of backing off inside that hour helps. Only a short
+            # burst-throttle is worth waiting out.
+            body = ''
+            try:
+                body = e.read(300).decode(errors='replace')
+            except Exception:                                   # noqa: BLE001
+                pass
+            if 'hour' in body.lower() or 'daily' in body.lower():
+                raise RateLimitWindow(body.strip() or 'rate limit window exceeded') from e
+            if attempt < tries:
+                wait = 5 * attempt
+                print(f'      burst-throttled — waiting {wait}s ({attempt}/{tries - 1})', flush=True)
                 time.sleep(wait)
                 continue
             raise
@@ -188,6 +209,11 @@ def main():
             continue
         try:
             n = normals_for(*place)
+        except RateLimitWindow as exc:
+            print(f'\n  Open-Meteo: {exc}', flush=True)
+            print(f'  Stopping with {len(out)} venues saved. Re-run in an hour — it resumes.',
+                  flush=True)
+            break
         except Exception as exc:                                   # noqa: BLE001
             failed.append(f"{v['name']} — archive failed: {exc}")
             continue
@@ -198,18 +224,10 @@ def main():
         print(f"  [{i:>3}/{len(todo)}] {v['name']}, {v['city']} {v['state']} — {len(n)} dates", flush=True)
         # Write after every venue, so a throttle never costs completed work.
         _save(path, out)
-        time.sleep(1.2)
+        time.sleep(PACE)
 
-    _save(path, out)(json.dumps({
-        '_note': f'Climate normals per venue, {YEARS[0]}-{YEARS[-1]}, +/-{WINDOW} day window. '
-                 'Keyed by ESPN venue id then MM-DD. "rain" is the percent of observed days with '
-                 f'at least {WET_INCHES}in — a frequency, NOT a forecast. Built by tools/build-normals.py.',
-        'source': 'Open-Meteo archive API (keyless)',
-        'years': [YEARS[0], YEARS[-1]],
-        'window': WINDOW,
-        'venues': out,
-    }, indent=0))
-    print(f'\n{len(out)} venues -> {path}')
+    _save(path, out)
+    print(f'\n{len(out)} of {len(vs)} venues -> {path}')
     for f in failed:
         print(f'  skipped: {f}')
 

@@ -155,6 +155,13 @@
 					"est": 1.5,
 					"status": "done",
 					"note": "Brien's ask. Open-Meteo's archive API is keyless and CORS-open, and ONE call returns a decade (3,653 days, ~104 KB) per venue. tools/build-normals.py reduces that to a per-date normal \u2014 mean high, mean low, and the share of days with measurable rain \u2014 over a +/-3 day window so one freak afternoon cannot define a date. Cards past the 16-day horizon now read 'Usually 76/57, rain on 40% of days' instead of only 'forecast opens in N days'. Labelled 10-YR NORMAL and styled quieter, because it is history, not a prediction."
+				},
+				{
+					"id": "S20",
+					"title": "Treat a rate-limit WINDOW as different from a throttle",
+					"est": 0.5,
+					"status": "done",
+					"note": "Open-Meteo answers a spent hour with 'Hourly API request limit exceeded' \u2014 so backing off 20/40/60/80s stays inside the same hour and cannot help. Exactly the mistake already fixed for CFBD's monthly quota, repeated because I did not carry the lesson across. The normals builder now stops on an hour/day window and says to re-run later; only a short burst-throttle is waited out. 62 of 144 venues built; it resumes."
 				}
 			]
 		},
@@ -206,8 +213,8 @@
 					"id": "A1",
 					"title": "Deploy to GitHub Pages",
 					"est": 0.5,
-					"status": "next",
-					"note": "Static repo, public \u2014 Pages is free and needs no build step.",
+					"status": "done",
+					"note": "Live at https://brienmizell.github.io/gameday-sound-edition/ \u2014 every route verified 200 and rendering. Static, keyless, no build step, so Pages needs no workflow.",
 					"required": true
 				},
 				{
@@ -238,8 +245,8 @@
 					"id": "A5",
 					"title": "Register in bookmarks.json + rerun dashboard.py",
 					"est": 0.25,
-					"status": "next",
-					"note": "The standing rule: every deployed URL gets filed.",
+					"status": "done",
+					"note": "GameDay group added to ~/jobsearch/bookmarks.json (site, roadmap, compare, repo) and dashboard.py rerun; hq.html and brien-services-bookmarks.html both picked it up.",
 					"required": true
 				},
 				{
