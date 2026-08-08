@@ -45,21 +45,34 @@ SEASON = 2026
 PAUSE = 0.35  # be a good citizen on a free tier
 
 
+PLACEHOLDER = 'PASTE_YOUR_KEY_HERE'
+
+
 def load_key():
-    key = os.environ.get('CFBD_API_KEY')
-    if key:
-        return key.strip()
-    env = pathlib.Path('.env')
-    if env.exists():
-        for line in env.read_text().splitlines():
-            line = line.strip()
-            if line.startswith('CFBD_API_KEY='):
-                return line.split('=', 1)[1].strip().strip('"\'')
-    sys.exit(
-        'No CFBD key found.\n'
-        "  export CFBD_API_KEY='...'   or   echo \"CFBD_API_KEY=...\" > .env\n"
-        '  Free key: https://collegefootballdata.com/key'
-    )
+    key = (os.environ.get('CFBD_API_KEY') or '').strip()
+    if not key:
+        env = pathlib.Path('.env')
+        if env.exists():
+            for line in env.read_text().splitlines():
+                line = line.strip()
+                if line.startswith('CFBD_API_KEY='):
+                    key = line.split('=', 1)[1].strip().strip('"\'')
+                    break
+
+    if key == PLACEHOLDER:
+        sys.exit(
+            '.env still has the placeholder in it.\n'
+            '  Open ~/GameDay/.env and replace PASTE_YOUR_KEY_HERE with your key,\n'
+            '  or run:  python3 tools/set-key.py'
+        )
+    if not key:
+        sys.exit(
+            'No CFBD key found.\n'
+            '  python3 tools/set-key.py          (prompts, nothing echoes)\n'
+            "  or export CFBD_API_KEY='...'\n"
+            '  Free key: https://collegefootballdata.com/key'
+        )
+    return key
 
 
 def espn_week(year, week):
