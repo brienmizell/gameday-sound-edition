@@ -141,6 +141,35 @@ def resolve(index, espn_name):
     return index.get(stripped)
 
 
+def check_quota(key, planned):
+    """Ask CFBD how much budget is left BEFORE spending any of it.
+
+    /info keeps returning 200 while every data endpoint 429s, so it is a free
+    and reliable meter. Reading X-CallLimit-Remaining off a response only tells
+    you after you have already spent the call — which is how a run kept going
+    into a wall it could have seen.
+    """
+    req = urllib.request.Request(f'{CFBD}/info', headers={
+        'Authorization': f'Bearer {key}', 'Accept': 'application/json'})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            d = json.load(r)
+    except Exception:
+        return None                      # meter unavailable; the budget cap still applies
+
+    left, limit = d.get('remainingCalls'), d.get('monthlyLimit')
+    print(f"CFBD {d.get('tierName')} tier — {left}/{limit} calls left, resets {d.get('resetAt')}")
+    if d.get('sharedPool'):
+        print(f"  (pool is shared across {', '.join(d.get('products') or [])})")
+    if left == 0:
+        sys.exit('  Quota is spent. Nothing to do but wait for the reset, or upgrade:\n'
+                 '  https://collegefootballdata.com/api-tiers  (Tier 1 is $1/month for 5,000)')
+    if isinstance(left, int) and left < planned:
+        print(f'  WARNING: this run plans up to {planned} calls but only {left} remain.\n'
+              f'  It will stop cleanly when the budget runs out; finished pairs are saved.')
+    return left
+
+
 class QuotaExhausted(Exception):
     """The month's call budget is gone. Not retryable — stop, do not spin."""
 
@@ -284,6 +313,7 @@ def main():
         ap.error('give --week, --weeks or --all')
 
     key = load_key()
+    check_quota(key, args.budget)
     index = cfbd_teams(key)
     print(f'CFBD knows {len(index)} team names\n', flush=True)
 

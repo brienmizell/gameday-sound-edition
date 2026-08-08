@@ -141,6 +141,13 @@
 					"est": 0.25,
 					"status": "done",
 					"note": "ESPN carries exactly one book (DraftKings) and the card was printing its number bare, which reads as a consensus. It is now tagged with the book's name, and would read 'avg of N' if more than one ever appears."
+				},
+				{
+					"id": "S18",
+					"title": "Preflight the CFBD quota before spending it",
+					"est": 0.25,
+					"status": "done",
+					"note": "/info returns 200 even at quota 0, so it is a free meter. The builder now reads remainingCalls BEFORE it starts and refuses rather than walking into a wall. Reading X-CallLimit-Remaining off a response only tells you after the call is already spent."
 				}
 			]
 		},
@@ -304,6 +311,14 @@
 			"blurb": "Real features, but the season does not wait on them and none of them breaks day one.",
 			"tasks": [
 				{
+					"id": "B10",
+					"title": "Rewrite build-series.py onto bulk /games",
+					"est": 2.5,
+					"status": "next",
+					"required": false,
+					"note": "THE REAL FIX. /games?year=Y returns a whole season in one call and carries every field /teams/matchup does, plus more. Grouping all games by unordered team pair reconstructs every head-to-head at once. ~158 calls covers 1869-2026 ALL-TIME, one time, versus ~902 per season recurring \u2014 and my per-matchup loop spent 1,101 calls to store 157 pairs, about 86% waste. Do this before next season regardless of tier."
+				},
+				{
 					"id": "B1",
 					"title": "Rivalry and trophy-game labels",
 					"est": 1.5,
@@ -358,10 +373,10 @@
 				{
 					"id": "B9",
 					"title": "Average + closing betting lines (CFBD /lines)",
-					"est": 2,
+					"est": 1,
 					"status": "blocked",
 					"owner": "brien",
-					"note": "Brien asked for average lines, and for closing lines on completed games. Neither is reachable today. ESPN gives ONE book for upcoming games and DROPS odds entirely once a game is final \u2014 verified: 0 of 62 games in 2018 wk10 and 0 of 51 in 2025 wk6 carry odds. CFBD /lines has multiple books plus history, but the monthly quota is spent. Per Brien's instruction ('if not, they can just be left off') this is deferred, not bodged. Closing lines never move, so they are ideal build-time data whenever the quota returns."
+					"note": "Now cheap and unblocked-by-design: /lines?year=2026 returns the WHOLE season's lines in ONE call, with every provider (so a true average) plus spreadOpen AND closing spread (so historical closing lines, which is exactly what Brien asked for). Betting lines are included on the FREE tier. Waiting only on quota reset 2026-09-01, or a $1 Tier 1 upgrade."
 				}
 			]
 		}
