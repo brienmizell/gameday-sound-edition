@@ -18,16 +18,21 @@
 // SOUND_EDITION.md; that is what the write-up's series paragraph needs.
 
 let slugs = null;
+let records = null;
 
 export async function loadSeries() {
-	if (slugs) return slugs;
-	try {
-		const d = await fetch('data/winsipedia.json').then((r) => (r.ok ? r.json() : null));
-		slugs = new Map(Object.entries(d?.teams ?? {}));
-	} catch {
-		slugs = new Map(); // no table, no links — the card is fine without them
-	}
-	return slugs;
+	if (slugs && records) return { slugs, records };
+
+	const [w, s] = await Promise.all([
+		fetch('data/winsipedia.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
+		// Optional. Absent until tools/build-series.py has been run, and the
+		// card simply shows no record until then.
+		fetch('data/series.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
+	]);
+
+	slugs = new Map(Object.entries(w?.teams ?? {}));
+	records = new Map(Object.entries(s?.series ?? {}));
+	return { slugs, records };
 }
 
 /** Away vs home, matching how the matchup reads. Null unless BOTH sides map. */
@@ -37,4 +42,26 @@ export function seriesUrl(game) {
 	const home = slugs.get(String(game.home.id));
 	if (!away || !home || away === home) return null;
 	return `https://www.winsipedia.com/${away}/vs/${home}`;
+}
+
+/**
+ * The all-time record for this matchup, or null.
+ *
+ * Built at BUILD time from CollegeFootballData — see tools/build-series.py.
+ * Two teams that have never met are a real answer, not a missing one, so the
+ * caller gets `meetings: 0` and says "First meeting" rather than nothing.
+ */
+export function seriesRecord(game) {
+	if (!records) return null;
+	return records.get(`${game.away.id}-${game.home.id}`) ?? null;
+}
+
+/** One line for the card: "Georgia leads 44-25-4 · last met 2024". */
+export function seriesLine(game) {
+	const r = seriesRecord(game);
+	if (!r) return null;
+	if (!r.meetings) return 'First meeting';
+	const parts = [r.summary];
+	if (r.last?.season) parts.push(`last met ${r.last.season}`);
+	return parts.join(' · ');
 }

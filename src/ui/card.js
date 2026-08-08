@@ -7,7 +7,7 @@
 
 import { weatherLabel, kickoff, countdown, temp, teamColor, logoUrl } from '../util/fmt.js';
 import { matchupSlug } from '../sound.js';
-import { seriesUrl } from '../series.js';
+import { seriesUrl, seriesLine } from '../series.js';
 
 export function cardFor(game, { issue = null, favorites = new Set(), myTeamId = null } = {}) {
 	const el = document.createElement('article');
@@ -210,16 +210,29 @@ function meta(game) {
 		m.append(n);
 	}
 
-	const series = seriesUrl(game);
-	if (series) {
-		const a = document.createElement('a');
-		a.className = 'series-link';
-		a.href = series;
-		a.target = '_blank';
-		a.rel = 'noopener noreferrer';
-		a.textContent = 'All-time series';
-		a.title = `${game.away.name} vs ${game.home.name} on Winsipedia`;
-		m.append(a);
+	const url = seriesUrl(game);
+	const line = seriesLine(game);
+	if (url || line) {
+		const row = document.createElement('div');
+		row.className = 'series';
+
+		if (line) {
+			const s = document.createElement('span');
+			s.className = 'series-record';
+			s.textContent = line;
+			row.append(s);
+		}
+		if (url) {
+			const a = document.createElement('a');
+			a.className = 'series-link';
+			a.href = url;
+			a.target = '_blank';
+			a.rel = 'noopener noreferrer';
+			a.textContent = line ? 'History' : 'All-time series';
+			a.title = `${game.away.name} vs ${game.home.name} on Winsipedia`;
+			row.append(a);
+		}
+		m.append(row);
 	}
 
 	return m;

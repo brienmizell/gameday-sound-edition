@@ -655,9 +655,21 @@ button:focus-visible {
 	font-size: 0.8rem;
 }
 
-.series-link {
-	align-self: flex-start;
+.series {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.25rem 0.55rem;
 	margin-top: 0.15rem;
+}
+
+.series-record {
+	color: var(--ink-2);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.series-link {
 	color: var(--ink-2);
 	font-size: 0.8rem;
 	text-decoration-color: var(--line);

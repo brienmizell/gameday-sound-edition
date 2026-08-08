@@ -276,11 +276,11 @@
 				},
 				{
 					"id": "M7",
-					"title": "Series numbers from CFBD /teams/matchup at build time",
+					"title": "Series numbers from CFBD (needs the key placed)",
 					"est": 2,
 					"status": "blocked",
 					"owner": "brien",
-					"note": "Needs a free CollegeFootballData key (register at collegefootballdata.com). Returns team1Wins/team2Wins/ties/startYear/endYear plus every meeting \u2014 that is the raw material for the write-up's series paragraph and for a 'Georgia leads 44-25-4' line on the card. Fetched at BUILD time into data/series.json so the deployed site stays keyless; the key never enters the repo."
+					"note": "Brien has the key. Everything else is built and pushed: tools/build-series.py, the loader, the card line, and .gitignore. One step left, and it is his because the key must never reach the repo or this chat: create ~/GameDay/.env containing CFBD_API_KEY=<key>. Then `python3 tools/build-series.py --week 1` writes data/series.json and the card starts reading 'Georgia leads 44-25-4 \u00b7 last met 2024'."
 				}
 			]
 		},

@@ -1,0 +1,7 @@
+# Secrets. The deployed site is keyless by design — a key is only ever used at
+# BUILD time, by tools/, to write static JSON into data/. Nothing here ships.
+.env
+*.key
+
+# macOS
+.DS_Store
