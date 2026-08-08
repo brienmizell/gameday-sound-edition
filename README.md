@@ -147,13 +147,6 @@ See [`SOUND_EDITION.md`](SOUND_EDITION.md) for where that work goes next.
 
 ---
 
-## Credits
-
-Original: Brien Mizell and Evan Procter, DigitalCrafts, October 2018.
-Rebuild: 2026, targeting the August 22 kickoff.
-
----
-
 ## Head-to-head history
 
 Every card carries an **All-time series** link to
@@ -172,3 +165,10 @@ endpoint, which returns `team1Wins`, `team2Wins`, `ties` and every meeting, and
 needs a free key. Because a series record does not change during a week, that
 call belongs at **build time**, written into a static `data/series.json` — so
 the deployed site keeps its no-keys property and the key never enters the repo.
+
+---
+
+## Credits
+
+Original: Brien Mizell and Evan Procter, DigitalCrafts, October 2018.
+Rebuild: 2026, targeting the August 22 kickoff.
