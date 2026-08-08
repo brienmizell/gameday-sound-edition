@@ -88,6 +88,46 @@ def espn_week(year, week):
     return out
 
 
+def cfbd_teams(key):
+    """CFBD's own team list, for resolving names BEFORE asking about a matchup.
+
+    This matters more than it looks. /teams/matchup answers an unknown team the
+    same way it answers two teams that never played: team1 null, 0-0-0, no
+    games. A misspelling and a genuine first meeting are indistinguishable in
+    the response. Checking the names first is what separates a fact from an
+    absence of knowledge.
+    """
+    req = urllib.request.Request(f'{CFBD}/teams', headers={
+        'Authorization': f'Bearer {key}', 'Accept': 'application/json'})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        teams = json.load(r)
+
+    index = {}
+    for t in teams:
+        school = t.get('school')
+        if not school:
+            continue
+        for name in [school, *(t.get('alternateNames') or [])]:
+            index.setdefault(norm_name(name), school)
+    return index
+
+
+def norm_name(s):
+    return ''.join(ch for ch in (s or '').lower() if ch.isalnum())
+
+
+def resolve(index, espn_name):
+    """ESPN's team name -> CFBD's school name, or None if CFBD has no such team."""
+    if not espn_name:
+        return None
+    hit = index.get(norm_name(espn_name))
+    if hit:
+        return hit
+    # ESPN writes "Hawai'i", "Texas A&M", "Miami" where CFBD may differ slightly.
+    stripped = norm_name(espn_name.replace('&', 'and').replace("'", ''))
+    return index.get(stripped)
+
+
 def matchup(key, team1, team2):
     url = f'{CFBD}/teams/matchup?' + urllib.parse.urlencode({'team1': team1, 'team2': team2})
     req = urllib.request.Request(url, headers={
@@ -124,6 +164,16 @@ def summarize(m, away_id, home_id, away_name, home_name):
     games = m.get('games') or []
     last = games[-1] if games else None
 
+    if not games:
+        # Both names resolved against CFBD's roster, so zero games is a fact:
+        # these two have never played.
+        return {
+            'awayId': away_id, 'homeId': home_id, 'resolved': True,
+            'awayWins': 0, 'homeWins': 0, 'ties': 0, 'meetings': 0,
+            'startYear': None, 'endYear': None, 'last': None,
+            'summary': 'First meeting',
+        }
+
     if away_w > home_w:
         leader, lead = away_name, f'{away_w}-{home_w}'
     elif home_w > away_w:
@@ -136,6 +186,7 @@ def summarize(m, away_id, home_id, away_name, home_name):
     return {
         'awayId': away_id,
         'homeId': home_id,
+        'resolved': True,
         'awayWins': away_w,
         'homeWins': home_w,
         'ties': ties,
@@ -172,8 +223,11 @@ def main():
         ap.error('give --week, --weeks or --all')
 
     key = load_key()
+    index = cfbd_teams(key)
+    print(f'CFBD knows {len(index)} team names\n', flush=True)
+
     store = json.loads(OUT.read_text())['series'] if OUT.exists() else {}
-    added = skipped = failed = 0
+    added = skipped = unresolved = 0
 
     for wk in weeks:
         pairs = espn_week(args.season, wk)
@@ -185,13 +239,26 @@ def main():
             if pair_key in store:
                 skipped += 1
                 continue
-            row = summarize(matchup(key, away, home), aid, hid, away, home)
+
+            a_cfbd, h_cfbd = resolve(index, away), resolve(index, home)
+            if not a_cfbd or not h_cfbd:
+                # Say which side we could not place, and record it as unknown
+                # rather than letting it masquerade as "never met".
+                miss = ' + '.join(n for n, r in ((away, a_cfbd), (home, h_cfbd)) if not r)
+                store[pair_key] = {'awayId': aid, 'homeId': hid, 'resolved': False, 'unknown': miss}
+                unresolved += 1
+                print(f'  ? {away} at {home} — CFBD has no team named: {miss}', flush=True)
+                continue
+
+            row = summarize(matchup(key, a_cfbd, h_cfbd), aid, hid, a_cfbd, h_cfbd)
             if row:
                 store[pair_key] = row
                 added += 1
-                print(f'  {row["summary"]}  ({row["meetings"]} meetings)', flush=True)
+                label = 'first meeting' if row['meetings'] == 0 else f'{row["meetings"]} meetings'
+                print(f'  {row["summary"]}  ({label})', flush=True)
             else:
-                failed += 1
+                store[pair_key] = {'awayId': aid, 'homeId': hid, 'resolved': False, 'unknown': 'request failed'}
+                unresolved += 1
             time.sleep(PAUSE)
 
     OUT.parent.mkdir(exist_ok=True)
@@ -202,7 +269,8 @@ def main():
         'season': args.season,
         'series': store,
     }, indent=0))
-    print(f'\n{added} added, {skipped} already had, {failed} failed -> {OUT} ({len(store)} total)')
+    print(f'\n{added} resolved, {unresolved} unresolved, {skipped} already had '
+          f'-> {OUT} ({len(store)} total)')
 
 
 if __name__ == '__main__':

@@ -127,6 +127,13 @@
 					"est": 0.25,
 					"status": "done",
 					"note": "Window resizing did not give a true mobile viewport (page kept rendering at 1153px), so the harness iframes the pages at 375/390/430 instead. It loads them ONE AT A TIME: three iframes pulling ten ES modules at once overwhelms python -m http.server, some module requests never land, and the app then never boots \u2014 which looks exactly like an app bug and is not one."
+				},
+				{
+					"id": "S16",
+					"title": "Catch CFBD answering \"unknown team\" as \"never met\"",
+					"est": 0.75,
+					"status": "done",
+					"note": "/teams/matchup returns team1=null and 0-0-0 for a team it cannot resolve \u2014 byte-identical to its answer for two teams that genuinely never played. Confirmed by querying a made-up school and getting the same response. The first run wrote 30 false 'never met' rows. Fixed by resolving both names against CFBD's own /teams roster BEFORE asking, so zero games is only recorded as 'First meeting' when both schools are known; anything unresolved is stored as resolved:false and renders nothing."
 				}
 			]
 		},
@@ -276,11 +283,11 @@
 				},
 				{
 					"id": "M7",
-					"title": "Series numbers from CFBD (needs the key placed)",
+					"title": "Series numbers from CFBD at build time",
 					"est": 2,
-					"status": "blocked",
+					"status": "done",
 					"owner": "brien",
-					"note": "Brien has the key. Everything else is built and pushed: tools/build-series.py, the loader, the card line, and .gitignore. One step left, and it is his because the key must never reach the repo or this chat: create ~/GameDay/.env containing CFBD_API_KEY=<key>. Then `python3 tools/build-series.py --week 1` writes data/series.json and the card starts reading 'Georgia leads 44-25-4 \u00b7 last met 2024'."
+					"note": "Key placed by Brien in a gitignored .env; data/series.json built and committed; the card now reads 'Alabama leads 45-26-3 - last met 2025'. Verified against known series (Red River: Texas leads 62-51-5). The deployed site stays keyless."
 				}
 			]
 		},
