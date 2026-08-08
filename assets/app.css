@@ -241,6 +241,71 @@ button:focus-visible {
 	opacity: 0.8;
 }
 
+/* live polling status — never colour alone, the text says it too */
+.live-status:empty {
+	display: none;
+}
+
+.live-status {
+	font-size: 0.74rem;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+.live-status.is-live {
+	color: var(--live);
+}
+
+.live-status.is-live::before {
+	content: "●";
+	margin-right: 0.25rem;
+	animation: pulse 1.6s ease-in-out infinite;
+}
+
+.live-status.is-paused {
+	color: var(--ink-3);
+}
+
+.live-status.is-paused::before {
+	content: "❙❙";
+	margin-right: 0.25rem;
+	font-size: 0.6rem;
+}
+
+.count-flash {
+	animation: countflash 0.9s ease;
+}
+
+@keyframes countflash {
+	0%,
+	100% {
+		color: var(--ink-3);
+	}
+	25% {
+		color: var(--live);
+	}
+}
+
+/* a score that just changed */
+.score-bump {
+	animation: bump 0.9s ease;
+}
+
+@keyframes bump {
+	0% {
+		transform: scale(1);
+		color: var(--ink);
+	}
+	30% {
+		transform: scale(1.28);
+		color: var(--live);
+	}
+	100% {
+		transform: scale(1);
+		color: var(--ink);
+	}
+}
+
 .status {
 	max-width: 1400px;
 	margin: 1rem auto 0;

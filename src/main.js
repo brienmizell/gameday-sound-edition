@@ -7,7 +7,7 @@
 import { CONFERENCES, fetchCalendar, fetchWeek, weekFor, inConference } from './api/espn.js';
 import { fetchRankings, applyRankings, byRanking, byKickoff } from './api/rankings.js';
 import { forecastFor } from './api/weather.js';
-import { cardFor, paintWeather } from './ui/card.js';
+import { cardFor, paintWeather, patchCard } from './ui/card.js';
 import { loadIndex, matchupSlug, loadIssue } from './sound.js';
 import { openIssue } from './ui/issue.js';
 import { openPicker, getTeam, hasBeenAsked, markAsked } from './ui/teampicker.js';
@@ -29,6 +29,7 @@ const el = {
 	poll: document.getElementById('poll'),
 	status: document.getElementById('status'),
 	count: document.getElementById('count'),
+	live: document.getElementById('live'),
 };
 
 const state = {
@@ -252,9 +253,19 @@ async function load() {
 
 	try {
 		const [games, ranks] = await Promise.all([fetchWeek(state.year, state.week), fetchRankings(), loadIndex()]);
-		state.games = applyRankings(games, ranks.byTeam);
-		state.poll = ranks.poll;
-		el.poll.textContent = ranks.poll ? `Ranked by ${ranks.poll}${ranks.occurrence ? ` · ${ranks.occurrence}` : ''}` : '';
+
+		// The rankings endpoint only serves the CURRENT poll. Stamping it onto a
+		// past season would print 2026 ranks on a 2018 game — for completed weeks
+		// ESPN already supplies the ranks that were true at the time, so leave
+		// those alone and let anyone it left unranked stay unranked.
+		const current = state.year === SEASON;
+		state.games = current ? applyRankings(games, ranks.byTeam) : games;
+		state.poll = current ? ranks.poll : null;
+		el.poll.textContent = current && ranks.poll
+			? `Ranked by ${ranks.poll}${ranks.occurrence ? ` · ${ranks.occurrence}` : ''}`
+			: state.year === SEASON
+				? ''
+				: `${state.year} season · ranks as they stood`;
 	} catch (err) {
 		return fail(`Could not load week ${state.week}. ${err.message}`);
 	}
@@ -330,6 +341,7 @@ async function render() {
 	el.count.textContent = parts.join(' · ');
 
 	fillWeather(); // cards exist now; weather paints in behind them
+	scheduleLive(); // start (or stop) polling based on what is on screen
 }
 
 function empty() {
@@ -379,6 +391,92 @@ async function fillWeather() {
 		})
 	);
 }
+
+// ---------- live scores ----------
+//
+// Polls ONLY while something is actually being played, and only while the tab
+// is visible. A free unauthenticated endpoint does not deserve a heartbeat
+// from a page nobody is looking at.
+
+const LIVE_MS = 30000;
+let liveTimer = null;
+let lastTick = null;
+
+/** A game is worth polling for if it is in progress, or should have kicked off. */
+function isLiveish(g) {
+	if (g.status.state === 'in') return true;
+	// A 'pre' game whose kickoff has passed is about to flip; ESPN lags a little.
+	return g.status.state === 'pre' && g.timeValid && new Date(g.date) <= Date.now();
+}
+
+function liveCount() {
+	return state.games.filter(isLiveish).length;
+}
+
+function scheduleLive() {
+	clearTimeout(liveTimer);
+	liveTimer = null;
+	if (document.hidden) return paintLive();
+	if (!liveCount()) return paintLive();
+	liveTimer = setTimeout(tickLive, LIVE_MS);
+	paintLive();
+}
+
+async function tickLive() {
+	if (document.hidden || !liveCount()) return scheduleLive();
+
+	try {
+		const fresh = await fetchWeek(state.year, state.week);
+		const ranks = await fetchRankings();
+		applyRankings(fresh, ranks.byTeam);
+
+		const byId = new Map(fresh.map((g) => [g.id, g]));
+		let changed = 0;
+
+		for (const [i, old] of state.games.entries()) {
+			const next = byId.get(old.id);
+			if (!next) continue;
+			const moved =
+				next.home.score !== old.home.score ||
+				next.away.score !== old.away.score ||
+				next.status.state !== old.status.state ||
+				next.status.detail !== old.status.detail;
+			state.games[i] = next;
+			if (!moved) continue;
+			changed++;
+			const card = el.slate.querySelector(`.game[data-game-id="${next.id}"]`);
+			if (card) patchCard(card, next);
+		}
+
+		lastTick = Date.now();
+		if (changed) el.count.classList.add('count-flash');
+		setTimeout(() => el.count.classList.remove('count-flash'), 900);
+	} catch {
+		// A dropped poll is not worth surfacing — the next one is 30s away.
+	}
+	scheduleLive();
+}
+
+function paintLive() {
+	const n = liveCount();
+	if (!n) {
+		el.live.textContent = '';
+		el.live.className = 'live-status';
+		return;
+	}
+	const ago = lastTick ? Math.round((Date.now() - lastTick) / 1000) : null;
+	el.live.className = document.hidden ? 'live-status is-paused' : 'live-status is-live';
+	el.live.textContent = document.hidden
+		? `${n} live · paused`
+		: `${n} live · ${ago == null ? 'updating…' : `updated ${ago}s ago`}`;
+}
+
+document.addEventListener('visibilitychange', () => {
+	if (!document.hidden && liveCount()) tickLive();
+	else scheduleLive();
+});
+
+setInterval(paintLive, 5000); // keep the "updated Ns ago" honest
 
 function fail(msg) {
 	el.slate.removeAttribute('aria-busy');

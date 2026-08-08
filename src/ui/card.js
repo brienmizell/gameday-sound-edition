@@ -32,6 +32,37 @@ export function cardFor(game, { issue = null, favorites = new Set(), myTeamId = 
 	return el;
 }
 
+/**
+ * Update a card in place from fresh data.
+ *
+ * Deliberately NOT a re-render: rebuilding the slate every 30 seconds would
+ * throw away scroll position, close an open issue dialog, and make the page
+ * jump under someone's thumb on a Saturday. Only the parts that actually
+ * change get touched, and a changed score gets a brief flash so it is seen.
+ */
+export function patchCard(el, game) {
+	const isMine = el.classList.contains('is-mine');
+	el.querySelector('.game-head')?.replaceWith(header(game, isMine));
+	el.classList.toggle('is-live', game.status.state === 'in');
+
+	for (const [which, team] of [['away', game.away], ['home', game.home]]) {
+		const row = el.querySelector(`.team-${which}`);
+		if (!row) continue;
+
+		const scoreEl = row.querySelector('.score');
+		if (scoreEl) {
+			const next = game.status.state === 'pre' ? '' : String(team.score ?? 0);
+			if (scoreEl.textContent !== next) {
+				scoreEl.textContent = next;
+				scoreEl.classList.remove('score-bump');
+				void scoreEl.offsetWidth; // force reflow so the animation restarts
+				scoreEl.classList.add('score-bump');
+			}
+		}
+		row.classList.toggle('won', game.status.completed && team.winner);
+	}
+}
+
 function header(game, isMine) {
 	const h = document.createElement('div');
 	h.className = 'game-head';
@@ -43,25 +74,28 @@ function header(game, isMine) {
 		h.append(m);
 	}
 
-	const k = kickoff(game.date, game.timeValid);
-	const when = document.createElement('span');
-	when.className = 'when';
-	if (k.tba) when.classList.add('when-tba');
-	when.textContent = game.status.state === 'post' ? 'Final' : `${k.day} · ${k.time}`;
-	h.append(when);
-
-	const cd = countdown(game.date, game.status.state);
-	if (cd && game.status.state === 'pre') {
-		const c = document.createElement('span');
-		c.className = 'countdown';
-		c.textContent = cd;
-		h.append(c);
-	}
+	// While a game is being played the clock is the only time that matters —
+	// showing the kickoff time next to "Q3 4:12" is noise.
 	if (game.status.state === 'in') {
 		const live = document.createElement('span');
 		live.className = 'live-dot';
 		live.textContent = game.status.detail || 'Live';
 		h.append(live);
+	} else {
+		const k = kickoff(game.date, game.timeValid);
+		const when = document.createElement('span');
+		when.className = 'when';
+		if (k.tba) when.classList.add('when-tba');
+		when.textContent = game.status.state === 'post' ? 'Final' : `${k.day} · ${k.time}`;
+		h.append(when);
+
+		const cd = countdown(game.date, game.status.state);
+		if (cd && game.status.state === 'pre') {
+			const c = document.createElement('span');
+			c.className = 'countdown';
+			c.textContent = cd;
+			h.append(c);
+		}
 	}
 
 	const tags = document.createElement('span');

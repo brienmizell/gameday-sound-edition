@@ -106,6 +106,13 @@
 					"title": "Redact the three 2018 keys at HEAD",
 					"est": 0.5,
 					"status": "done"
+				},
+				{
+					"id": "S13",
+					"title": "Fix cross-season ranks leaking into past weeks",
+					"est": 0.25,
+					"status": "done",
+					"note": "Viewing 2018 was stamping the 2026 preseason poll onto teams ESPN left unranked. Poll ranks now apply only to the current season."
 				}
 			]
 		},
@@ -144,7 +151,7 @@
 					"status": "blocked",
 					"owner": "brien",
 					"required": true,
-					"note": "Google's refusal reads 'You must enable Billing on this project', not 'API key not valid'. That is a project-level block, so it would lift if billing were ever enabled on that old project. Check Credentials and make sure the key row itself is gone."
+					"note": "Brien's Credentials screenshot shows 'No API keys to display' \u2014 but that was the Home Assistant project, and the 2018 key predates it. The key still resolves: Google refuses on BILLING, not 'API key not valid', so the credential likely still exists in an older project. Use the console project picker (ALL tab) to find the 2018 project and delete the key row. Practical risk is low \u2014 no billing means Maps refuses everything."
 				}
 			]
 		},
@@ -165,8 +172,8 @@
 					"id": "A2",
 					"title": "Live score refresh while games are in progress",
 					"est": 2,
-					"status": "next",
-					"note": "Poll every 30s only when a game on screen has state=in. Nothing on the page updates itself right now, which is the one thing a Saturday actually needs.",
+					"status": "done",
+					"note": "Polls every 30s ONLY while a game on screen is in progress, and only while the tab is visible. Patches cards in place rather than re-rendering, so scroll position and any open issue dialog survive; a changed score flashes.",
 					"required": true
 				},
 				{

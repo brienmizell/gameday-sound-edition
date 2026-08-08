@@ -73,7 +73,8 @@ ESPN's JSON — so replacing it with [CollegeFootballData](https://collegefootba
 
 ```
 index.html            the app
-compare.html          2018 vs 2026, side by side (showcase, not linked in-app)
+compare.html          2018 vs 2026, side by side (showcase)
+roadmap.html          countdown to kickoff + the backlog, rendered from data/roadmap.json
 assets/app.css        one stylesheet
 src/
   main.js             state, URL sync, filters, event wiring
@@ -93,6 +94,11 @@ legacy/               the 2018 app, unmodified, plus a fixture that revives it
 
 ## What it does
 
+- **Live scores.** While a game on screen is in progress the slate refreshes
+  every 30 seconds and patches cards in place — scroll position holds, an open
+  issue stays open, and a changed score flashes. It polls **only** when
+  something is actually being played and **only** while the tab is visible; the
+  status line says how many are live and how stale the numbers are.
 - **Opens sorted by ranking.** Best game first: `#1 vs #2` outranks
   `#1 vs unranked`, and everything unranked falls back to kickoff order.
   Switch to kickoff-time order in the Sort control.
