@@ -655,6 +655,17 @@ button:focus-visible {
 	font-size: 0.8rem;
 }
 
+/* Whose price this is. One book is a quote, not a consensus. */
+.odds-book {
+	padding: 0.02rem 0.3rem;
+	border: 1px solid var(--line);
+	border-radius: 3px;
+	font-size: 0.66rem;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	white-space: nowrap;
+}
+
 .series {
 	display: flex;
 	flex-wrap: wrap;

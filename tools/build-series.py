@@ -99,8 +99,21 @@ def cfbd_teams(key):
     """
     req = urllib.request.Request(f'{CFBD}/teams', headers={
         'Authorization': f'Bearer {key}', 'Accept': 'application/json'})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        teams = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            teams = json.load(r)
+    except urllib.error.HTTPError as e:
+        if e.code == 429:
+            body = e.read(300).decode(errors='replace')
+            sys.exit(
+                f'CFBD is refusing calls: {body.strip()}\n'
+                '  The free tier is a MONTHLY quota. Nothing to do but wait for it to\n'
+                '  reset, or upgrade at https://collegefootballdata.com\n'
+                '  Whatever is already in data/series.json still works.'
+            )
+        if e.code == 401:
+            sys.exit('CFBD rejected the key (401). Check CFBD_API_KEY.')
+        raise
 
     index = {}
     for t in teams:
@@ -128,7 +141,11 @@ def resolve(index, espn_name):
     return index.get(stripped)
 
 
-def matchup(key, team1, team2):
+class QuotaExhausted(Exception):
+    """The month's call budget is gone. Not retryable — stop, do not spin."""
+
+
+def matchup(key, team1, team2, attempt=1):
     url = f'{CFBD}/teams/matchup?' + urllib.parse.urlencode({'team1': team1, 'team2': team2})
     req = urllib.request.Request(url, headers={
         'Authorization': f'Bearer {key}',
@@ -136,19 +153,30 @@ def matchup(key, team1, team2):
     })
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
-            return json.load(r)
+            left = r.headers.get('X-CallLimit-Remaining')
+            return json.load(r), (int(left) if left and left.isdigit() else None)
     except urllib.error.HTTPError as e:
         if e.code == 401:
             sys.exit('CFBD rejected the key (401). Check CFBD_API_KEY.')
         if e.code == 429:
-            print('  rate limited — pausing 10s', flush=True)
-            time.sleep(10)
-            return matchup(key, team1, team2)
+            # A 429 here is TWO different things and they must not be conflated.
+            # "Monthly call quota exceeded" is permanent until the month rolls
+            # over; retrying it is pure abuse of someone's free API. Only a
+            # transient throttle is worth waiting out, and only a few times.
+            body = e.read(400).decode(errors='replace')
+            if 'quota' in body.lower():
+                raise QuotaExhausted(body.strip()) from e
+            if attempt > 3:
+                raise QuotaExhausted('throttled repeatedly; stopping rather than hammering') from e
+            wait = 5 * attempt
+            print(f'  throttled — waiting {wait}s (attempt {attempt}/3)', flush=True)
+            time.sleep(wait)
+            return matchup(key, team1, team2, attempt + 1)
         print(f'  HTTP {e.code} for {team1} vs {team2}', flush=True)
-        return None
+        return None, None
     except Exception as exc:                      # noqa: BLE001 — one pair failing is not fatal
         print(f'  failed {team1} vs {team2}: {exc}', flush=True)
-        return None
+        return None, None
 
 
 def summarize(m, away_id, home_id, away_name, home_name):
@@ -204,15 +232,48 @@ def summarize(m, away_id, home_id, away_name, home_name):
     }
 
 
+def save(store, season):
+    """Write after every week, not just at the end.
+
+    A full-season run is ~870 requests and several minutes. Saving once at the
+    end means a stall, a rate limit, or a closed laptop throws all of it away —
+    which is exactly what happened the first time. Now a killed run resumes
+    where it stopped, because completed pairs are already on disk and get
+    skipped next time.
+    """
+    OUT.parent.mkdir(exist_ok=True)
+    OUT.write_text(json.dumps({
+        '_note': 'All-time head-to-head, keyed "<awayEspnId>-<homeEspnId>". '
+                 'Built by tools/build-series.py; the CFBD key never ships. '
+                 'resolved:false means CFBD could not place a team name — not that they never met.',
+        'source': 'CollegeFootballData /teams/matchup',
+        'season': season,
+        'series': store,
+    }, indent=0))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--week', type=int)
     ap.add_argument('--weeks', help='inclusive range, e.g. 1-4')
     ap.add_argument('--all', action='store_true')
+    ap.add_argument('--i-know-it-costs-a-month', dest='i_know_it_costs_a_month', action='store_true',
+                    help='required with --all; a full season can spend the entire monthly quota')
+    ap.add_argument('--budget', type=int, default=250,
+                    help='stop after this many CFBD calls in one run (default 250)')
     ap.add_argument('--season', type=int, default=SEASON)
     args = ap.parse_args()
 
     if args.all:
+        if not args.i_know_it_costs_a_month:
+            sys.exit(
+                'Refusing --all.\n'
+                '  A full season is roughly 870 requests. The CFBD free tier is a MONTHLY\n'
+                '  quota, not a per-second throttle — one --all run can spend the whole\n'
+                '  month, which is exactly what happened on 2026-08-08.\n'
+                '  Build the weeks you need:  --week 1   or   --weeks 1-3\n'
+                '  If you really mean it:     --all --i-know-it-costs-a-month'
+            )
         weeks = range(1, 16)
     elif args.weeks:
         lo, hi = (int(x) for x in args.weeks.split('-'))
@@ -227,7 +288,7 @@ def main():
     print(f'CFBD knows {len(index)} team names\n', flush=True)
 
     store = json.loads(OUT.read_text())['series'] if OUT.exists() else {}
-    added = skipped = unresolved = 0
+    added = skipped = unresolved = calls = 0
 
     for wk in weeks:
         pairs = espn_week(args.season, wk)
@@ -250,7 +311,24 @@ def main():
                 print(f'  ? {away} at {home} — CFBD has no team named: {miss}', flush=True)
                 continue
 
-            row = summarize(matchup(key, a_cfbd, h_cfbd), aid, hid, a_cfbd, h_cfbd)
+            if calls >= args.budget:
+                print(f'\n  budget reached ({args.budget} calls) — stopping here.', flush=True)
+                print('  Re-run to continue; finished pairs are already saved.', flush=True)
+                save(store, args.season)
+                return report(added, unresolved, skipped, store)
+            try:
+                m, remaining = matchup(key, a_cfbd, h_cfbd)
+            except QuotaExhausted as e:
+                print(f'\n  CFBD quota exhausted: {e}', flush=True)
+                print('  Stopping. Finished pairs are saved; resume after the quota resets.', flush=True)
+                save(store, args.season)
+                return report(added, unresolved, skipped, store)
+            calls += 1
+            if remaining is not None and remaining <= 5:
+                print(f'\n  only {remaining} CFBD calls left this month — stopping.', flush=True)
+                save(store, args.season)
+                return report(added, unresolved, skipped, store)
+            row = summarize(m, aid, hid, a_cfbd, h_cfbd)
             if row:
                 store[pair_key] = row
                 added += 1
@@ -261,14 +339,13 @@ def main():
                 unresolved += 1
             time.sleep(PAUSE)
 
-    OUT.parent.mkdir(exist_ok=True)
-    OUT.write_text(json.dumps({
-        '_note': 'All-time head-to-head, keyed "<awayEspnId>-<homeEspnId>". '
-                 'Built by tools/build-series.py; the CFBD key never ships.',
-        'source': 'CollegeFootballData /teams/matchup',
-        'season': args.season,
-        'series': store,
-    }, indent=0))
+        save(store, args.season)   # checkpoint after each week
+
+    save(store, args.season)
+    report(added, unresolved, skipped, store)
+
+
+def report(added, unresolved, skipped, store):
     print(f'\n{added} resolved, {unresolved} unresolved, {skipped} already had '
           f'-> {OUT} ({len(store)} total)')
 

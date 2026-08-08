@@ -173,8 +173,18 @@ function normalizeGame(ev) {
 		notes: (comp.notes ?? []).map((n) => n.headline).filter(Boolean),
 
 		broadcast: (comp.broadcasts ?? []).flatMap((b) => b.names ?? [])[0] ?? null,
+
+		// ESPN carries exactly one book (DraftKings), so this is a quoted price
+		// and not a consensus — the card names it rather than letting it read as
+		// "the line". ESPN also drops odds entirely once a game is final, so a
+		// completed game has none of this. See tools/build-lines.py.
 		odds: comp.odds?.[0]
-			? { details: comp.odds[0].details ?? null, overUnder: comp.odds[0].overUnder ?? null }
+			? {
+					details: comp.odds[0].details ?? null,
+					overUnder: comp.odds[0].overUnder ?? null,
+					provider: comp.odds[0].provider?.name ?? null,
+					books: comp.odds.length,
+			  }
 			: null,
 
 		status: {

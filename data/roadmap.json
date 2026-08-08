@@ -134,6 +134,13 @@
 					"est": 0.75,
 					"status": "done",
 					"note": "/teams/matchup returns team1=null and 0-0-0 for a team it cannot resolve \u2014 byte-identical to its answer for two teams that genuinely never played. Confirmed by querying a made-up school and getting the same response. The first run wrote 30 false 'never met' rows. Fixed by resolving both names against CFBD's own /teams roster BEFORE asking, so zero games is only recorded as 'First meeting' when both schools are known; anything unresolved is stored as resolved:false and renders nothing."
+				},
+				{
+					"id": "S17",
+					"title": "Label the odds with whose book they are",
+					"est": 0.25,
+					"status": "done",
+					"note": "ESPN carries exactly one book (DraftKings) and the card was printing its number bare, which reads as a consensus. It is now tagged with the book's name, and would read 'avg of N' if more than one ever appears."
 				}
 			]
 		},
@@ -287,7 +294,7 @@
 					"est": 2,
 					"status": "done",
 					"owner": "brien",
-					"note": "Key placed by Brien in a gitignored .env; data/series.json built and committed; the card now reads 'Alabama leads 45-26-3 - last met 2025'. Verified against known series (Red River: Texas leads 62-51-5). The deployed site stays keyless."
+					"note": "Weeks 1 and 6 built and committed (157 pairs) \u2014 the card reads 'Alabama leads 45-26-3'. The remaining weeks are NOT built: a --all run spent the whole monthly CFBD quota. Resume with --week N once it resets; finished pairs are skipped."
 				}
 			]
 		},
@@ -347,6 +354,14 @@
 					"title": "Offline / PWA",
 					"est": 2,
 					"status": "next"
+				},
+				{
+					"id": "B9",
+					"title": "Average + closing betting lines (CFBD /lines)",
+					"est": 2,
+					"status": "blocked",
+					"owner": "brien",
+					"note": "Brien asked for average lines, and for closing lines on completed games. Neither is reachable today. ESPN gives ONE book for upcoming games and DROPS odds entirely once a game is final \u2014 verified: 0 of 62 games in 2018 wk10 and 0 of 51 in 2025 wk6 carry odds. CFBD /lines has multiple books plus history, but the monthly quota is spent. Per Brien's instruction ('if not, they can just be left off') this is deferred, not bodged. Closing lines never move, so they are ideal build-time data whenever the quota returns."
 				}
 			]
 		}

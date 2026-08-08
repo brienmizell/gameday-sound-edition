@@ -197,9 +197,17 @@ function meta(game) {
 	if (game.odds?.details) {
 		const o = document.createElement('div');
 		o.className = 'odds';
-		o.textContent = game.odds.overUnder
+		const line = game.odds.overUnder
 			? `${game.odds.details} · O/U ${game.odds.overUnder}`
 			: game.odds.details;
+		o.textContent = line;
+		if (game.odds.provider) {
+			const who = document.createElement('span');
+			who.className = 'odds-book';
+			// One book is a quote, not a consensus. Say whose it is.
+			who.textContent = game.odds.books > 1 ? `avg of ${game.odds.books}` : game.odds.provider;
+			o.append(' ', who);
+		}
 		m.append(o);
 	}
 
