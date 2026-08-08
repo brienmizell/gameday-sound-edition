@@ -19,20 +19,56 @@
 
 let slugs = null;
 let records = null;
+let lines = null;
 
 export async function loadSeries() {
-	if (slugs && records) return { slugs, records };
+	if (slugs && records && lines) return { slugs, records, lines };
 
-	const [w, s] = await Promise.all([
+	const [w, s, l] = await Promise.all([
 		fetch('data/winsipedia.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
-		// Optional. Absent until tools/build-series.py has been run, and the
-		// card simply shows no record until then.
+		// Both optional. Absent until the build tools have run, and the card
+		// simply shows less until then.
 		fetch('data/series.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
+		fetch('data/lines.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
 	]);
 
 	slugs = new Map(Object.entries(w?.teams ?? {}));
 	records = new Map(Object.entries(s?.series ?? {}));
-	return { slugs, records };
+	lines = new Map(Object.entries(l?.games ?? {}));
+	return { slugs, records, lines };
+}
+
+/**
+ * The multi-book average line, or null.
+ *
+ * ESPN carries one book and drops odds the moment a game ends. This is built
+ * from CFBD across every book it lists, one vote each, and a completed game's
+ * number is by definition its CLOSING line — it cannot move again.
+ */
+export function avgLine(game) {
+	if (!lines) return null;
+	return lines.get(`${game.season}-w${game.week}-${game.away.id}-${game.home.id}`) ?? null;
+}
+
+/** "Avg −7.2 · O/U 48.1 · 3 books", or the closing number on a finished game. */
+export function lineText(game) {
+	const l = avgLine(game);
+	if (!l || (l.spread == null && l.overUnder == null)) return null;
+
+	const parts = [];
+	if (l.spread != null) {
+		// CFBD's sign convention is home-relative: negative means home is favoured.
+		const fav = l.spread < 0 ? game.home : game.away;
+		const num = Math.abs(l.spread);
+		parts.push(`${fav.abbr || fav.short || fav.name} −${num}`);
+	}
+	if (l.overUnder != null) parts.push(`O/U ${l.overUnder}`);
+	return {
+		text: parts.join(' · '),
+		label: l.closing ? 'closing' : `avg of ${l.books}`,
+		books: l.books,
+		closing: l.closing,
+	};
 }
 
 /** Away vs home, matching how the matchup reads. Null unless BOTH sides map. */

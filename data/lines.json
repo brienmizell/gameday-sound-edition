@@ -1,0 +1,11928 @@
+{
+"_note": "Average betting lines, one vote per sportsbook. Keyed \"<season>-w<week>-<awayEspnId>-<homeEspnId>\". closing:true means the game is final, so the number is the closing line. Built by tools/build-bulk.py.",
+"source": "CollegeFootballData /lines",
+"books": [
+"Bovada",
+"DraftKings"
+],
+"games": {
+"2025-w15-193-2711": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.33,
+"overUnder": 44.0,
+"spreadOpen": -2.5,
+"closing": true
+},
+"2025-w15-338-55": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 61.17,
+"spreadOpen": -1.25,
+"closing": true
+},
+"2025-w1-2649-97": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -10.5,
+"overUnder": 44.5,
+"spreadOpen": -8.75,
+"closing": true
+},
+"2025-w15-252-2641": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.83,
+"overUnder": 50.0,
+"spreadOpen": -12.0,
+"closing": true
+},
+"2025-w15-84-194": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 46.67,
+"spreadOpen": -6.0,
+"closing": true
+},
+"2025-w15-2439-68": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.17,
+"overUnder": 59.0,
+"spreadOpen": -3.25,
+"closing": true
+},
+"2025-w1-154-344": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -2.75,
+"overUnder": 52.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w15-150-258": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 58.5,
+"spreadOpen": -2.5,
+"closing": true
+},
+"2025-w1-2655-145": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -17.0,
+"overUnder": 57.5,
+"spreadOpen": -17.0,
+"closing": true
+},
+"2025-w1-2633-356": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 2.75,
+"overUnder": 62.25,
+"spreadOpen": 5.5,
+"closing": true
+},
+"2025-w1-295-58": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.5,
+"overUnder": 53.25,
+"spreadOpen": -6.0,
+"closing": true
+},
+"2025-w14-12-9": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.0,
+"overUnder": 48.17,
+"spreadOpen": 1.0,
+"closing": true
+},
+"2025-w15-61-333": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.83,
+"overUnder": 48.17,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w1-2653-55": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.0,
+"overUnder": 47.5,
+"spreadOpen": 4.0,
+"closing": true
+},
+"2025-w1-333-201": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -2.0,
+"overUnder": 42.25,
+"spreadOpen": 1.0,
+"closing": true
+},
+"2025-w1-256-2483": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -21.5,
+"overUnder": 47.5,
+"spreadOpen": -21.0,
+"closing": true
+},
+"2025-w1-2229-2636": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -7.0,
+"overUnder": 62.5,
+"spreadOpen": -8.5,
+"closing": true
+},
+"2025-w16-349-2426": {
+"season": 2025,
+"week": 16,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.33,
+"overUnder": 38.33,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w1-242-326": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -19.5,
+"overUnder": 55.5,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w1-2294-238": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.0,
+"overUnder": 47.25,
+"spreadOpen": -4.5,
+"closing": true
+},
+"2025-w14-5-202": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.33,
+"overUnder": 56.5,
+"spreadOpen": -7.83,
+"closing": true
+},
+"2025-w15-249-2655": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.67,
+"overUnder": 66.83,
+"spreadOpen": 2.75,
+"closing": true
+},
+"2025-w14-66-197": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 46.83,
+"spreadOpen": 15.17,
+"closing": true
+},
+"2025-w14-84-2509": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 28.5,
+"overUnder": 54.17,
+"spreadOpen": 28.17,
+"closing": true
+},
+"2025-w14-2247-295": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.67,
+"overUnder": 58.5,
+"spreadOpen": -25.5,
+"closing": true
+},
+"2025-w15-2653-256": {
+"season": 2025,
+"week": 15,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -23.83,
+"overUnder": 47.5,
+"spreadOpen": -21.5,
+"closing": true
+},
+"2025-w1-68-264": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -9.75,
+"overUnder": 55.5,
+"spreadOpen": -8.5,
+"closing": true
+},
+"2025-w1-235-152": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -4.75,
+"overUnder": 56.5,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w5-87-8": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.33,
+"overUnder": 63.5,
+"spreadOpen": 7.67,
+"closing": true
+},
+"2025-w1-98-2572": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -2.75,
+"overUnder": 59.25,
+"spreadOpen": 4.0,
+"closing": true
+},
+"2025-w4-130-158": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 0.67,
+"overUnder": 47.83,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w4-264-265": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 20.83,
+"overUnder": 52.0,
+"spreadOpen": 17.83,
+"closing": true
+},
+"2025-w1-265-328": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -1.25,
+"overUnder": 50.25,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w5-194-264": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.33,
+"overUnder": 52.83,
+"spreadOpen": 11.5,
+"closing": true
+},
+"2025-w5-99-145": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 58.0,
+"spreadOpen": 1.0,
+"closing": true
+},
+"2025-w1-278-2305": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 50.67,
+"spreadOpen": -14.0,
+"closing": true
+},
+"2025-w1-2534-98": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 60.33,
+"spreadOpen": -8.67,
+"closing": true
+},
+"2025-w1-24-62": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.67,
+"overUnder": 51.33,
+"spreadOpen": -0.17,
+"closing": true
+},
+"2025-w1-68-58": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.17,
+"overUnder": 62.0,
+"spreadOpen": 8.83,
+"closing": true
+},
+"2025-w1-195-164": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 50.67,
+"spreadOpen": -11.17,
+"closing": true
+},
+"2025-w1-55-2116": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -19.17,
+"overUnder": 52.83,
+"spreadOpen": -16.5,
+"closing": true
+},
+"2025-w1-151-152": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.33,
+"overUnder": 60.33,
+"spreadOpen": -13.0,
+"closing": true
+},
+"2025-w1-2751-2006": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.0,
+"overUnder": 48.33,
+"spreadOpen": 8.5,
+"closing": true
+},
+"2025-w1-2084-135": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.17,
+"overUnder": 43.33,
+"spreadOpen": -17.33,
+"closing": true
+},
+"2025-w1-193-275": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -18.0,
+"overUnder": 41.0,
+"spreadOpen": -17.5,
+"closing": true
+},
+"2025-w1-158-2132": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.0,
+"overUnder": 51.17,
+"spreadOpen": 6.67,
+"closing": true
+},
+"2025-w1-2711-127": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -20.83,
+"overUnder": 50.0,
+"spreadOpen": -18.17,
+"closing": true
+},
+"2025-w1-338-154": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -18.17,
+"overUnder": 51.33,
+"spreadOpen": -17.67,
+"closing": true
+},
+"2025-w1-2026-2429": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.33,
+"overUnder": 51.25,
+"spreadOpen": 8.33,
+"closing": true
+},
+"2025-w1-59-38": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.67,
+"overUnder": 52.0,
+"spreadOpen": 3.83,
+"closing": true
+},
+"2025-w1-2-239": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 0.33,
+"overUnder": 56.83,
+"spreadOpen": 1.33,
+"closing": true
+},
+"2025-w1-2439-2534": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.33,
+"overUnder": 59.83,
+"spreadOpen": 13.33,
+"closing": true
+},
+"2025-w1-2117-23": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.5,
+"overUnder": 51.17,
+"spreadOpen": -11.17,
+"closing": true
+},
+"2025-w1-2050-2509": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.5,
+"overUnder": 49.17,
+"spreadOpen": -16.67,
+"closing": true
+},
+"2025-w1-2226-120": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 59.0,
+"spreadOpen": -16.83,
+"closing": true
+},
+"2025-w1-344-2572": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 59.67,
+"spreadOpen": 13.17,
+"closing": true
+},
+"2025-w1-77-2655": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.0,
+"overUnder": 46.33,
+"spreadOpen": -6.83,
+"closing": true
+},
+"2025-w1-2649-96": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 48.67,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w1-295-84": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -23.33,
+"overUnder": 53.67,
+"spreadOpen": -23.5,
+"closing": true
+},
+"2025-w1-333-52": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.5,
+"overUnder": 48.0,
+"spreadOpen": 12.17,
+"closing": true
+},
+"2025-w1-276-61": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -38.83,
+"overUnder": 52.83,
+"spreadOpen": -39.17,
+"closing": true
+},
+"2025-w1-2440-213": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -44.17,
+"overUnder": 55.83,
+"spreadOpen": -44.83,
+"closing": true
+},
+"2025-w1-218-113": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.33,
+"overUnder": 49.5,
+"spreadOpen": 1.5,
+"closing": true
+},
+"2025-w1-324-258": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.17,
+"overUnder": 55.67,
+"spreadOpen": -12.5,
+"closing": true
+},
+"2025-w1-2636-245": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -23.0,
+"overUnder": 58.17,
+"spreadOpen": -21.33,
+"closing": true
+},
+"2025-w1-99-228": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.83,
+"overUnder": 56.17,
+"spreadOpen": -3.17,
+"closing": true
+},
+"2025-w1-167-130": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -35.17,
+"overUnder": 50.5,
+"spreadOpen": -35.67,
+"closing": true
+},
+"2025-w1-2623-30": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -35.83,
+"overUnder": 60.0,
+"spreadOpen": -33.83,
+"closing": true
+},
+"2025-w1-2638-328": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 58.83,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w1-2247-145": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -35.17,
+"overUnder": 61.67,
+"spreadOpen": -37.5,
+"closing": true
+},
+"2025-w1-242-309": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -11.17,
+"overUnder": 48.67,
+"spreadOpen": -14.33,
+"closing": true
+},
+"2025-w1-2199-326": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.83,
+"overUnder": 57.0,
+"spreadOpen": -14.17,
+"closing": true
+},
+"2025-w1-290-278": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.0,
+"overUnder": 51.83,
+"spreadOpen": -2.0,
+"closing": true
+},
+"2025-w1-62-12": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.83,
+"overUnder": 55.33,
+"spreadOpen": -12.5,
+"closing": true
+},
+"2025-w1-25-204": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 0.83,
+"overUnder": 49.33,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w1-36-264": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.83,
+"overUnder": 52.0,
+"spreadOpen": -19.5,
+"closing": true
+},
+"2025-w1-254-26": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 49.33,
+"spreadOpen": 5.33,
+"closing": true
+},
+"2025-w1-87-2390": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.67,
+"overUnder": 51.5,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w1-2628-153": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.33,
+"overUnder": 56.33,
+"spreadOpen": 1.17,
+"closing": true
+},
+"2025-w2-2294-66": {
+"season": 2025,
+"week": 2,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.67,
+"overUnder": 43.25,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w2-2305-142": {
+"season": 2025,
+"week": 2,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.33,
+"overUnder": 50.25,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w2-130-201": {
+"season": 2025,
+"week": 2,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 45.33,
+"spreadOpen": -3.67,
+"closing": true
+},
+"2025-w1-59-252": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.5,
+"overUnder": 55.25,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w1-338-2711": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.25,
+"overUnder": 47.25,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w1-259-2579": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.67,
+"overUnder": 50.67,
+"spreadOpen": -9.0,
+"closing": true
+},
+"2025-w1-183-2633": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.5,
+"overUnder": 52.17,
+"spreadOpen": -14.0,
+"closing": true
+},
+"2025-w4-204-2483": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -34.0,
+"overUnder": 58.33,
+"spreadOpen": -32.0,
+"closing": true
+},
+"2025-w6-251-57": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 42.5,
+"spreadOpen": 6.67,
+"closing": true
+},
+"2025-w4-2641-254": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 58.33,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w4-356-84": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.0,
+"overUnder": 51.0,
+"spreadOpen": -3.83,
+"closing": true
+},
+"2025-w7-9-254": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.17,
+"overUnder": 43.83,
+"spreadOpen": -4.17,
+"closing": true
+},
+"2025-w6-2390-52": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.17,
+"overUnder": 54.5,
+"spreadOpen": 6.33,
+"closing": true
+},
+"2025-w8-30-87": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.67,
+"overUnder": 60.5,
+"spreadOpen": -9.5,
+"closing": true
+},
+"2025-w8-97-2390": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.5,
+"overUnder": 49.5,
+"spreadOpen": -11.0,
+"closing": true
+},
+"2025-w5-333-61": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.33,
+"overUnder": 53.33,
+"spreadOpen": -3.67,
+"closing": true
+},
+"2025-w7-201-251": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 44.17,
+"spreadOpen": -7.33,
+"closing": true
+},
+"2025-w12-228-97": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.83,
+"overUnder": 50.67,
+"spreadOpen": 2.83,
+"closing": true
+},
+"2025-w9-333-2579": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 11.83,
+"overUnder": 47.67,
+"spreadOpen": 11.33,
+"closing": true
+},
+"2025-w6-68-87": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.5,
+"overUnder": 63.33,
+"spreadOpen": -17.0,
+"closing": true
+},
+"2025-w6-228-153": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 15.17,
+"overUnder": 47.67,
+"spreadOpen": 13.5,
+"closing": true
+},
+"2025-w12-251-61": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.67,
+"overUnder": 50.5,
+"spreadOpen": -3.67,
+"closing": true
+},
+"2025-w7-84-2483": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.0,
+"overUnder": 51.33,
+"spreadOpen": -12.67,
+"closing": true
+},
+"2025-w8-145-61": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.5,
+"overUnder": 56.5,
+"spreadOpen": -9.17,
+"closing": true
+},
+"2025-w9-2306-2305": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 55.67,
+"spreadOpen": 1.67,
+"closing": true
+},
+"2025-w8-2641-9": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 8.0,
+"overUnder": 52.33,
+"spreadOpen": 5.67,
+"closing": true
+},
+"2025-w10-61-57": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 50.33,
+"spreadOpen": 7.67,
+"closing": true
+},
+"2025-w9-130-127": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.5,
+"overUnder": 47.5,
+"spreadOpen": 10.0,
+"closing": true
+},
+"2025-w10-213-194": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.67,
+"overUnder": 45.5,
+"spreadOpen": -9.67,
+"closing": true
+},
+"2025-w9-245-99": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 50.17,
+"spreadOpen": -2.83,
+"closing": true
+},
+"2025-w11-52-228": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.5,
+"overUnder": 56.83,
+"spreadOpen": -11.83,
+"closing": true
+},
+"2025-w10-2390-2567": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.83,
+"overUnder": 49.17,
+"spreadOpen": 7.5,
+"closing": true
+},
+"2025-w12-201-333": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 45.83,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w14-245-251": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 54.5,
+"spreadOpen": -1.5,
+"closing": true
+},
+"2025-w14-2433-309": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -11.0,
+"overUnder": 47.5,
+"spreadOpen": -13.17,
+"closing": true
+},
+"2025-w13-9-38": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 47.5,
+"spreadOpen": 6.83,
+"closing": true
+},
+"2025-w1-2623-2032": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -1.5,
+"overUnder": 55.25,
+"spreadOpen": -2.5,
+"closing": true
+},
+"2025-w13-30-2483": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -11.33,
+"overUnder": 59.67,
+"spreadOpen": -11.67,
+"closing": true
+},
+"2025-w13-2633-57": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.33,
+"overUnder": 57.67,
+"spreadOpen": 1.0,
+"closing": true
+},
+"2025-w1-41-349": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -6.5,
+"overUnder": 41.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w1-193-278": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -5.25,
+"overUnder": 40.75,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w1-2390-245": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.0,
+"overUnder": 48.5,
+"spreadOpen": -4.5,
+"closing": true
+},
+"2025-w2-26-2439": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 54.5,
+"spreadOpen": 2.25,
+"closing": true
+},
+"2025-w2-9-344": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 5.75,
+"overUnder": 58.5,
+"spreadOpen": 6.75,
+"closing": true
+},
+"2025-w2-21-265": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -2.25,
+"overUnder": 46.5,
+"spreadOpen": -2.25,
+"closing": true
+},
+"2025-w2-256-97": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -15.25,
+"overUnder": 56.75,
+"spreadOpen": -14.75,
+"closing": true
+},
+"2025-w2-2459-120": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -16.75,
+"overUnder": 44.5,
+"spreadOpen": -16.0,
+"closing": true
+},
+"2025-w14-2429-2655": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -31.0,
+"overUnder": 52.17,
+"spreadOpen": -29.33,
+"closing": true
+},
+"2025-w4-57-2390": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.5,
+"overUnder": 51.33,
+"spreadOpen": -5.33,
+"closing": true
+},
+"2025-w8-264-130": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 50.5,
+"spreadOpen": -9.0,
+"closing": true
+},
+"2025-w2-41-183": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -7.25,
+"overUnder": 57.5,
+"spreadOpen": -8.25,
+"closing": true
+},
+"2025-w2-239-2567": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -2.75,
+"overUnder": 65.5,
+"spreadOpen": -4.25,
+"closing": true
+},
+"2025-w2-356-150": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 49.25,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w2-2229-213": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -41.75,
+"overUnder": 53.5,
+"spreadOpen": -41.75,
+"closing": true
+},
+"2025-w3-57-99": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.0,
+"overUnder": 47.33,
+"spreadOpen": -6.83,
+"closing": true
+},
+"2025-w2-58-57": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -18.5,
+"overUnder": 58.25,
+"spreadOpen": -17.25,
+"closing": true
+},
+"2025-w1-66-2306": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.0,
+"overUnder": 50.67,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w2-103-127": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 45.5,
+"spreadOpen": -3.25,
+"closing": true
+},
+"2025-w1-251-194": {
+"season": 2025,
+"week": 1,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.17,
+"overUnder": 46.83,
+"spreadOpen": -2.83,
+"closing": true
+},
+"2025-w2-326-2636": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 64.5,
+"spreadOpen": -4.75,
+"closing": true
+},
+"2025-w2-145-96": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 7.75,
+"overUnder": 51.5,
+"spreadOpen": 9.0,
+"closing": true
+},
+"2025-w2-2309-2641": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -48.0,
+"overUnder": 59.75,
+"spreadOpen": -48.75,
+"closing": true
+},
+"2025-w2-2117-221": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -21.5,
+"overUnder": 48.5,
+"spreadOpen": -21.5,
+"closing": true
+},
+"2025-w2-338-84": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -35.5,
+"overUnder": 51.5,
+"spreadOpen": -35.5,
+"closing": true
+},
+"2025-w2-2335-55": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 6.25,
+"overUnder": 50.5,
+"spreadOpen": 5.75,
+"closing": true
+},
+"2025-w1-25-62": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -1.5,
+"overUnder": 52.5,
+"spreadOpen": 3.0,
+"closing": true
+},
+"2025-w1-12-2567": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -2.5,
+"overUnder": 55.25,
+"spreadOpen": 3.0,
+"closing": true
+},
+"2025-w2-189-2132": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -22.0,
+"overUnder": 46.5,
+"spreadOpen": -19.25,
+"closing": true
+},
+"2025-w1-324-2348": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -10.0,
+"overUnder": 51.25,
+"spreadOpen": -7.0,
+"closing": true
+},
+"2025-w3-61-2633": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 50.5,
+"spreadOpen": 7.0,
+"closing": true
+},
+"2025-w3-228-59": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 50.67,
+"spreadOpen": 8.17,
+"closing": true
+},
+"2025-w13-2306-254": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.83,
+"overUnder": 52.5,
+"spreadOpen": -11.67,
+"closing": true
+},
+"2025-w1-2483-2641": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -1.25,
+"overUnder": 50.75,
+"spreadOpen": 1.5,
+"closing": true
+},
+"2025-w1-30-2628": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 4.5,
+"overUnder": 56.5,
+"spreadOpen": 6.0,
+"closing": true
+},
+"2025-w1-309-48": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 1.5,
+"overUnder": 60.5,
+"spreadOpen": 3.0,
+"closing": true
+},
+"2025-w1-333-84": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -7.5,
+"overUnder": 46.5,
+"spreadOpen": -7.0,
+"closing": true
+},
+"2025-w1-258-142": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -4.0,
+"overUnder": 43.5,
+"spreadOpen": -7.0,
+"closing": true
+},
+"2025-w1-145-61": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -6.0,
+"overUnder": 53.75,
+"spreadOpen": -6.5,
+"closing": true
+},
+"2025-w1-99-248": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -1.25,
+"overUnder": 43.75,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w1-2439-195": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 6.25,
+"overUnder": 64.5,
+"spreadOpen": 4.0,
+"closing": true
+},
+"2025-w1-2117-77": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -12.75,
+"overUnder": 43.25,
+"spreadOpen": -12.5,
+"closing": true
+},
+"2025-w1-167-135": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -1.75,
+"overUnder": 44.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w1-221-151": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 9.75,
+"overUnder": 55.25,
+"spreadOpen": 6.0,
+"closing": true
+},
+"2025-w1-213-228": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -2.5,
+"overUnder": 47.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w1-249-21": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 5.25,
+"overUnder": 55.0,
+"spreadOpen": 3.0,
+"closing": true
+},
+"2025-w1-290-2026": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 10.0,
+"overUnder": 58.25,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w1-2390-194": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -7.75,
+"overUnder": 39.75,
+"spreadOpen": -9.0,
+"closing": true
+},
+"2025-w1-158-254": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -13.75,
+"overUnder": 51.25,
+"spreadOpen": -14.5,
+"closing": true
+},
+"2025-w1-2390-145": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 3.0,
+"overUnder": 52.75,
+"spreadOpen": 3.0,
+"closing": true
+},
+"2025-w1-2483-84": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.0,
+"overUnder": 50.25,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w1-2390-84": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -7.25,
+"overUnder": 47.25,
+"spreadOpen": -8.0,
+"closing": true
+},
+"2025-w1-2426-2132": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 5.75,
+"overUnder": 57.5,
+"spreadOpen": -1.5,
+"closing": true
+},
+"2025-w2-24-252": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -20.5,
+"overUnder": 44.0,
+"spreadOpen": -18.0,
+"closing": true
+},
+"2025-w2-277-195": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 58.5,
+"spreadOpen": 2.75,
+"closing": true
+},
+"2025-w11-99-333": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 49.5,
+"spreadOpen": -7.0,
+"closing": true
+},
+"2025-w11-84-213": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.0,
+"overUnder": 50.17,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w3-221-277": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 55.0,
+"spreadOpen": 3.17,
+"closing": true
+},
+"2025-w2-23-251": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -36.75,
+"overUnder": 52.5,
+"spreadOpen": -35.75,
+"closing": true
+},
+"2025-w2-258-152": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -2.75,
+"overUnder": 52.75,
+"spreadOpen": -2.75,
+"closing": true
+},
+"2025-w2-328-245": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -34.5,
+"overUnder": 57.5,
+"spreadOpen": -30.0,
+"closing": true
+},
+"2025-w2-2032-8": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -24.0,
+"overUnder": 61.75,
+"spreadOpen": -22.5,
+"closing": true
+},
+"2025-w1-130-251": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -5.5,
+"overUnder": 50.25,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w2-249-2711": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 12.25,
+"overUnder": 56.25,
+"spreadOpen": 10.25,
+"closing": true
+},
+"2025-w2-248-242": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 13.5,
+"overUnder": 38.5,
+"spreadOpen": 13.0,
+"closing": true
+},
+"2025-w2-235-2247": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 15.0,
+"overUnder": 57.5,
+"spreadOpen": 13.75,
+"closing": true
+},
+"2025-w1-9-150": {
+"season": 2025,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.0,
+"overUnder": 49.5,
+"spreadOpen": -1.5,
+"closing": true
+},
+"2025-w2-2393-275": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -28.5,
+"overUnder": 45.0,
+"spreadOpen": -28.0,
+"closing": true
+},
+"2025-w14-99-201": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -11.5,
+"overUnder": 36.33,
+"spreadOpen": -9.67,
+"closing": true
+},
+"2025-w14-2229-2534": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.5,
+"overUnder": 50.67,
+"spreadOpen": 10.33,
+"closing": true
+},
+"2025-w2-193-164": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -15.5,
+"overUnder": 45.5,
+"spreadOpen": -13.75,
+"closing": true
+},
+"2025-w2-197-2483": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -28.5,
+"overUnder": 55.5,
+"spreadOpen": -27.75,
+"closing": true
+},
+"2025-w2-2623-276": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -7.25,
+"overUnder": 53.5,
+"spreadOpen": -9.75,
+"closing": true
+},
+"2025-w2-48-38": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -23.5,
+"overUnder": 49.5,
+"spreadOpen": -24.0,
+"closing": true
+},
+"2025-w2-278-204": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -1.25,
+"overUnder": 45.0,
+"spreadOpen": -2.25,
+"closing": true
+},
+"2025-w2-2653-228": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -30.25,
+"overUnder": 51.5,
+"spreadOpen": -31.75,
+"closing": true
+},
+"2025-w2-5-2426": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -21.5,
+"overUnder": 58.75,
+"spreadOpen": -21.25,
+"closing": true
+},
+"2025-w2-349-2306": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -16.75,
+"overUnder": 48.5,
+"spreadOpen": -16.0,
+"closing": true
+},
+"2025-w14-333-2": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 48.33,
+"spreadOpen": 5.83,
+"closing": true
+},
+"2025-w2-2655-6": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 13.5,
+"overUnder": 51.5,
+"spreadOpen": 10.25,
+"closing": true
+},
+"2025-w10-2641-2306": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.33,
+"overUnder": 51.67,
+"spreadOpen": -0.67,
+"closing": true
+},
+"2025-w2-2348-99": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -36.5,
+"overUnder": 49.5,
+"spreadOpen": -35.25,
+"closing": true
+},
+"2025-w2-290-30": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -28.75,
+"overUnder": 62.0,
+"spreadOpen": -27.75,
+"closing": true
+},
+"2025-w2-2050-2": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -42.75,
+"overUnder": 52.5,
+"spreadOpen": -43.0,
+"closing": true
+},
+"2025-w2-98-2649": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -8.0,
+"overUnder": 57.0,
+"spreadOpen": -6.0,
+"closing": true
+},
+"2025-w2-2006-158": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -33.75,
+"overUnder": 47.5,
+"spreadOpen": -33.75,
+"closing": true
+},
+"2025-w2-2433-333": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -34.25,
+"overUnder": 50.25,
+"spreadOpen": -37.0,
+"closing": true
+},
+"2025-w2-202-166": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 3.25,
+"overUnder": 53.0,
+"spreadOpen": 3.0,
+"closing": true
+},
+"2025-w2-2534-62": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -7.25,
+"overUnder": 48.0,
+"spreadOpen": -8.75,
+"closing": true
+},
+"2025-w3-245-87": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 49.33,
+"spreadOpen": -6.83,
+"closing": true
+},
+"2025-w14-120-127": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 49.17,
+"spreadOpen": -4.17,
+"closing": true
+},
+"2025-w14-87-24": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 32.83,
+"overUnder": 49.83,
+"spreadOpen": 31.5,
+"closing": true
+},
+"2025-w14-2751-62": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.5,
+"overUnder": 44.67,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w14-2483-264": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.67,
+"overUnder": 51.33,
+"spreadOpen": 8.33,
+"closing": true
+},
+"2025-w14-77-356": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 44.33,
+"spreadOpen": -6.83,
+"closing": true
+},
+"2025-w14-6-326": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.67,
+"overUnder": 62.5,
+"spreadOpen": -9.0,
+"closing": true
+},
+"2025-w14-2294-158": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.67,
+"overUnder": 38.83,
+"spreadOpen": 2.17,
+"closing": true
+},
+"2025-w2-238-259": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -2.0,
+"overUnder": 45.5,
+"spreadOpen": -1.25,
+"closing": true
+},
+"2025-w14-61-59": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 16.17,
+"overUnder": 59.83,
+"spreadOpen": 13.0,
+"closing": true
+},
+"2025-w9-38-254": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 50.0,
+"spreadOpen": -13.17,
+"closing": true
+},
+"2025-w14-189-113": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.17,
+"overUnder": 44.5,
+"spreadOpen": 15.5,
+"closing": true
+},
+"2025-w14-2653-2572": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 50.33,
+"spreadOpen": -6.17,
+"closing": true
+},
+"2025-w8-2633-333": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.67,
+"overUnder": 60.83,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w14-38-2306": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.5,
+"overUnder": 49.83,
+"spreadOpen": -17.0,
+"closing": true
+},
+"2025-w13-264-26": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.67,
+"overUnder": 51.33,
+"spreadOpen": 10.83,
+"closing": true
+},
+"2025-w13-142-201": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 42.5,
+"spreadOpen": -9.17,
+"closing": true
+},
+"2025-w13-150-153": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 50.33,
+"spreadOpen": 2.17,
+"closing": true
+},
+"2025-w8-213-2294": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 41.33,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w14-2426-235": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.67,
+"overUnder": 57.5,
+"spreadOpen": -5.33,
+"closing": true
+},
+"2025-w14-2005-36": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 47.5,
+"spreadOpen": 2.75,
+"closing": true
+},
+"2025-w14-254-2305": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.17,
+"overUnder": 60.17,
+"spreadOpen": 13.5,
+"closing": true
+},
+"2025-w14-2050-193": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.67,
+"overUnder": 40.5,
+"spreadOpen": -17.5,
+"closing": true
+},
+"2025-w14-349-2636": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.5,
+"overUnder": 50.33,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w7-61-2": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 46.17,
+"spreadOpen": 5.83,
+"closing": true
+},
+"2025-w14-68-328": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.67,
+"overUnder": 54.67,
+"spreadOpen": 3.75,
+"closing": true
+},
+"2025-w14-2638-48": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 55.5,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w7-194-356": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 15.0,
+"overUnder": 51.33,
+"spreadOpen": 13.83,
+"closing": true
+},
+"2025-w14-259-258": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.67,
+"overUnder": 52.83,
+"spreadOpen": -10.83,
+"closing": true
+},
+"2025-w14-242-58": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.33,
+"overUnder": 57.5,
+"spreadOpen": -25.67,
+"closing": true
+},
+"2025-w14-153-152": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 49.0,
+"spreadOpen": -5.83,
+"closing": true
+},
+"2025-w14-290-276": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.33,
+"overUnder": 62.17,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w14-103-183": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 54.0,
+"spreadOpen": 3.17,
+"closing": true
+},
+"2025-w5-2483-213": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.0,
+"overUnder": 53.0,
+"spreadOpen": -5.17,
+"closing": true
+},
+"2025-w14-213-164": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.17,
+"overUnder": 55.5,
+"spreadOpen": 10.83,
+"closing": true
+},
+"2025-w14-2390-221": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 49.0,
+"spreadOpen": 7.0,
+"closing": true
+},
+"2025-w14-151-2226": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 66.33,
+"spreadOpen": 6.67,
+"closing": true
+},
+"2025-w14-228-2579": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 45.67,
+"spreadOpen": 1.67,
+"closing": true
+},
+"2025-w14-52-57": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.33,
+"overUnder": 49.0,
+"spreadOpen": -2.17,
+"closing": true
+},
+"2025-w14-2641-277": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 24.33,
+"overUnder": 53.33,
+"spreadOpen": 20.33,
+"closing": true
+},
+"2025-w6-238-333": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.5,
+"overUnder": 57.83,
+"spreadOpen": -15.5,
+"closing": true
+},
+"2025-w14-21-167": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.33,
+"overUnder": 41.5,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w14-26-30": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.33,
+"overUnder": 59.0,
+"spreadOpen": -20.33,
+"closing": true
+},
+"2025-w14-145-344": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.33,
+"overUnder": 62.67,
+"spreadOpen": 10.33,
+"closing": true
+},
+"2025-w14-2116-252": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 46.5,
+"spreadOpen": -18.17,
+"closing": true
+},
+"2025-w14-2393-166": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.33,
+"overUnder": 52.0,
+"spreadOpen": -4.5,
+"closing": true
+},
+"2025-w14-2711-2199": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.83,
+"overUnder": 49.33,
+"spreadOpen": 6.17,
+"closing": true
+},
+"2025-w14-2348-2623": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 45.33,
+"spreadOpen": -3.17,
+"closing": true
+},
+"2025-w14-238-2633": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.33,
+"overUnder": 66.5,
+"spreadOpen": -4.17,
+"closing": true
+},
+"2025-w14-194-130": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.5,
+"overUnder": 43.0,
+"spreadOpen": 5.5,
+"closing": true
+},
+"2025-w14-96-97": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 0.67,
+"overUnder": 45.5,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w14-154-150": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 53.67,
+"spreadOpen": -3.33,
+"closing": true
+},
+"2025-w14-338-2335": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 55.5,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w14-248-239": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 57.0,
+"spreadOpen": -2.17,
+"closing": true
+},
+"2025-w14-2649-2117": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 11.17,
+"overUnder": 46.5,
+"spreadOpen": 9.67,
+"closing": true
+},
+"2025-w14-142-8": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 54.5,
+"spreadOpen": 2.33,
+"closing": true
+},
+"2025-w14-218-249": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -20.33,
+"overUnder": 65.5,
+"spreadOpen": -19.17,
+"closing": true
+},
+"2025-w2-16-2440": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": -8.75,
+"overUnder": 55.75,
+"spreadOpen": -7.5,
+"closing": true
+},
+"2025-w3-38-248": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.83,
+"overUnder": 45.33,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w3-2306-12": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 55.83,
+"spreadOpen": 0.75,
+"closing": true
+},
+"2025-w3-152-154": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.33,
+"overUnder": 52.67,
+"spreadOpen": 7.25,
+"closing": true
+},
+"2025-w3-167-26": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -15.5,
+"overUnder": 52.67,
+"spreadOpen": -14.75,
+"closing": true
+},
+"2025-w14-2132-2628": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 58.5,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w14-2032-2026": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 0.67,
+"overUnder": 54.5,
+"spreadOpen": -1.67,
+"closing": true
+},
+"2025-w3-2483-77": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 25.5,
+"overUnder": 50.5,
+"spreadOpen": 27.75,
+"closing": true
+},
+"2025-w2-153-2429": {
+"season": 2025,
+"week": 2,
+"books": 2,
+"providers": [
+"Bovada",
+"ESPN Bet"
+],
+"spread": 15.75,
+"overUnder": 49.5,
+"spreadOpen": 14.75,
+"closing": true
+},
+"2025-w3-150-2655": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -0.5,
+"overUnder": 52.83,
+"spreadOpen": -2.5,
+"closing": true
+},
+"2025-w3-201-218": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 23.83,
+"overUnder": 51.0,
+"spreadOpen": 25.0,
+"closing": true
+},
+"2025-w3-235-2653": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 51.33,
+"spreadOpen": 6.5,
+"closing": true
+},
+"2025-w3-275-333": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -18.5,
+"overUnder": 45.33,
+"spreadOpen": -21.25,
+"closing": true
+},
+"2025-w3-204-2641": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.0,
+"overUnder": 61.5,
+"spreadOpen": -24.25,
+"closing": true
+},
+"2025-w3-265-249": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 57.83,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w3-295-259": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.5,
+"overUnder": 50.67,
+"spreadOpen": -7.25,
+"closing": true
+},
+"2025-w3-30-2509": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 20.5,
+"overUnder": 59.33,
+"spreadOpen": 21.25,
+"closing": true
+},
+"2025-w3-113-2294": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -35.33,
+"overUnder": 44.33,
+"spreadOpen": -34.17,
+"closing": true
+},
+"2025-w3-238-2579": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 48.5,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w3-254-2751": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 24.5,
+"overUnder": 47.33,
+"spreadOpen": 22.5,
+"closing": true
+},
+"2025-w3-2426-202": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.67,
+"overUnder": 52.67,
+"spreadOpen": 14.5,
+"closing": true
+},
+"2025-w3-58-2390": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.67,
+"overUnder": 56.5,
+"spreadOpen": -15.75,
+"closing": true
+},
+"2025-w3-2084-2309": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 24.0,
+"overUnder": 48.17,
+"spreadOpen": 22.75,
+"closing": true
+},
+"2025-w3-2117-130": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -27.67,
+"overUnder": 42.67,
+"spreadOpen": -27.5,
+"closing": true
+},
+"2025-w3-41-48": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 8.67,
+"overUnder": 52.17,
+"spreadOpen": 10.25,
+"closing": true
+},
+"2025-w14-275-135": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 38.5,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w14-256-324": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 24.0,
+"overUnder": 54.17,
+"spreadOpen": 21.67,
+"closing": true
+},
+"2025-w3-6-2": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -26.33,
+"overUnder": 56.0,
+"spreadOpen": -25.75,
+"closing": true
+},
+"2025-w3-2567-2623": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 28.83,
+"overUnder": 60.33,
+"spreadOpen": 27.75,
+"closing": true
+},
+"2025-w3-66-2032": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 21.0,
+"overUnder": 55.67,
+"spreadOpen": 21.25,
+"closing": true
+},
+"2025-w3-2026-2572": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 56.17,
+"spreadOpen": -0.75,
+"closing": true
+},
+"2025-w3-166-2348": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 42.67,
+"spreadOpen": -11.25,
+"closing": true
+},
+"2025-w3-309-142": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -27.5,
+"overUnder": 47.17,
+"spreadOpen": -24.83,
+"closing": true
+},
+"2025-w14-204-265": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 42.5,
+"spreadOpen": -12.83,
+"closing": true
+},
+"2025-w3-2199-96": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -26.67,
+"overUnder": 49.83,
+"spreadOpen": -25.5,
+"closing": true
+},
+"2025-w3-8-145": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.83,
+"overUnder": 60.5,
+"spreadOpen": -8.5,
+"closing": true
+},
+"2025-w14-2567-25": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.5,
+"overUnder": 53.17,
+"spreadOpen": 10.5,
+"closing": true
+},
+"2025-w3-135-25": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.17,
+"overUnder": 40.5,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w14-278-23": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.33,
+"overUnder": 45.33,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w14-2439-2440": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.5,
+"overUnder": 52.67,
+"spreadOpen": 9.5,
+"closing": true
+},
+"2025-w14-2309-2459": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.0,
+"overUnder": 44.67,
+"spreadOpen": -4.67,
+"closing": true
+},
+"2025-w3-2638-251": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -39.83,
+"overUnder": 52.33,
+"spreadOpen": -39.0,
+"closing": true
+},
+"2025-w3-2005-328": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.0,
+"overUnder": 51.5,
+"spreadOpen": 3.5,
+"closing": true
+},
+"2025-w3-2393-2440": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.33,
+"overUnder": 49.67,
+"spreadOpen": -9.0,
+"closing": true
+},
+"2025-w3-2335-189": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.0,
+"overUnder": 51.5,
+"spreadOpen": 7.0,
+"closing": true
+},
+"2025-w3-2226-2229": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.0,
+"overUnder": 56.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w3-195-194": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.33,
+"overUnder": 49.33,
+"spreadOpen": -29.5,
+"closing": true
+},
+"2025-w3-55-290": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 58.33,
+"spreadOpen": -3.33,
+"closing": true
+},
+"2025-w3-2711-356": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -27.5,
+"overUnder": 50.67,
+"spreadOpen": -28.25,
+"closing": true
+},
+"2025-w3-326-9": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -18.5,
+"overUnder": 61.5,
+"spreadOpen": -14.5,
+"closing": true
+},
+"2025-w3-103-24": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 45.17,
+"spreadOpen": 11.17,
+"closing": true
+},
+"2025-w3-151-324": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.17,
+"overUnder": 57.33,
+"spreadOpen": 6.25,
+"closing": true
+},
+"2025-w3-2006-5": {
+"season": 2025,
+"week": 3,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.67,
+"overUnder": 59.0,
+"spreadOpen": -11.5,
+"closing": true
+},
+"2025-w14-195-2084": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.17,
+"overUnder": 44.83,
+"spreadOpen": 5.67,
+"closing": true
+},
+"2025-w4-2294-164": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.33,
+"overUnder": 46.5,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w4-2567-2628": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 63.5,
+"spreadOpen": -5.83,
+"closing": true
+},
+"2025-w14-98-55": {
+"season": 2025,
+"week": 14,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 56.5,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w4-9-239": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 60.83,
+"spreadOpen": -2.5,
+"closing": true
+},
+"2025-w4-120-275": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.5,
+"overUnder": 44.5,
+"spreadOpen": -7.0,
+"closing": true
+},
+"2025-w4-2-201": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 47.5,
+"spreadOpen": -5.67,
+"closing": true
+},
+"2025-w4-127-30": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -18.5,
+"overUnder": 55.5,
+"spreadOpen": -15.5,
+"closing": true
+},
+"2025-w4-2509-87": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.5,
+"overUnder": 51.5,
+"spreadOpen": -28.0,
+"closing": true
+},
+"2025-w4-2579-142": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 48.5,
+"spreadOpen": -9.0,
+"closing": true
+},
+"2025-w5-52-258": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 60.17,
+"spreadOpen": 7.33,
+"closing": true
+},
+"2025-w5-248-204": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 11.83,
+"overUnder": 48.17,
+"spreadOpen": 12.5,
+"closing": true
+},
+"2025-w7-152-87": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -23.83,
+"overUnder": 59.5,
+"spreadOpen": -22.17,
+"closing": true
+},
+"2025-w8-295-256": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 47.5,
+"spreadOpen": -2.17,
+"closing": true
+},
+"2025-w7-2623-2393": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 51.83,
+"spreadOpen": 3.0,
+"closing": true
+},
+"2025-w7-58-249": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 68.5,
+"spreadOpen": -1.83,
+"closing": true
+},
+"2025-w7-164-264": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.5,
+"overUnder": 62.33,
+"spreadOpen": -10.17,
+"closing": true
+},
+"2025-w5-2628-9": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 54.5,
+"spreadOpen": -2.17,
+"closing": true
+},
+"2025-w7-151-2655": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 53.5,
+"spreadOpen": -7.17,
+"closing": true
+},
+"2025-w6-96-61": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -19.67,
+"overUnder": 49.0,
+"spreadOpen": -20.75,
+"closing": true
+},
+"2025-w6-275-130": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.33,
+"overUnder": 42.5,
+"spreadOpen": -16.67,
+"closing": true
+},
+"2025-w8-23-328": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 63.17,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w8-99-238": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.5,
+"overUnder": 48.33,
+"spreadOpen": -0.17,
+"closing": true
+},
+"2025-w5-2116-2306": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.83,
+"overUnder": 48.5,
+"spreadOpen": -5.83,
+"closing": true
+},
+"2025-w6-135-194": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -23.5,
+"overUnder": 42.33,
+"spreadOpen": -23.17,
+"closing": true
+},
+"2025-w8-2439-68": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.0,
+"overUnder": 61.0,
+"spreadOpen": -9.83,
+"closing": true
+},
+"2025-w7-2294-275": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.0,
+"overUnder": 37.5,
+"spreadOpen": 3.5,
+"closing": true
+},
+"2025-w7-333-142": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.17,
+"overUnder": 51.0,
+"spreadOpen": 5.33,
+"closing": true
+},
+"2025-w8-2084-113": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 16.5,
+"overUnder": 47.5,
+"spreadOpen": 17.33,
+"closing": true
+},
+"2025-w5-12-66": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.0,
+"overUnder": 48.5,
+"spreadOpen": -7.0,
+"closing": true
+},
+"2025-w5-349-151": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 52.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w7-8-2633": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 68.5,
+"spreadOpen": -13.17,
+"closing": true
+},
+"2025-w6-38-2628": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.83,
+"overUnder": 57.0,
+"spreadOpen": -14.5,
+"closing": true
+},
+"2025-w7-278-36": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.67,
+"overUnder": 47.83,
+"spreadOpen": 6.75,
+"closing": true
+},
+"2025-w8-2199-193": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.17,
+"overUnder": 47.33,
+"spreadOpen": -12.17,
+"closing": true
+},
+"2025-w8-142-2": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 43.67,
+"spreadOpen": -1.83,
+"closing": true
+},
+"2025-w5-2633-344": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.5,
+"overUnder": 63.5,
+"spreadOpen": 9.17,
+"closing": true
+},
+"2025-w6-344-245": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 57.17,
+"spreadOpen": -14.0,
+"closing": true
+},
+"2025-w5-290-256": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -15.33,
+"overUnder": 54.5,
+"spreadOpen": -15.0,
+"closing": true
+},
+"2025-w7-2335-2638": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.67,
+"overUnder": 46.83,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w6-2641-248": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.67,
+"overUnder": 51.5,
+"spreadOpen": 11.0,
+"closing": true
+},
+"2025-w7-113-2309": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.33,
+"overUnder": 49.67,
+"spreadOpen": -2.67,
+"closing": true
+},
+"2025-w7-57-245": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 48.0,
+"spreadOpen": -8.5,
+"closing": true
+},
+"2025-w8-254-252": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 49.5,
+"spreadOpen": 3.17,
+"closing": true
+},
+"2025-w8-324-2026": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.5,
+"overUnder": 48.0,
+"spreadOpen": -10.83,
+"closing": true
+},
+"2025-w5-84-2294": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.17,
+"overUnder": 47.5,
+"spreadOpen": 4.33,
+"closing": true
+},
+"2025-w7-2348-338": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.83,
+"overUnder": 46.17,
+"spreadOpen": 5.83,
+"closing": true
+},
+"2025-w7-2116-2132": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.33,
+"overUnder": 55.5,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w5-254-277": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.17,
+"overUnder": 46.67,
+"spreadOpen": 10.83,
+"closing": true
+},
+"2025-w6-264-120": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.5,
+"overUnder": 52.67,
+"spreadOpen": 5.83,
+"closing": true
+},
+"2025-w7-2579-99": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.33,
+"overUnder": 44.5,
+"spreadOpen": -10.0,
+"closing": true
+},
+"2025-w8-277-2116": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 46.67,
+"spreadOpen": -8.0,
+"closing": true
+},
+"2025-w5-30-356": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 62.33,
+"spreadOpen": 3.17,
+"closing": true
+},
+"2025-w5-189-195": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.67,
+"overUnder": 49.67,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w7-55-2534": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.17,
+"overUnder": 53.33,
+"spreadOpen": 9.0,
+"closing": true
+},
+"2025-w7-2572-290": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 60.0,
+"spreadOpen": 0.83,
+"closing": true
+},
+"2025-w7-309-256": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -18.5,
+"overUnder": 45.0,
+"spreadOpen": -17.17,
+"closing": true
+},
+"2025-w8-2459-195": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.83,
+"overUnder": 41.83,
+"spreadOpen": -12.0,
+"closing": true
+},
+"2025-w8-41-103": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 58.33,
+"spreadOpen": -2.0,
+"closing": true
+},
+"2025-w7-2429-349": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 45.17,
+"spreadOpen": -19.5,
+"closing": true
+},
+"2025-w5-2-245": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 51.5,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w5-2335-295": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.5,
+"overUnder": 53.5,
+"spreadOpen": -13.17,
+"closing": true
+},
+"2025-w5-2006-2649": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.67,
+"overUnder": 50.0,
+"spreadOpen": -21.17,
+"closing": true
+},
+"2025-w8-201-2579": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.33,
+"overUnder": 43.0,
+"spreadOpen": 4.33,
+"closing": true
+},
+"2025-w8-2309-2649": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -25.33,
+"overUnder": 48.5,
+"spreadOpen": -24.17,
+"closing": true
+},
+"2025-w7-295-276": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.5,
+"overUnder": 57.5,
+"spreadOpen": 13.67,
+"closing": true
+},
+"2025-w7-158-120": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 47.33,
+"spreadOpen": 5.5,
+"closing": true
+},
+"2025-w8-245-8": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.67,
+"overUnder": 57.5,
+"spreadOpen": 8.0,
+"closing": true
+},
+"2025-w8-2247-290": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 58.67,
+"spreadOpen": -6.33,
+"closing": true
+},
+"2025-w7-221-52": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.83,
+"overUnder": 57.0,
+"spreadOpen": -9.17,
+"closing": true
+},
+"2025-w7-2426-218": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.17,
+"overUnder": 52.5,
+"spreadOpen": 8.5,
+"closing": true
+},
+"2025-w5-235-2226": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 62.67,
+"spreadOpen": 13.67,
+"closing": true
+},
+"2025-w8-218-2429": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.67,
+"overUnder": 47.33,
+"spreadOpen": 11.67,
+"closing": true
+},
+"2025-w7-5-2226": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.83,
+"overUnder": 66.0,
+"spreadOpen": -4.83,
+"closing": true
+},
+"2025-w5-25-103": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.17,
+"overUnder": 54.17,
+"spreadOpen": -5.67,
+"closing": true
+},
+"2025-w8-344-57": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.5,
+"overUnder": 51.0,
+"spreadOpen": -9.67,
+"closing": true
+},
+"2025-w7-2026-2247": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 55.5,
+"spreadOpen": 3.67,
+"closing": true
+},
+"2025-w8-2653-2433": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.83,
+"overUnder": 45.67,
+"spreadOpen": 5.17,
+"closing": true
+},
+"2025-w5-21-2459": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.67,
+"overUnder": 42.0,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w8-326-276": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 65.67,
+"spreadOpen": 4.33,
+"closing": true
+},
+"2025-w5-164-135": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.67,
+"overUnder": 51.5,
+"spreadOpen": -4.5,
+"closing": true
+},
+"2025-w8-127-84": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -26.5,
+"overUnder": 49.5,
+"spreadOpen": -26.17,
+"closing": true
+},
+"2025-w7-77-213": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -20.5,
+"overUnder": 46.5,
+"spreadOpen": -21.83,
+"closing": true
+},
+"2025-w8-2483-164": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 17.83,
+"overUnder": 62.0,
+"spreadOpen": 15.83,
+"closing": true
+},
+"2025-w8-166-2335": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.83,
+"overUnder": 48.17,
+"spreadOpen": -10.17,
+"closing": true
+},
+"2025-w8-2117-189": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 43.83,
+"spreadOpen": -6.0,
+"closing": true
+},
+"2025-w5-59-154": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.67,
+"overUnder": 53.33,
+"spreadOpen": 15.67,
+"closing": true
+},
+"2025-w8-2006-2050": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.0,
+"overUnder": 44.0,
+"spreadOpen": -1.5,
+"closing": true
+},
+"2025-w5-41-2084": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 51.33,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w7-259-59": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 55.5,
+"spreadOpen": -14.5,
+"closing": true
+},
+"2025-w7-26-127": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 51.67,
+"spreadOpen": -7.83,
+"closing": true
+},
+"2025-w8-2509-77": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.33,
+"overUnder": 47.0,
+"spreadOpen": -3.33,
+"closing": true
+},
+"2025-w8-221-183": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.17,
+"overUnder": 54.5,
+"spreadOpen": 11.17,
+"closing": true
+},
+"2025-w5-150-183": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.0,
+"overUnder": 59.5,
+"spreadOpen": 5.83,
+"closing": true
+},
+"2025-w5-97-221": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.17,
+"overUnder": 53.33,
+"spreadOpen": 4.17,
+"closing": true
+},
+"2025-w7-2649-189": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.67,
+"overUnder": 45.67,
+"spreadOpen": 8.33,
+"closing": true
+},
+"2025-w8-62-36": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.67,
+"overUnder": 53.5,
+"spreadOpen": 1.0,
+"closing": true
+},
+"2025-w8-2032-6": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.5,
+"overUnder": 57.33,
+"spreadOpen": -7.0,
+"closing": true
+},
+"2025-w5-259-152": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 57.17,
+"spreadOpen": -9.5,
+"closing": true
+},
+"2025-w7-2433-324": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 46.17,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w8-12-248": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.0,
+"overUnder": 47.33,
+"spreadOpen": -2.0,
+"closing": true
+},
+"2025-w7-193-2006": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 11.67,
+"overUnder": 47.5,
+"spreadOpen": 9.67,
+"closing": true
+},
+"2025-w5-328-238": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -23.67,
+"overUnder": 57.83,
+"spreadOpen": -22.17,
+"closing": true
+},
+"2025-w5-62-2005": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 52.33,
+"spreadOpen": -4.83,
+"closing": true
+},
+"2025-w8-48-55": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 55.67,
+"spreadOpen": 2.17,
+"closing": true
+},
+"2025-w8-2638-2534": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 46.83,
+"spreadOpen": -0.83,
+"closing": true
+},
+"2025-w8-202-151": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.5,
+"overUnder": 54.67,
+"spreadOpen": -16.17,
+"closing": true
+},
+"2025-w8-239-2628": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 66.83,
+"spreadOpen": -3.17,
+"closing": true
+},
+"2025-w7-2305-2641": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.5,
+"overUnder": 58.5,
+"spreadOpen": -14.33,
+"closing": true
+},
+"2025-w8-158-135": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 47.83,
+"spreadOpen": 5.83,
+"closing": true
+},
+"2025-w8-2636-249": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.83,
+"overUnder": 64.0,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w7-2459-2199": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 48.33,
+"spreadOpen": -0.33,
+"closing": true
+},
+"2025-w8-2572-309": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.33,
+"overUnder": 54.5,
+"spreadOpen": 3.67,
+"closing": true
+},
+"2025-w5-2026-68": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.83,
+"overUnder": 59.5,
+"spreadOpen": -17.17,
+"closing": true
+},
+"2025-w8-153-25": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.83,
+"overUnder": 46.5,
+"spreadOpen": -12.17,
+"closing": true
+},
+"2025-w7-265-145": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -33.0,
+"overUnder": 58.5,
+"spreadOpen": -32.5,
+"closing": true
+},
+"2025-w8-349-2655": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.0,
+"overUnder": 44.5,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w5-2199-2117": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 55.17,
+"spreadOpen": -5.33,
+"closing": true
+},
+"2025-w8-194-275": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 24.5,
+"overUnder": 41.33,
+"spreadOpen": 27.33,
+"closing": true
+},
+"2025-w8-2229-98": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 55.5,
+"spreadOpen": -8.5,
+"closing": true
+},
+"2025-w7-66-38": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 52.5,
+"spreadOpen": 4.67,
+"closing": true
+},
+"2025-w5-26-77": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.17,
+"overUnder": 46.0,
+"spreadOpen": -6.17,
+"closing": true
+},
+"2025-w5-2132-2305": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.17,
+"overUnder": 56.33,
+"spreadOpen": -5.83,
+"closing": true
+},
+"2025-w7-2050-2711": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.5,
+"overUnder": 43.0,
+"spreadOpen": -9.67,
+"closing": true
+},
+"2025-w8-235-5": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 23.5,
+"overUnder": 59.5,
+"spreadOpen": 21.5,
+"closing": true
+},
+"2025-w5-242-2426": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 45.67,
+"spreadOpen": -14.33,
+"closing": true
+},
+"2025-w8-2132-197": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 23.67,
+"overUnder": 57.67,
+"spreadOpen": 20.83,
+"closing": true
+},
+"2025-w7-252-12": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 46.67,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w7-167-68": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.83,
+"overUnder": 58.17,
+"spreadOpen": -16.5,
+"closing": true
+},
+"2025-w5-166-167": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.83,
+"overUnder": 53.5,
+"spreadOpen": -12.5,
+"closing": true
+},
+"2025-w8-2751-2005": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.83,
+"overUnder": 56.5,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w5-55-2572": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.83,
+"overUnder": 55.67,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w8-265-258": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.5,
+"overUnder": 56.5,
+"spreadOpen": -18.0,
+"closing": true
+},
+"2025-w7-24-2567": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -19.5,
+"overUnder": 55.5,
+"spreadOpen": -18.0,
+"closing": true
+},
+"2025-w7-2653-326": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.5,
+"overUnder": 53.5,
+"spreadOpen": -10.33,
+"closing": true
+},
+"2025-w8-251-96": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.67,
+"overUnder": 45.33,
+"spreadOpen": 12.67,
+"closing": true
+},
+"2025-w5-2655-202": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.5,
+"overUnder": 52.33,
+"spreadOpen": 13.83,
+"closing": true
+},
+"2025-w7-248-197": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.5,
+"overUnder": 47.67,
+"spreadOpen": 14.0,
+"closing": true
+},
+"2025-w8-52-24": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 17.5,
+"overUnder": 55.33,
+"spreadOpen": 17.17,
+"closing": true
+},
+"2025-w8-2440-167": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.17,
+"overUnder": 49.5,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w5-96-2579": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.67,
+"overUnder": 46.67,
+"spreadOpen": -6.33,
+"closing": true
+},
+"2025-w5-6-249": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.67,
+"overUnder": 63.5,
+"spreadOpen": -12.0,
+"closing": true
+},
+"2025-w7-154-204": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 47.67,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w7-2005-2439": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 65.83,
+"spreadOpen": -7.17,
+"closing": true
+},
+"2025-w5-239-197": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 21.17,
+"overUnder": 58.67,
+"spreadOpen": 19.5,
+"closing": true
+},
+"2025-w8-2226-58": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -20.5,
+"overUnder": 72.5,
+"spreadOpen": -21.17,
+"closing": true
+},
+"2025-w8-2567-228": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 49.67,
+"spreadOpen": -10.33,
+"closing": true
+},
+"2025-w7-2628-2306": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 54.5,
+"spreadOpen": 1.83,
+"closing": true
+},
+"2025-w5-276-309": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.17,
+"overUnder": 48.0,
+"spreadOpen": -2.83,
+"closing": true
+},
+"2025-w5-2032-2433": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.5,
+"overUnder": 55.5,
+"spreadOpen": -2.67,
+"closing": true
+},
+"2025-w7-242-2636": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.17,
+"overUnder": 48.5,
+"spreadOpen": -12.0,
+"closing": true
+},
+"2025-w5-113-142": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -44.5,
+"overUnder": 57.0,
+"spreadOpen": -42.83,
+"closing": true
+},
+"2025-w7-328-62": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.67,
+"overUnder": 57.17,
+"spreadOpen": -1.67,
+"closing": true
+},
+"2025-w5-2348-2638": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 48.0,
+"spreadOpen": 3.5,
+"closing": true
+},
+"2025-w7-23-2751": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 49.83,
+"spreadOpen": 1.83,
+"closing": true
+},
+"2025-w5-98-2623": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 59.5,
+"spreadOpen": 6.0,
+"closing": true
+},
+"2025-w5-2393-338": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 54.17,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w7-2509-135": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.33,
+"overUnder": 49.5,
+"spreadOpen": -10.0,
+"closing": true
+},
+"2025-w7-21-2440": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 42.5,
+"spreadOpen": 6.67,
+"closing": true
+},
+"2025-w9-258-153": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 11.67,
+"overUnder": 50.83,
+"spreadOpen": 9.5,
+"closing": true
+},
+"2025-w5-252-38": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 48.67,
+"spreadOpen": 5.67,
+"closing": true
+},
+"2025-w8-59-150": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 60.83,
+"spreadOpen": -1.17,
+"closing": true
+},
+"2025-w8-120-26": {
+"season": 2025,
+"week": 8,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.0,
+"overUnder": 52.5,
+"spreadOpen": -1.5,
+"closing": true
+},
+"2025-w9-2623-166": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 51.5,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w9-26-84": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -27.17,
+"overUnder": 53.5,
+"spreadOpen": -24.17,
+"closing": true
+},
+"2025-w10-84-120": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 21.17,
+"overUnder": 50.67,
+"spreadOpen": 19.67,
+"closing": true
+},
+"2025-w9-183-59": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 52.83,
+"spreadOpen": -18.0,
+"closing": true
+},
+"2025-w7-228-103": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 54.33,
+"spreadOpen": 13.5,
+"closing": true
+},
+"2025-w10-238-251": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 48.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w10-349-2005": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.33,
+"overUnder": 48.5,
+"spreadOpen": 1.33,
+"closing": true
+},
+"2025-w10-201-2633": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 55.67,
+"spreadOpen": -3.17,
+"closing": true
+},
+"2025-w10-59-152": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.33,
+"overUnder": 58.5,
+"spreadOpen": 5.83,
+"closing": true
+},
+"2025-w5-265-36": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.17,
+"overUnder": 48.5,
+"spreadOpen": -4.33,
+"closing": true
+},
+"2025-w10-2638-338": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.17,
+"overUnder": 53.0,
+"spreadOpen": -9.33,
+"closing": true
+},
+"2025-w11-2655-235": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 53.67,
+"spreadOpen": -6.17,
+"closing": true
+},
+"2025-w9-145-201": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.5,
+"overUnder": 52.5,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w9-142-238": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 52.5,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w9-251-344": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 8.33,
+"overUnder": 48.83,
+"spreadOpen": 7.17,
+"closing": true
+},
+"2025-w9-58-235": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 58.83,
+"spreadOpen": 1.33,
+"closing": true
+},
+"2025-w9-356-264": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.33,
+"overUnder": 54.5,
+"spreadOpen": -4.67,
+"closing": true
+},
+"2025-w9-2393-48": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.67,
+"overUnder": 55.33,
+"spreadOpen": -10.33,
+"closing": true
+},
+"2025-w9-164-2509": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 60.33,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w11-2348-48": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.5,
+"overUnder": 56.83,
+"spreadOpen": 4.83,
+"closing": true
+},
+"2025-w5-23-24": {
+"season": 2025,
+"week": 5,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 49.67,
+"spreadOpen": -1.83,
+"closing": true
+},
+"2025-w10-153-183": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.5,
+"overUnder": 45.5,
+"spreadOpen": -1.75,
+"closing": true
+},
+"2025-w12-87-221": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.67,
+"overUnder": 55.0,
+"spreadOpen": 10.67,
+"closing": true
+},
+"2025-w12-258-150": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.33,
+"overUnder": 60.0,
+"spreadOpen": -6.17,
+"closing": true
+},
+"2025-w12-254-239": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.5,
+"overUnder": 60.83,
+"spreadOpen": 8.67,
+"closing": true
+},
+"2025-w12-135-2483": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -26.67,
+"overUnder": 46.0,
+"spreadOpen": -22.33,
+"closing": true
+},
+"2025-w12-328-2439": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.67,
+"overUnder": 68.5,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w10-2132-254": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.67,
+"overUnder": 57.83,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w11-61-344": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.5,
+"overUnder": 56.5,
+"spreadOpen": 8.5,
+"closing": true
+},
+"2025-w12-2649-193": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.83,
+"overUnder": 44.33,
+"spreadOpen": 2.83,
+"closing": true
+},
+"2025-w12-204-202": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.33,
+"overUnder": 50.5,
+"spreadOpen": -0.25,
+"closing": true
+},
+"2025-w12-195-2711": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.5,
+"overUnder": 47.0,
+"spreadOpen": 1.83,
+"closing": true
+},
+"2025-w7-130-30": {
+"season": 2025,
+"week": 7,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 58.0,
+"spreadOpen": -0.83,
+"closing": true
+},
+"2025-w9-252-66": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 49.0,
+"spreadOpen": -1.0,
+"closing": true
+},
+"2025-w10-2426-249": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 68.5,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w10-256-326": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.33,
+"overUnder": 55.33,
+"spreadOpen": 6.33,
+"closing": true
+},
+"2025-w12-57-145": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.83,
+"overUnder": 53.5,
+"spreadOpen": -11.67,
+"closing": true
+},
+"2025-w12-58-2426": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 8.83,
+"overUnder": 62.67,
+"spreadOpen": 10.17,
+"closing": true
+},
+"2025-w12-2084-2117": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.33,
+"overUnder": 44.67,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w12-2459-113": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.17,
+"overUnder": 43.33,
+"spreadOpen": 11.0,
+"closing": true
+},
+"2025-w12-275-84": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.0,
+"overUnder": 43.5,
+"spreadOpen": -30.5,
+"closing": true
+},
+"2025-w12-152-2390": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.17,
+"overUnder": 54.67,
+"spreadOpen": -14.5,
+"closing": true
+},
+"2025-w12-2306-197": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 19.5,
+"overUnder": 50.33,
+"spreadOpen": 20.0,
+"closing": true
+},
+"2025-w12-2309-2006": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.5,
+"overUnder": 49.5,
+"spreadOpen": -4.67,
+"closing": true
+},
+"2025-w12-2653-295": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.67,
+"overUnder": 53.33,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w9-239-2132": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 68.83,
+"spreadOpen": -4.83,
+"closing": true
+},
+"2025-w11-66-2628": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.5,
+"overUnder": 58.33,
+"spreadOpen": -5.33,
+"closing": true
+},
+"2025-w10-30-158": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 59.33,
+"spreadOpen": 5.67,
+"closing": true
+},
+"2025-w10-2655-2636": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.83,
+"overUnder": 54.33,
+"spreadOpen": 4.33,
+"closing": true
+},
+"2025-w12-130-77": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.17,
+"overUnder": 42.0,
+"spreadOpen": 10.17,
+"closing": true
+},
+"2025-w10-235-242": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 48.33,
+"spreadOpen": 15.0,
+"closing": true
+},
+"2025-w4-202-197": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 54.67,
+"spreadOpen": -13.5,
+"closing": true
+},
+"2025-w9-6-2247": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.83,
+"overUnder": 54.0,
+"spreadOpen": 6.33,
+"closing": true
+},
+"2025-w9-2567-154": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.5,
+"overUnder": 52.67,
+"spreadOpen": 3.83,
+"closing": true
+},
+"2025-w12-2116-2641": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.33,
+"overUnder": 48.5,
+"spreadOpen": -23.5,
+"closing": true
+},
+"2025-w12-120-356": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.17,
+"overUnder": 51.67,
+"spreadOpen": -14.0,
+"closing": true
+},
+"2025-w12-2579-245": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.5,
+"overUnder": 49.5,
+"spreadOpen": -18.17,
+"closing": true
+},
+"2025-w12-2294-30": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 48.5,
+"spreadOpen": -6.5,
+"closing": true
+},
+"2025-w11-245-142": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 48.33,
+"spreadOpen": 5.67,
+"closing": true
+},
+"2025-w12-2628-252": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 51.67,
+"spreadOpen": -5.33,
+"closing": true
+},
+"2025-w12-26-194": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -33.0,
+"overUnder": 46.5,
+"spreadOpen": -31.17,
+"closing": true
+},
+"2025-w12-12-2132": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.0,
+"overUnder": 56.33,
+"spreadOpen": -5.75,
+"closing": true
+},
+"2025-w12-2509-264": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.83,
+"overUnder": 51.33,
+"spreadOpen": -16.17,
+"closing": true
+},
+"2025-w9-25-259": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.17,
+"overUnder": 50.67,
+"spreadOpen": -3.17,
+"closing": true
+},
+"2025-w11-252-2641": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.5,
+"overUnder": 50.25,
+"spreadOpen": -9.83,
+"closing": true
+},
+"2025-w11-2-238": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.83,
+"overUnder": 46.33,
+"spreadOpen": -6.83,
+"closing": true
+},
+"2025-w11-2483-2294": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 41.67,
+"spreadOpen": 6.33,
+"closing": true
+},
+"2025-w12-249-5": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 17.5,
+"overUnder": 69.0,
+"spreadOpen": 18.33,
+"closing": true
+},
+"2025-w12-153-154": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 37.67,
+"spreadOpen": -6.0,
+"closing": true
+},
+"2025-w4-242-2429": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.67,
+"overUnder": 42.0,
+"spreadOpen": 5.5,
+"closing": true
+},
+"2025-w9-2026-295": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.17,
+"overUnder": 61.83,
+"spreadOpen": -13.33,
+"closing": true
+},
+"2025-w10-309-6": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 52.67,
+"spreadOpen": -4.67,
+"closing": true
+},
+"2025-w11-2426-87": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -30.5,
+"overUnder": 54.67,
+"spreadOpen": -24.5,
+"closing": true
+},
+"2025-w12-259-52": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.0,
+"overUnder": 54.67,
+"spreadOpen": -11.5,
+"closing": true
+},
+"2025-w11-158-26": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.0,
+"overUnder": 45.67,
+"spreadOpen": -0.33,
+"closing": true
+},
+"2025-w11-21-62": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 48.0,
+"spreadOpen": 4.17,
+"closing": true
+},
+"2025-w10-151-218": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.33,
+"overUnder": 58.33,
+"spreadOpen": 4.5,
+"closing": true
+},
+"2025-w12-344-142": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.33,
+"overUnder": 50.33,
+"spreadOpen": -6.0,
+"closing": true
+},
+"2025-w9-2-8": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 56.0,
+"spreadOpen": -1.0,
+"closing": true
+},
+"2025-w10-2084-189": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 44.33,
+"spreadOpen": -2.0,
+"closing": true
+},
+"2025-w4-2439-193": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.83,
+"overUnder": 49.33,
+"spreadOpen": 4.17,
+"closing": true
+},
+"2025-w12-324-290": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 59.17,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w10-87-103": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 31.0,
+"overUnder": 55.33,
+"spreadOpen": 28.5,
+"closing": true
+},
+"2025-w4-249-349": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 50.67,
+"spreadOpen": -0.67,
+"closing": true
+},
+"2025-w12-2005-41": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.5,
+"overUnder": 64.5,
+"spreadOpen": -7.83,
+"closing": true
+},
+"2025-w9-152-221": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.0,
+"overUnder": 52.67,
+"spreadOpen": -7.83,
+"closing": true
+},
+"2025-w12-2636-2429": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 17.0,
+"overUnder": 57.5,
+"spreadOpen": 18.0,
+"closing": true
+},
+"2025-w10-154-52": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.67,
+"overUnder": 50.67,
+"spreadOpen": -7.67,
+"closing": true
+},
+"2025-w4-309-2199": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.17,
+"overUnder": 51.33,
+"spreadOpen": 4.0,
+"closing": true
+},
+"2025-w10-97-259": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.5,
+"overUnder": 52.5,
+"spreadOpen": 10.67,
+"closing": true
+},
+"2025-w4-153-2116": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 46.33,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w9-2006-2084": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 48.67,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w12-276-2247": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.5,
+"overUnder": 59.83,
+"spreadOpen": 6.17,
+"closing": true
+},
+"2025-w6-127-158": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.83,
+"overUnder": 48.83,
+"spreadOpen": -10.33,
+"closing": true
+},
+"2025-w6-150-25": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 54.83,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w12-2026-256": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -20.67,
+"overUnder": 53.83,
+"spreadOpen": -19.5,
+"closing": true
+},
+"2025-w10-2509-130": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.5,
+"overUnder": 48.67,
+"spreadOpen": -21.0,
+"closing": true
+},
+"2025-w4-218-59": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.5,
+"overUnder": 52.83,
+"spreadOpen": -24.0,
+"closing": true
+},
+"2025-w9-2628-277": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 16.5,
+"overUnder": 55.5,
+"spreadOpen": 14.67,
+"closing": true
+},
+"2025-w9-113-2117": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.83,
+"overUnder": 46.5,
+"spreadOpen": -16.33,
+"closing": true
+},
+"2025-w10-164-356": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.0,
+"overUnder": 63.5,
+"spreadOpen": -12.33,
+"closing": true
+},
+"2025-w4-189-97": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -26.17,
+"overUnder": 50.67,
+"spreadOpen": -27.33,
+"closing": true
+},
+"2025-w12-235-151": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 57.0,
+"spreadOpen": -2.67,
+"closing": true
+},
+"2025-w6-258-97": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 60.33,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w12-59-103": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 16.5,
+"overUnder": 61.33,
+"spreadOpen": 16.5,
+"closing": true
+},
+"2025-w4-252-151": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.17,
+"overUnder": 49.67,
+"spreadOpen": 8.0,
+"closing": true
+},
+"2025-w12-2199-2050": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.67,
+"overUnder": 48.67,
+"spreadOpen": 2.83,
+"closing": true
+},
+"2025-w10-127-135": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 44.5,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w9-41-242": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.0,
+"overUnder": 48.5,
+"spreadOpen": 9.67,
+"closing": true
+},
+"2025-w6-66-2132": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.67,
+"overUnder": 55.5,
+"spreadOpen": 0.17,
+"closing": true
+},
+"2025-w12-213-127": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 49.0,
+"spreadOpen": 7.33,
+"closing": true
+},
+"2025-w4-183-228": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 53.83,
+"spreadOpen": -17.0,
+"closing": true
+},
+"2025-w10-2117-2711": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.67,
+"overUnder": 43.33,
+"spreadOpen": -6.0,
+"closing": true
+},
+"2025-w6-2005-2426": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.5,
+"overUnder": 51.0,
+"spreadOpen": -11.33,
+"closing": true
+},
+"2025-w10-9-66": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.83,
+"overUnder": 48.5,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w4-2653-2084": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.83,
+"overUnder": 43.67,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w4-2309-52": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -45.0,
+"overUnder": 56.33,
+"spreadOpen": -43.83,
+"closing": true
+},
+"2025-w10-5-41": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.33,
+"overUnder": 61.5,
+"spreadOpen": -11.83,
+"closing": true
+},
+"2025-w10-2116-239": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 58.5,
+"spreadOpen": -4.5,
+"closing": true
+},
+"2025-w4-2649-2711": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.67,
+"overUnder": 48.5,
+"spreadOpen": 12.67,
+"closing": true
+},
+"2025-w9-103-97": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -25.5,
+"overUnder": 54.5,
+"spreadOpen": -23.83,
+"closing": true
+},
+"2025-w4-152-150": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 57.33,
+"spreadOpen": -2.67,
+"closing": true
+},
+"2025-w6-2429-58": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.0,
+"overUnder": 54.83,
+"spreadOpen": -27.5,
+"closing": true
+},
+"2025-w10-265-204": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.33,
+"overUnder": 47.5,
+"spreadOpen": 3.67,
+"closing": true
+},
+"2025-w9-24-2390": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -29.0,
+"overUnder": 45.67,
+"spreadOpen": -30.0,
+"closing": true
+},
+"2025-w9-77-158": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 44.5,
+"spreadOpen": -8.5,
+"closing": true
+},
+"2025-w12-326-2572": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 65.67,
+"spreadOpen": -6.5,
+"closing": true
+},
+"2025-w4-5-2633": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -39.0,
+"overUnder": 68.83,
+"spreadOpen": -39.0,
+"closing": true
+},
+"2025-w9-189-2309": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.5,
+"overUnder": 47.33,
+"spreadOpen": 9.0,
+"closing": true
+},
+"2025-w6-277-252": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -19.67,
+"overUnder": 46.67,
+"spreadOpen": -19.5,
+"closing": true
+},
+"2025-w12-48-2534": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.17,
+"overUnder": 56.33,
+"spreadOpen": 8.0,
+"closing": true
+},
+"2025-w10-278-68": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 47.67,
+"spreadOpen": -17.83,
+"closing": true
+},
+"2025-w4-324-6": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.67,
+"overUnder": 51.83,
+"spreadOpen": -14.33,
+"closing": true
+},
+"2025-w6-2534-166": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.0,
+"overUnder": 52.67,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w4-2751-38": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.33,
+"overUnder": 45.67,
+"spreadOpen": -14.17,
+"closing": true
+},
+"2025-w4-2636-36": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.0,
+"overUnder": 58.5,
+"spreadOpen": 4.0,
+"closing": true
+},
+"2025-w6-103-221": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.67,
+"overUnder": 54.67,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w10-277-248": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.0,
+"overUnder": 48.83,
+"spreadOpen": -15.17,
+"closing": true
+},
+"2025-w9-2050-2459": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 42.0,
+"spreadOpen": -5.17,
+"closing": true
+},
+"2025-w9-2711-193": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 40.33,
+"spreadOpen": -2.67,
+"closing": true
+},
+"2025-w4-277-2305": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.83,
+"overUnder": 54.33,
+"spreadOpen": -12.0,
+"closing": true
+},
+"2025-w10-258-25": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.17,
+"overUnder": 52.33,
+"spreadOpen": 4.0,
+"closing": true
+},
+"2025-w10-2032-2653": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.67,
+"overUnder": 52.5,
+"spreadOpen": -7.5,
+"closing": true
+},
+"2025-w9-195-2199": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.33,
+"overUnder": 60.33,
+"spreadOpen": 10.33,
+"closing": true
+},
+"2025-w12-8-99": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 58.33,
+"spreadOpen": -6.17,
+"closing": true
+},
+"2025-w10-167-2439": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.83,
+"overUnder": 61.17,
+"spreadOpen": -5.33,
+"closing": true
+},
+"2025-w4-2655-145": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.17,
+"overUnder": 61.5,
+"spreadOpen": -12.83,
+"closing": true
+},
+"2025-w10-221-24": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.5,
+"overUnder": 51.83,
+"spreadOpen": 14.33,
+"closing": true
+},
+"2025-w10-96-2": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -11.67,
+"overUnder": 44.5,
+"spreadOpen": -10.17,
+"closing": true
+},
+"2025-w9-309-2653": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 47.33,
+"spreadOpen": -8.83,
+"closing": true
+},
+"2025-w4-8-235": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.17,
+"overUnder": 59.67,
+"spreadOpen": 6.17,
+"closing": true
+},
+"2025-w6-98-48": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.67,
+"overUnder": 63.0,
+"spreadOpen": -0.67,
+"closing": true
+},
+"2025-w12-6-2433": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.0,
+"overUnder": 49.83,
+"spreadOpen": 3.67,
+"closing": true
+},
+"2025-w12-2226-2655": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.83,
+"overUnder": 60.83,
+"spreadOpen": -16.5,
+"closing": true
+},
+"2025-w10-48-2335": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.5,
+"overUnder": 52.33,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w4-2050-41": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.0,
+"overUnder": 53.67,
+"spreadOpen": -20.0,
+"closing": true
+},
+"2025-w11-113-2006": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.17,
+"overUnder": 51.33,
+"spreadOpen": -10.0,
+"closing": true
+},
+"2025-w6-167-23": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.0,
+"overUnder": 58.83,
+"spreadOpen": -2.83,
+"closing": true
+},
+"2025-w9-2433-2572": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.83,
+"overUnder": 48.67,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w4-2459-344": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.0,
+"overUnder": 48.33,
+"spreadOpen": -22.0,
+"closing": true
+},
+"2025-w11-2309-2050": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 48.33,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w10-2579-145": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.0,
+"overUnder": 55.83,
+"spreadOpen": -13.83,
+"closing": true
+},
+"2025-w9-328-167": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 61.0,
+"spreadOpen": -1.83,
+"closing": true
+},
+"2025-w4-24-258": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.17,
+"overUnder": 48.83,
+"spreadOpen": -15.67,
+"closing": true
+},
+"2025-w10-166-98": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.5,
+"overUnder": 53.83,
+"spreadOpen": -9.17,
+"closing": true
+},
+"2025-w11-2636-58": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.83,
+"overUnder": 67.0,
+"spreadOpen": -13.0,
+"closing": true
+},
+"2025-w12-277-9": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 46.5,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w11-290-2026": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.67,
+"overUnder": 61.83,
+"spreadOpen": -5.67,
+"closing": true
+},
+"2025-w10-295-2433": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 16.67,
+"overUnder": 55.5,
+"spreadOpen": 14.5,
+"closing": true
+},
+"2025-w4-256-2335": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.5,
+"overUnder": 46.67,
+"spreadOpen": 10.83,
+"closing": true
+},
+"2025-w4-278-62": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 47.33,
+"spreadOpen": 3.5,
+"closing": true
+},
+"2025-w6-36-21": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 40.5,
+"spreadOpen": -5.67,
+"closing": true
+},
+"2025-w12-36-167": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -15.33,
+"overUnder": 53.67,
+"spreadOpen": -13.83,
+"closing": true
+},
+"2025-w10-197-2305": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.67,
+"overUnder": 54.17,
+"spreadOpen": -24.5,
+"closing": true
+},
+"2025-w9-21-278": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.17,
+"overUnder": 46.0,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w6-204-2026": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.0,
+"overUnder": 53.83,
+"spreadOpen": -0.83,
+"closing": true
+},
+"2025-w4-48-2229": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 54.83,
+"spreadOpen": -3.83,
+"closing": true
+},
+"2025-w12-338-55": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.67,
+"overUnder": 56.0,
+"spreadOpen": 2.5,
+"closing": true
+},
+"2025-w11-2459-2649": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -15.17,
+"overUnder": 42.0,
+"spreadOpen": -14.5,
+"closing": true
+},
+"2025-w4-2032-338": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 58.0,
+"spreadOpen": 7.0,
+"closing": true
+},
+"2025-w9-275-2483": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -31.33,
+"overUnder": 45.0,
+"spreadOpen": -34.0,
+"closing": true
+},
+"2025-w12-2638-2623": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 48.17,
+"spreadOpen": -4.33,
+"closing": true
+},
+"2025-w10-2751-21": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.0,
+"overUnder": 42.0,
+"spreadOpen": -10.5,
+"closing": true
+},
+"2025-w6-324-295": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -19.0,
+"overUnder": 53.33,
+"spreadOpen": -16.67,
+"closing": true
+},
+"2025-w11-77-30": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.5,
+"overUnder": 54.33,
+"spreadOpen": -15.67,
+"closing": true
+},
+"2025-w4-2440-98": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.83,
+"overUnder": 54.5,
+"spreadOpen": -11.5,
+"closing": true
+},
+"2025-w10-62-23": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 55.67,
+"spreadOpen": -2.17,
+"closing": true
+},
+"2025-w11-57-96": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.83,
+"overUnder": 44.5,
+"spreadOpen": 4.17,
+"closing": true
+},
+"2025-w4-68-2005": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 11.0,
+"overUnder": 51.67,
+"spreadOpen": 8.67,
+"closing": true
+},
+"2025-w9-2649-265": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.67,
+"overUnder": 44.83,
+"spreadOpen": -0.5,
+"closing": true
+},
+"2025-w12-68-21": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.0,
+"overUnder": 42.17,
+"spreadOpen": -2.17,
+"closing": true
+},
+"2025-w12-23-2440": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 9.67,
+"overUnder": 49.5,
+"spreadOpen": 8.5,
+"closing": true
+},
+"2025-w6-195-2050": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.17,
+"overUnder": 52.17,
+"spreadOpen": 16.83,
+"closing": true
+},
+"2025-w10-12-38": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.67,
+"overUnder": 52.17,
+"spreadOpen": 4.83,
+"closing": true
+},
+"2025-w12-166-2633": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -41.5,
+"overUnder": 60.0,
+"spreadOpen": -38.83,
+"closing": true
+},
+"2025-w4-2247-238": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -27.33,
+"overUnder": 53.17,
+"spreadOpen": -26.67,
+"closing": true
+},
+"2025-w9-2226-2426": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -14.5,
+"overUnder": 63.5,
+"spreadOpen": -14.33,
+"closing": true
+},
+"2025-w11-194-2509": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 29.67,
+"overUnder": 49.67,
+"spreadOpen": 28.5,
+"closing": true
+},
+"2025-w4-2572-2348": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 51.17,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w12-2393-98": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.5,
+"overUnder": 51.83,
+"spreadOpen": -13.67,
+"closing": true
+},
+"2025-w9-197-2641": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -37.0,
+"overUnder": 56.33,
+"spreadOpen": -38.0,
+"closing": true
+},
+"2025-w6-2117-2006": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.0,
+"overUnder": 47.5,
+"spreadOpen": 7.0,
+"closing": true
+},
+"2025-w10-344-8": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.33,
+"overUnder": 66.5,
+"spreadOpen": -3.83,
+"closing": true
+},
+"2025-w11-193-195": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.67,
+"overUnder": 50.67,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w12-2751-278": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.83,
+"overUnder": 40.5,
+"spreadOpen": -4.33,
+"closing": true
+},
+"2025-w9-290-2032": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 0.33,
+"overUnder": 59.5,
+"spreadOpen": -2.5,
+"closing": true
+},
+"2025-w10-276-324": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.17,
+"overUnder": 55.17,
+"spreadOpen": 3.83,
+"closing": true
+},
+"2025-w6-2199-2084": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.5,
+"overUnder": 53.5,
+"spreadOpen": -9.83,
+"closing": true
+},
+"2025-w4-276-2393": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 46.17,
+"spreadOpen": 3.67,
+"closing": true
+},
+"2025-w12-2335-2229": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.17,
+"overUnder": 52.17,
+"spreadOpen": 3.17,
+"closing": true
+},
+"2025-w4-2534-251": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -39.5,
+"overUnder": 51.5,
+"spreadOpen": -41.17,
+"closing": true
+},
+"2025-w6-154-259": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.0,
+"overUnder": 51.33,
+"spreadOpen": -5.67,
+"closing": true
+},
+"2025-w9-36-2751": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.67,
+"overUnder": 46.5,
+"spreadOpen": -4.33,
+"closing": true
+},
+"2025-w12-2348-265": {
+"season": 2025,
+"week": 12,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -10.17,
+"overUnder": 43.5,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w4-2433-2638": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.33,
+"overUnder": 47.0,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w6-2711-113": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 12.33,
+"overUnder": 46.17,
+"spreadOpen": 11.5,
+"closing": true
+},
+"2025-w10-55-2393": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.33,
+"overUnder": 54.0,
+"spreadOpen": 6.17,
+"closing": true
+},
+"2025-w10-150-228": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 55.0,
+"spreadOpen": -3.5,
+"closing": true
+},
+"2025-w6-6-2653": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 46.67,
+"spreadOpen": -2.83,
+"closing": true
+},
+"2025-w9-135-2294": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.33,
+"overUnder": 39.17,
+"spreadOpen": -7.67,
+"closing": true
+},
+"2025-w4-25-21": {
+"season": 2025,
+"week": 4,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 46.67,
+"spreadOpen": 12.83,
+"closing": true
+},
+"2025-w6-256-2247": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 19.33,
+"overUnder": 52.67,
+"spreadOpen": 19.0,
+"closing": true
+},
+"2025-w11-248-2116": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.33,
+"overUnder": 47.5,
+"spreadOpen": 1.67,
+"closing": true
+},
+"2025-w6-202-235": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.17,
+"overUnder": 53.83,
+"spreadOpen": -21.17,
+"closing": true
+},
+"2025-w6-2433-77": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.83,
+"overUnder": 43.33,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w6-356-2509": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.17,
+"overUnder": 54.83,
+"spreadOpen": 10.0,
+"closing": true
+},
+"2025-w11-2567-103": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.5,
+"overUnder": 54.5,
+"spreadOpen": 12.67,
+"closing": true
+},
+"2025-w10-2229-2623": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 50.0,
+"spreadOpen": -3.33,
+"closing": true
+},
+"2025-w10-2534-2348": {
+"season": 2025,
+"week": 10,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -16.5,
+"overUnder": 48.0,
+"spreadOpen": -17.0,
+"closing": true
+},
+"2025-w9-68-2440": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 20.83,
+"overUnder": 50.83,
+"spreadOpen": 21.67,
+"closing": true
+},
+"2025-w11-38-277": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 51.5,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w11-218-349": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 45.33,
+"spreadOpen": -6.17,
+"closing": true
+},
+"2025-w6-197-12": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -22.17,
+"overUnder": 56.5,
+"spreadOpen": -18.17,
+"closing": true
+},
+"2025-w9-218-202": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.33,
+"overUnder": 52.5,
+"spreadOpen": 6.17,
+"closing": true
+},
+"2025-w6-193-2459": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.67,
+"overUnder": 38.5,
+"spreadOpen": 2.83,
+"closing": true
+},
+"2025-w6-2226-242": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.67,
+"overUnder": 55.0,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w6-213-26": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 24.5,
+"overUnder": 48.0,
+"spreadOpen": 26.0,
+"closing": true
+},
+"2025-w9-249-2429": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 25.33,
+"overUnder": 60.83,
+"spreadOpen": 27.0,
+"closing": true
+},
+"2025-w11-202-2226": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.5,
+"overUnder": 60.83,
+"spreadOpen": -5.5,
+"closing": true
+},
+"2025-w6-183-2567": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 56.67,
+"spreadOpen": -16.5,
+"closing": true
+},
+"2025-w11-2429-151": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.33,
+"overUnder": 56.5,
+"spreadOpen": -27.83,
+"closing": true
+},
+"2025-w9-248-9": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.33,
+"overUnder": 47.0,
+"spreadOpen": -8.0,
+"closing": true
+},
+"2025-w9-2633-96": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.5,
+"overUnder": 55.0,
+"spreadOpen": 9.0,
+"closing": true
+},
+"2025-w6-2306-239": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.67,
+"overUnder": 60.0,
+"spreadOpen": -5.83,
+"closing": true
+},
+"2025-w11-183-2390": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.5,
+"overUnder": 46.83,
+"spreadOpen": -28.0,
+"closing": true
+},
+"2025-w6-349-5": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 55.5,
+"spreadOpen": 8.0,
+"closing": true
+},
+"2025-w9-338-2229": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.83,
+"overUnder": 48.83,
+"spreadOpen": 1.5,
+"closing": true
+},
+"2025-w13-52-152": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.67,
+"overUnder": 58.83,
+"spreadOpen": 4.17,
+"closing": true
+},
+"2025-w13-62-2439": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 64.5,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w9-98-2348": {
+"season": 2025,
+"week": 9,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.0,
+"overUnder": 49.33,
+"spreadOpen": -2.83,
+"closing": true
+},
+"2025-w6-2309-201": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -46.5,
+"overUnder": 53.67,
+"spreadOpen": -45.5,
+"closing": true
+},
+"2025-w6-2229-41": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 52.0,
+"spreadOpen": -8.67,
+"closing": true
+},
+"2025-w13-127-2294": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 43.0,
+"spreadOpen": -16.17,
+"closing": true
+},
+"2025-w13-48-154": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.5,
+"overUnder": 49.17,
+"spreadOpen": -18.0,
+"closing": true
+},
+"2025-w13-2628-248": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 55.83,
+"spreadOpen": -2.5,
+"closing": true
+},
+"2025-w6-2439-2751": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.33,
+"overUnder": 51.67,
+"spreadOpen": 5.33,
+"closing": true
+},
+"2025-w6-326-2032": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 14.17,
+"overUnder": 63.5,
+"spreadOpen": 11.17,
+"closing": true
+},
+"2025-w11-256-276": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.5,
+"overUnder": 53.17,
+"spreadOpen": 12.5,
+"closing": true
+},
+"2025-w11-2247-324": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 56.67,
+"spreadOpen": -7.17,
+"closing": true
+},
+"2025-w6-2440-278": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -12.5,
+"overUnder": 45.83,
+"spreadOpen": -13.83,
+"closing": true
+},
+"2025-w13-197-2116": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -13.17,
+"overUnder": 47.5,
+"spreadOpen": -14.0,
+"closing": true
+},
+"2025-w13-276-2026": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.83,
+"overUnder": 56.83,
+"spreadOpen": 3.67,
+"closing": true
+},
+"2025-w13-183-87": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -36.67,
+"overUnder": 51.0,
+"spreadOpen": -35.0,
+"closing": true
+},
+"2025-w13-130-120": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 13.83,
+"overUnder": 46.5,
+"spreadOpen": 12.17,
+"closing": true
+},
+"2025-w13-202-349": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 43.5,
+"spreadOpen": -10.67,
+"closing": true
+},
+"2025-w13-221-59": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 61.0,
+"spreadOpen": -2.67,
+"closing": true
+},
+"2025-w13-158-213": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 45.33,
+"spreadOpen": -8.83,
+"closing": true
+},
+"2025-w6-2636-218": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 58.17,
+"spreadOpen": 6.5,
+"closing": true
+},
+"2025-w6-2305-2116": {
+"season": 2025,
+"week": 6,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.83,
+"overUnder": 53.33,
+"spreadOpen": 3.5,
+"closing": true
+},
+"2025-w13-2050-2649": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -29.17,
+"overUnder": 45.5,
+"spreadOpen": -25.5,
+"closing": true
+},
+"2025-w13-41-2226": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.83,
+"overUnder": 64.0,
+"spreadOpen": 7.33,
+"closing": true
+},
+"2025-w13-2429-61": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -42.5,
+"overUnder": 53.33,
+"spreadOpen": -44.67,
+"closing": true
+},
+"2025-w13-2655-218": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.5,
+"overUnder": 54.33,
+"spreadOpen": 8.33,
+"closing": true
+},
+"2025-w13-25-24": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 4.5,
+"overUnder": 47.5,
+"spreadOpen": 3.33,
+"closing": true
+},
+"2025-w11-25-97": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -18.33,
+"overUnder": 49.0,
+"spreadOpen": -18.17,
+"closing": true
+},
+"2025-w13-135-77": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 41.0,
+"spreadOpen": -4.33,
+"closing": true
+},
+"2025-w13-96-238": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.83,
+"overUnder": 53.5,
+"spreadOpen": -9.33,
+"closing": true
+},
+"2025-w11-24-153": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -8.5,
+"overUnder": 41.67,
+"spreadOpen": -8.33,
+"closing": true
+},
+"2025-w13-2711-2459": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.83,
+"overUnder": 39.17,
+"spreadOpen": 6.0,
+"closing": true
+},
+"2025-w13-2006-189": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.33,
+"overUnder": 47.67,
+"spreadOpen": -4.33,
+"closing": true
+},
+"2025-w13-113-195": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -33.83,
+"overUnder": 53.33,
+"spreadOpen": -31.17,
+"closing": true
+},
+"2025-w13-324-2579": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.0,
+"overUnder": 50.0,
+"spreadOpen": -23.33,
+"closing": true
+},
+"2025-w13-164-194": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -28.67,
+"overUnder": 54.33,
+"spreadOpen": -32.83,
+"closing": true
+},
+"2025-w13-309-2032": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 54.33,
+"spreadOpen": -3.33,
+"closing": true
+},
+"2025-w13-2623-338": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 54.33,
+"spreadOpen": -5.67,
+"closing": true
+},
+"2025-w11-2623-2335": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.67,
+"overUnder": 51.5,
+"spreadOpen": -7.33,
+"closing": true
+},
+"2025-w13-2117-2309": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.5,
+"overUnder": 50.5,
+"spreadOpen": 7.5,
+"closing": true
+},
+"2025-w13-193-2084": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 38.5,
+"spreadOpen": -2.33,
+"closing": true
+},
+"2025-w13-2390-259": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 17.83,
+"overUnder": 49.0,
+"spreadOpen": 16.33,
+"closing": true
+},
+"2025-w13-295-290": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.17,
+"overUnder": 62.0,
+"spreadOpen": 9.83,
+"closing": true
+},
+"2025-w11-189-2199": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.17,
+"overUnder": 49.33,
+"spreadOpen": -1.83,
+"closing": true
+},
+"2025-w13-239-12": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.5,
+"overUnder": 61.17,
+"spreadOpen": -6.5,
+"closing": true
+},
+"2025-w13-151-2636": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.0,
+"overUnder": 62.17,
+"spreadOpen": 3.5,
+"closing": true
+},
+"2025-w13-2440-2751": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.33,
+"overUnder": 39.83,
+"spreadOpen": -7.67,
+"closing": true
+},
+"2025-w11-154-258": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -7.17,
+"overUnder": 48.5,
+"spreadOpen": -6.67,
+"closing": true
+},
+"2025-w13-2572-6": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 53.33,
+"spreadOpen": 2.83,
+"closing": true
+},
+"2025-w13-252-2132": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 2.5,
+"overUnder": 56.83,
+"spreadOpen": 0.33,
+"closing": true
+},
+"2025-w13-23-21": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 51.17,
+"spreadOpen": -12.0,
+"closing": true
+},
+"2025-w13-2335-2348": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.33,
+"overUnder": 45.33,
+"spreadOpen": 0.0,
+"closing": true
+},
+"2025-w11-120-164": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.5,
+"overUnder": 56.67,
+"spreadOpen": -1.67,
+"closing": true
+},
+"2025-w13-2534-2393": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.67,
+"overUnder": 53.5,
+"spreadOpen": -5.83,
+"closing": true
+},
+"2025-w13-265-256": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -15.33,
+"overUnder": 44.83,
+"spreadOpen": -13.5,
+"closing": true
+},
+"2025-w13-58-5": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 21.67,
+"overUnder": 68.67,
+"spreadOpen": 21.33,
+"closing": true
+},
+"2025-w13-98-99": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -24.83,
+"overUnder": 52.67,
+"spreadOpen": -22.17,
+"closing": true
+},
+"2025-w11-5-242": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -0.33,
+"overUnder": 51.5,
+"spreadOpen": -3.67,
+"closing": true
+},
+"2025-w11-326-309": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 63.17,
+"spreadOpen": 2.67,
+"closing": true
+},
+"2025-w13-8-251": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.17,
+"overUnder": 58.0,
+"spreadOpen": -10.33,
+"closing": true
+},
+"2025-w13-249-242": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 18.5,
+"overUnder": 57.0,
+"spreadOpen": 17.67,
+"closing": true
+},
+"2025-w13-166-2638": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -4.17,
+"overUnder": 44.83,
+"spreadOpen": -3.0,
+"closing": true
+},
+"2025-w11-264-275": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 10.5,
+"overUnder": 44.5,
+"spreadOpen": 12.0,
+"closing": true
+},
+"2025-w11-2305-12": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -5.83,
+"overUnder": 56.5,
+"spreadOpen": -5.0,
+"closing": true
+},
+"2025-w13-2433-326": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -20.5,
+"overUnder": 59.83,
+"spreadOpen": -18.5,
+"closing": true
+},
+"2025-w11-2439-36": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 5.17,
+"overUnder": 61.0,
+"spreadOpen": 6.0,
+"closing": true
+},
+"2025-w13-2305-66": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.33,
+"overUnder": 55.5,
+"spreadOpen": -4.0,
+"closing": true
+},
+"2025-w11-2229-2393": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.67,
+"overUnder": 50.67,
+"spreadOpen": 1.33,
+"closing": true
+},
+"2025-w13-97-2567": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -3.83,
+"overUnder": 49.83,
+"spreadOpen": -2.67,
+"closing": true
+},
+"2025-w11-55-2638": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 1.5,
+"overUnder": 46.5,
+"spreadOpen": 1.83,
+"closing": true
+},
+"2025-w11-2005-23": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -6.17,
+"overUnder": 67.83,
+"spreadOpen": -3.17,
+"closing": true
+},
+"2025-w13-356-275": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 8.83,
+"overUnder": 42.0,
+"spreadOpen": 9.33,
+"closing": true
+},
+"2025-w11-2572-2032": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 6.5,
+"overUnder": 54.67,
+"spreadOpen": 5.0,
+"closing": true
+},
+"2025-w13-167-2005": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 3.5,
+"overUnder": 53.17,
+"spreadOpen": 2.0,
+"closing": true
+},
+"2025-w11-150-41": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 7.67,
+"overUnder": 63.0,
+"spreadOpen": 9.17,
+"closing": true
+},
+"2025-w13-328-278": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -1.67,
+"overUnder": 50.33,
+"spreadOpen": -2.17,
+"closing": true
+},
+"2025-w11-2440-328": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 52.33,
+"spreadOpen": -11.0,
+"closing": true
+},
+"2025-w13-55-2229": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -2.5,
+"overUnder": 56.0,
+"spreadOpen": -0.33,
+"closing": true
+},
+"2025-w11-338-166": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": 11.17,
+"overUnder": 52.33,
+"spreadOpen": 7.0,
+"closing": true
+},
+"2025-w13-2247-2653": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -9.83,
+"overUnder": 51.0,
+"spreadOpen": -10.83,
+"closing": true
+},
+"2025-w11-2534-204": {
+"season": 2025,
+"week": 11,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -21.17,
+"overUnder": 52.17,
+"spreadOpen": -18.17,
+"closing": true
+},
+"2025-w13-36-68": {
+"season": 2025,
+"week": 13,
+"books": 3,
+"providers": [
+"Bovada",
+"DraftKings",
+"ESPN Bet"
+],
+"spread": -17.33,
+"overUnder": 45.83,
+"spreadOpen": -16.83,
+"closing": true
+},
+"2026-w1-62-24": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -3.5,
+"overUnder": 50.5,
+"spreadOpen": -3.0,
+"closing": false
+},
+"2026-w1-278-30": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -23.0,
+"overUnder": 51.5,
+"spreadOpen": -23.25,
+"closing": false
+},
+"2026-w1-2567-52": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 2.0,
+"overUnder": 53.0,
+"spreadOpen": 2.5,
+"closing": false
+},
+"2026-w1-2335-256": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -6.25,
+"overUnder": 51.5,
+"spreadOpen": -6.0,
+"closing": false
+},
+"2026-w1-103-2132": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -8.5,
+"overUnder": 54.5,
+"spreadOpen": -9.5,
+"closing": false
+},
+"2026-w1-235-2439": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -4.25,
+"overUnder": 57.5,
+"spreadOpen": -3.0,
+"closing": false
+},
+"2026-w1-2390-24": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 22.5,
+"overUnder": 49.5,
+"spreadOpen": 21.5,
+"closing": false
+},
+"2026-w1-326-251": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -30.5,
+"overUnder": 60.0,
+"spreadOpen": -30.5,
+"closing": false
+},
+"2026-w1-197-202": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 12.5,
+"overUnder": 61.0,
+"spreadOpen": 11.5,
+"closing": false
+},
+"2026-w1-2655-150": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -9.25,
+"overUnder": 52.0,
+"spreadOpen": -8.5,
+"closing": false
+},
+"2026-w1-249-84": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -40.75,
+"overUnder": 55.5,
+"spreadOpen": -40.5,
+"closing": false
+},
+"2026-w1-265-264": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -22.25,
+"overUnder": 50.5,
+"spreadOpen": -21.5,
+"closing": false
+},
+"2026-w1-38-59": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -7.0,
+"overUnder": 51.0,
+"spreadOpen": -7.0,
+"closing": false
+},
+"2026-w1-152-258": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -4.25,
+"overUnder": 54.0,
+"spreadOpen": -3.5,
+"closing": false
+},
+"2026-w1-97-145": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -6.5,
+"overUnder": 55.5,
+"spreadOpen": -8.5,
+"closing": false
+},
+"2026-w1-5-356": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -27.5,
+"overUnder": 57.0,
+"spreadOpen": -27.5,
+"closing": false
+},
+"2026-w1-239-2": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -6.75,
+"overUnder": 59.25,
+"spreadOpen": -7.0,
+"closing": false
+},
+"2026-w1-2433-344": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -28.5,
+"overUnder": 55.5,
+"spreadOpen": -28.5,
+"closing": false
+},
+"2026-w1-98-2440": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 3.5,
+"overUnder": 53.0,
+"spreadOpen": 4.25,
+"closing": false
+},
+"2026-w1-16-2199": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -8.5,
+"overUnder": 53.0,
+"spreadOpen": -8.5,
+"closing": false
+},
+"2026-w1-151-333": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -27.0,
+"overUnder": 54.0,
+"spreadOpen": -25.5,
+"closing": false
+},
+"2026-w1-153-2628": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -7.0,
+"overUnder": 49.0,
+"spreadOpen": -7.5,
+"closing": false
+},
+"2026-w1-2711-130": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -26.5,
+"overUnder": 47.5,
+"spreadOpen": -26.5,
+"closing": false
+},
+"2026-w1-195-158": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -23.75,
+"overUnder": 47.5,
+"spreadOpen": -23.5,
+"closing": false
+},
+"2026-w1-68-2483": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -24.5,
+"overUnder": 52.0,
+"spreadOpen": -24.5,
+"closing": false
+},
+"2026-w1-2117-167": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -12.75,
+"overUnder": 49.0,
+"spreadOpen": -12.5,
+"closing": false
+},
+"2026-w1-2459-2294": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -30.25,
+"overUnder": 45.5,
+"spreadOpen": -29.5,
+"closing": false
+},
+"2026-w1-2229-58": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -12.5,
+"overUnder": 55.0,
+"spreadOpen": -12.5,
+"closing": false
+},
+"2026-w1-26-25": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 0.0,
+"overUnder": 54.0,
+"spreadOpen": -2.5,
+"closing": false
+},
+"2026-w1-2534-2653": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -16.25,
+"overUnder": 51.5,
+"spreadOpen": -17.25,
+"closing": false
+},
+"2026-w1-275-87": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -20.5,
+"overUnder": 47.5,
+"spreadOpen": -16.5,
+"closing": false
+},
+"2026-w1-2439-62": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": 2.0,
+"overUnder": 58.5,
+"spreadOpen": 1.5,
+"closing": false
+},
+"2026-w1-55-2449": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -8.75,
+"overUnder": 48.5,
+"spreadOpen": -10.0,
+"closing": false
+},
+"2026-w1-276-213": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -24.0,
+"overUnder": 54.5,
+"spreadOpen": -23.5,
+"closing": false
+},
+"2026-w1-23-30": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -36.5,
+"overUnder": 59.5,
+"spreadOpen": -35.5,
+"closing": false
+},
+"2026-w2-194-251": {
+"season": 2026,
+"week": 2,
+"books": 1,
+"providers": [
+"Bovada"
+],
+"spread": -1.5,
+"overUnder": 47.5,
+"spreadOpen": -2.5,
+"closing": false
+},
+"2026-w1-166-52": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -30.25,
+"overUnder": 53.0,
+"spreadOpen": -29.0,
+"closing": false
+},
+"2026-w2-201-130": {
+"season": 2026,
+"week": 2,
+"books": 1,
+"providers": [
+"Bovada"
+],
+"spread": -2.5,
+"overUnder": 45.5,
+"spreadOpen": -1.5,
+"closing": false
+},
+"2026-w1-2751-36": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -4.0,
+"overUnder": 48.0,
+"spreadOpen": -4.0,
+"closing": false
+},
+"2026-w1-204-248": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -19.25,
+"overUnder": 51.0,
+"spreadOpen": -18.5,
+"closing": false
+},
+"2026-w1-2226-57": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -26.0,
+"overUnder": 58.5,
+"spreadOpen": -25.5,
+"closing": false
+},
+"2026-w1-2309-2579": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -35.0,
+"overUnder": 53.0,
+"spreadOpen": -34.0,
+"closing": false
+},
+"2026-w1-2006-154": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -22.5,
+"overUnder": 49.5,
+"spreadOpen": -22.5,
+"closing": false
+},
+"2026-w1-23-2199": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -4.0,
+"overUnder": 53.5,
+"spreadOpen": -3.5,
+"closing": false
+},
+"2026-w1-324-277": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -19.5,
+"overUnder": 58.0,
+"spreadOpen": -17.5,
+"closing": false
+},
+"2026-w1-193-221": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -16.5,
+"overUnder": 50.5,
+"spreadOpen": -16.5,
+"closing": false
+},
+"2026-w1-228-99": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -10.0,
+"overUnder": 50.5,
+"spreadOpen": -11.5,
+"closing": false
+},
+"2026-w1-2032-235": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -10.0,
+"overUnder": 55.5,
+"spreadOpen": -10.5,
+"closing": false
+},
+"2026-w1-113-164": {
+"season": 2026,
+"week": 1,
+"books": 1,
+"providers": [
+"DraftKings"
+],
+"spread": -30.5,
+"overUnder": null,
+"spreadOpen": -30.5,
+"closing": false
+},
+"2026-w1-2649-127": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -10.5,
+"overUnder": 49.5,
+"spreadOpen": -10.5,
+"closing": false
+},
+"2026-w1-2050-194": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -50.25,
+"overUnder": 56.5,
+"spreadOpen": -50.0,
+"closing": false
+},
+"2026-w1-2638-201": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -40.5,
+"overUnder": 50.5,
+"spreadOpen": -40.5,
+"closing": false
+},
+"2026-w1-2623-245": {
+"season": 2026,
+"week": 1,
+"books": 2,
+"providers": [
+"Bovada",
+"DraftKings"
+],
+"spread": -39.0,
+"overUnder": 52.5,
+"spreadOpen": -38.5,
+"closing": false
+}
+}
+}

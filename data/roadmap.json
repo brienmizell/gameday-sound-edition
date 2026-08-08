@@ -148,6 +148,13 @@
 					"est": 0.25,
 					"status": "done",
 					"note": "/info returns 200 even at quota 0, so it is a free meter. The builder now reads remainingCalls BEFORE it starts and refuses rather than walking into a wall. Reading X-CallLimit-Remaining off a response only tells you after the call is already spent."
+				},
+				{
+					"id": "S19",
+					"title": "Climate normals for games past the forecast horizon",
+					"est": 1.5,
+					"status": "done",
+					"note": "Brien's ask. Open-Meteo's archive API is keyless and CORS-open, and ONE call returns a decade (3,653 days, ~104 KB) per venue. tools/build-normals.py reduces that to a per-date normal \u2014 mean high, mean low, and the share of days with measurable rain \u2014 over a +/-3 day window so one freak afternoon cannot define a date. Cards past the 16-day horizon now read 'Usually 76/57, rain on 40% of days' instead of only 'forecast opens in N days'. Labelled 10-YR NORMAL and styled quieter, because it is history, not a prediction."
 				}
 			]
 		},
@@ -312,11 +319,11 @@
 			"tasks": [
 				{
 					"id": "B10",
-					"title": "Rewrite build-series.py onto bulk /games",
+					"title": "Rewrite onto bulk /games",
 					"est": 2.5,
-					"status": "next",
+					"status": "done",
 					"required": false,
-					"note": "THE REAL FIX. /games?year=Y returns a whole season in one call and carries every field /teams/matchup does, plus more. Grouping all games by unordered team pair reconstructs every head-to-head at once. ~158 calls covers 1869-2026 ALL-TIME, one time, versus ~902 per season recurring \u2014 and my per-matchup loop spent 1,101 calls to store 157 pairs, about 86% waste. Do this before next season regardless of tier."
+					"note": "tools/build-bulk.py. 158 calls covered 1869-2026 and found 19,217 all-time pairs; series.json now has all 893 matchups on the 2026 schedule, up from 157. Cross-validated against the old per-matchup data: 124 of 124 summaries identical, and the bulk version is MORE complete (it caught the 2025 SEC Championship as Georgia/Alabama's last meeting, which /teams/matchup missed). The costly pair table is cached in data/pairs-alltime.json, so --emit-only rebuilds for zero calls."
 				},
 				{
 					"id": "B1",
@@ -372,11 +379,11 @@
 				},
 				{
 					"id": "B9",
-					"title": "Average + closing betting lines (CFBD /lines)",
+					"title": "Average + closing betting lines",
 					"est": 1,
-					"status": "blocked",
+					"status": "done",
 					"owner": "brien",
-					"note": "Now cheap and unblocked-by-design: /lines?year=2026 returns the WHOLE season's lines in ONE call, with every provider (so a true average) plus spreadOpen AND closing spread (so historical closing lines, which is exactly what Brien asked for). Betting lines are included on the FREE tier. Waiting only on quota reset 2026-09-01, or a $1 Tier 1 upgrade."
+					"note": "ONE call per season. data/lines.json holds 2025 (809 games, all closing) and 2026. Averages one vote per BOOK \u2014 CFBD lists 'DraftKings' and 'Draft Kings' separately and averaging both double-weights it. A finished game's number cannot move again, so it IS the closing line, and the card labels it so."
 				}
 			]
 		}

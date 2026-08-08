@@ -645,6 +645,26 @@ button:focus-visible {
 	font-style: italic;
 }
 
+/* A normal is history, not a forecast — it reads quieter on purpose. */
+.wx-normal {
+	color: var(--ink-3);
+}
+
+.wx-normal strong {
+	color: var(--ink-2);
+}
+
+.wx-tag {
+	margin-left: 0.35rem;
+	padding: 0.02rem 0.3rem;
+	border: 1px solid var(--line);
+	border-radius: 3px;
+	font-size: 0.64rem;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	white-space: nowrap;
+}
+
 .wx-icon {
 	margin-right: 0.15rem;
 }
@@ -664,6 +684,12 @@ button:focus-visible {
 	text-transform: uppercase;
 	letter-spacing: 0.03em;
 	white-space: nowrap;
+}
+
+/* A finished game's number can never move again. */
+.odds-book.is-closing {
+	border-color: var(--ink-3);
+	color: var(--ink-2);
 }
 
 .series {

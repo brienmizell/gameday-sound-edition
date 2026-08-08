@@ -93,32 +93,61 @@ def espn_index():
 
 # ---------------------------------------------------------------- betting lines
 
+def canon_book(name):
+    """CFBD lists the same sportsbook under more than one spelling.
+
+    2025 returns both "DraftKings" and "Draft Kings" — the same shop, and
+    averaging both double-weights it. Fold them before doing any arithmetic.
+    """
+    if not name:
+        return None
+    squashed = ''.join(c for c in name.lower() if c.isalnum())
+    return {'draftkings': 'DraftKings', 'espnbet': 'ESPN Bet', 'bovada': 'Bovada'}.get(squashed, name.strip())
+
+
 def build_lines(key, year):
     """One call. Every provider, opening and closing, for the whole season."""
     print(f'\n/lines?year={year} — one call for the season')
     games, left = api(key, '/lines', year=year, seasonType='both')
     print(f'  {len(games)} games returned' + (f' ({left} calls left)' if left is not None else ''))
 
-    out, books = {}, set()
+    idx, norm = espn_index()
+    path = DATA / 'lines.json'
+    prev = json.loads(path.read_text())['games'] if path.exists() else {}
+    out, books, unkeyed = dict(prev), set(), 0
+
     for g in games:
         lines = g.get('lines') or []
         if not lines:
             continue
-        spreads = [l['spread'] for l in lines if l.get('spread') is not None]
-        totals = [l['overUnder'] for l in lines if l.get('overUnder') is not None]
-        opens = [l['spreadOpen'] for l in lines if l.get('spreadOpen') is not None]
+
+        # One entry per BOOK, so a duplicate spelling cannot vote twice.
+        by_book = {}
         for l in lines:
-            books.add(l.get('provider'))
+            b = canon_book(l.get('provider'))
+            if b:
+                by_book.setdefault(b, l)
+                books.add(b)
+        picked = list(by_book.values())
+
+        spreads = [l['spread'] for l in picked if l.get('spread') is not None]
+        totals = [l['overUnder'] for l in picked if l.get('overUnder') is not None]
+        opens = [l['spreadOpen'] for l in picked if l.get('spreadOpen') is not None]
         if not spreads and not totals:
+            continue
+
+        # Key the way the APP can look it up: it knows ESPN ids, not CFBD game ids.
+        a_id, h_id = idx.get(norm(g.get('awayTeam'))), idx.get(norm(g.get('homeTeam')))
+        if not a_id or not h_id:
+            unkeyed += 1
             continue
 
         avg = lambda xs: round(sum(xs) / len(xs), 2) if xs else None             # noqa: E731
         completed = g.get('homeScore') is not None and g.get('awayScore') is not None
-        out[str(g.get('id'))] = {
+        out[f"{g.get('season')}-w{g.get('week')}-{a_id}-{h_id}"] = {
             'season': g.get('season'), 'week': g.get('week'),
-            'homeTeam': g.get('homeTeam'), 'awayTeam': g.get('awayTeam'),
-            'books': len(lines),
-            'providers': sorted({l.get('provider') for l in lines if l.get('provider')}),
+            'books': len(picked),
+            'providers': sorted(by_book),
             'spread': avg(spreads),          # negative = home favoured, CFBD's convention
             'overUnder': avg(totals),
             'spreadOpen': avg(opens),
@@ -126,19 +155,18 @@ def build_lines(key, year):
             'closing': completed,
         }
 
-    path = DATA / 'lines.json'
     path.write_text(json.dumps({
-        '_note': 'Average betting lines across all books CFBD carries. '
-                 'closing:true means the game is final, so the number is the closing line. '
-                 'Built by tools/build-bulk.py --lines; the key never ships.',
+        '_note': 'Average betting lines, one vote per sportsbook. Keyed '
+                 '"<season>-w<week>-<awayEspnId>-<homeEspnId>". closing:true means the game '
+                 'is final, so the number is the closing line. Built by tools/build-bulk.py.',
         'source': 'CollegeFootballData /lines',
-        'season': year,
-        'books': sorted(b for b in books if b),
+        'books': sorted(books),
         'games': out,
     }, indent=0))
     closed = sum(1 for v in out.values() if v['closing'])
-    print(f'  -> {path}: {len(out)} games with lines, {closed} closing, '
-          f'books seen: {", ".join(sorted(b for b in books if b))}')
+    print(f'  -> {path}: {len(out)} games total, {closed} closing, '
+          f'books: {", ".join(sorted(books))}'
+          + (f' ({unkeyed} skipped: non-FBS opponent)' if unkeyed else ''))
 
 
 # ------------------------------------------------------------- head-to-head
@@ -182,35 +210,85 @@ def build_series(key, first, last, season):
                   + (f' · {left} calls left' if left is not None else ''), flush=True)
         time.sleep(PAUSE)
 
-    # Emit only pairs that actually play THIS season — the app needs no more,
-    # and the whole-history file would be enormous.
-    sched = json.loads((DATA / 'series.json').read_text())['series'] if (DATA / 'series.json').exists() else {}
-    out = dict(sched)      # start from whatever is already known, then improve it
+    # Cache the expensive part. 158 calls produced this; never pay for it twice
+    # just because the emit step needs changing.
+    cache = DATA / 'pairs-alltime.json'
+    cache.write_text(json.dumps({
+        '_note': 'All-time head-to-head aggregates by school-name pair, derived from bulk '
+                 '/games. The costly artifact — re-emit series.json from this for free.',
+        'built': f'{first}-{last}',
+        'pairs': [{'a': list(k)[0], 'b': list(k)[1] if len(k) == 2 else list(k)[0],
+                   'w': v['w'], 'ties': v['ties'], 'n': v['n'], 'last': v['last']}
+                  for k, v in pairs.items() if len(k) == 2],
+    }, indent=0))
+    print(f'  cached {len(pairs)} all-time pairs -> {cache}')
 
-    for k, rec in pairs.items():
-        a_school, b_school = tuple(k) if len(k) == 2 else (None, None)
-        if not a_school:
+    emit_series(pairs, idx, norm, season)
+
+
+def emit_series(pairs, idx, norm, season):
+    """Write series.json for every matchup on THIS season's schedule.
+
+    The earlier version only refreshed pairs already in the file, so a run that
+    found 19,217 pairs still wrote 157 — it could improve what was there but
+    never add what was missing. The schedule, not the existing file, decides
+    which pairs the app needs.
+    """
+    import urllib.request as _u
+    wanted = {}
+    for wk in range(1, 16):
+        url = ('https://site.api.espn.com/apis/site/v2/sports/football/college-football'
+               f'/scoreboard?dates={season}&seasontype=2&week={wk}&groups=80&limit=300')
+        try:
+            with _u.urlopen(url, timeout=30) as r:
+                data = json.load(r)
+        except Exception:
             continue
-        a_id, b_id = idx.get(norm(a_school)), idx.get(norm(b_school))
-        if not a_id or not b_id:
-            continue
-        for away_id, home_id, away, home in ((a_id, b_id, a_school, b_school),
-                                             (b_id, a_id, b_school, a_school)):
-            pk = f'{away_id}-{home_id}'
-            if pk not in sched:
-                continue                    # only overwrite pairs the app asks about
-            aw, hw, ties = rec['w'][away], rec['w'][home], rec['ties']
-            if aw > hw:
-                summary = f'{away} leads {aw}-{hw}' + (f'-{ties}' if ties else '')
-            elif hw > aw:
-                summary = f'{home} leads {hw}-{aw}' + (f'-{ties}' if ties else '')
-            else:
-                summary = f'Series tied {aw}-{hw}' + (f'-{ties}' if ties else '')
+        for ev in data.get('events', []):
+            c = ev['competitions'][0]
+            h = next(x for x in c['competitors'] if x['homeAway'] == 'home')['team']
+            a = next(x for x in c['competitors'] if x['homeAway'] == 'away')['team']
+            wanted[f"{a['id']}-{h['id']}"] = (a['id'], h['id'], a.get('location'), h.get('location'))
+    print(f'  {len(wanted)} matchups on the {season} schedule (ESPN, free)')
+
+    # school-name pair -> aggregate, for lookup by name
+    by_names = {}
+    for k, v in pairs.items():
+        if len(k) == 2:
+            by_names[k] = v
+    # CFBD school name for each ESPN team, so aggregates can be looked up.
+    cfbd_of = {}
+    for k in by_names:
+        for school in k:
+            eid = idx.get(norm(school))
+            if eid:
+                cfbd_of.setdefault(eid, school)
+
+    out, missing = {}, 0
+    for pk, (away_id, home_id, away_loc, home_loc) in wanted.items():
+        away = cfbd_of.get(away_id) or away_loc
+        home = cfbd_of.get(home_id) or home_loc
+        rec = by_names.get(frozenset((away, home)))
+        if not rec:
+            # Both teams exist but no game between them appears anywhere in
+            # 1869-2026: a genuine first meeting.
             out[pk] = {'awayId': away_id, 'homeId': home_id, 'resolved': True,
-                       'awayWins': aw, 'homeWins': hw, 'ties': ties,
-                       'meetings': rec['n'], 'startYear': None, 'endYear': None,
-                       'summary': summary if rec['n'] else 'First meeting',
-                       'last': rec['last']}
+                       'awayWins': 0, 'homeWins': 0, 'ties': 0, 'meetings': 0,
+                       'startYear': None, 'endYear': None, 'summary': 'First meeting', 'last': None}
+            missing += 1
+            continue
+        aw, hw, ties = rec['w'].get(away, 0), rec['w'].get(home, 0), rec['ties']
+        if aw > hw:
+            summary = f'{away} leads {aw}-{hw}' + (f'-{ties}' if ties else '')
+        elif hw > aw:
+            summary = f'{home} leads {hw}-{aw}' + (f'-{ties}' if ties else '')
+        else:
+            summary = f'Series tied {aw}-{hw}' + (f'-{ties}' if ties else '')
+        out[pk] = {'awayId': away_id, 'homeId': home_id, 'resolved': True,
+                   'awayWins': aw, 'homeWins': hw, 'ties': ties,
+                   'meetings': rec['n'], 'startYear': None, 'endYear': None,
+                   'summary': summary if rec['n'] else 'First meeting',
+                   'last': rec['last']}
 
     path = DATA / 'series.json'
     path.write_text(json.dumps({
@@ -219,7 +297,7 @@ def build_series(key, first, last, season):
         'source': 'CollegeFootballData /games (bulk, grouped by pair)',
         'season': season, 'series': out,
     }, indent=0))
-    print(f'  -> {path}: {len(out)} pairs ({len(pairs)} distinct pairs seen across all history)')
+    print(f'  -> {path}: {len(out)} pairs written, {missing} with no meeting on record')
 
 
 def main():
@@ -229,7 +307,21 @@ def main():
     ap.add_argument('--from', dest='first', type=int, default=1869)
     ap.add_argument('--to', dest='last', type=int, default=SEASON)
     ap.add_argument('--season', type=int, default=SEASON)
+    ap.add_argument('--emit-only', dest='emit_only', action='store_true',
+                    help='rebuild series.json from data/pairs-alltime.json — costs ZERO CFBD calls')
     args = ap.parse_args()
+    if args.emit_only:
+        cache = DATA / 'pairs-alltime.json'
+        if not cache.exists():
+            sys.exit('No data/pairs-alltime.json — run --games once to build it.')
+        raw = json.loads(cache.read_text())['pairs']
+        pairs = {frozenset((r['a'], r['b'])): {'w': r['w'], 'ties': r['ties'],
+                                               'n': r['n'], 'last': r['last']} for r in raw}
+        print(f"{len(pairs)} all-time pairs from cache ({cache}) — no CFBD calls needed")
+        idx, norm = espn_index()
+        emit_series(pairs, idx, norm, args.season)
+        return
+
     if not (args.lines or args.games):
         ap.error('give --lines and/or --games')
 

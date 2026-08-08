@@ -102,7 +102,12 @@ export async function forecastFor(game) {
 	if (Number.isNaN(kickoff.getTime())) return { status: 'unknown', reason: 'no kickoff time' };
 
 	const days = Math.ceil((kickoff - Date.now()) / 86400000);
-	if (days > FORECAST_DAYS) return { status: 'horizon', days };
+	if (days > FORECAST_DAYS) {
+		// Beyond the model's reach there is no forecast — but what that stadium
+		// is USUALLY like on that date is knowable, and more use than silence.
+		const n = await normalFor(game, kickoff);
+		return n ? { status: 'normal', days, ...n } : { status: 'horizon', days };
+	}
 	if (days < -1) return { status: 'past' };
 
 	const place = await geocode(game.venue.city, game.venue.state);
@@ -141,4 +146,32 @@ export async function forecastFor(game) {
 function localDay(d) {
 	const p = (n) => String(n).padStart(2, '0');
 	return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+// ---------- climate normals ----------
+//
+// Built at build time by tools/build-normals.py from ten years of Open-Meteo
+// archive observations. Optional: with no file, a distant game just says the
+// forecast is not open yet, exactly as before.
+
+let normalsPromise = null;
+
+function loadNormals() {
+	if (!normalsPromise) {
+		normalsPromise = fetch('data/normals.json')
+			.then((r) => (r.ok ? r.json() : null))
+			.then((d) => new Map(Object.entries(d?.venues ?? {})))
+			.catch(() => new Map());
+	}
+	return normalsPromise;
+}
+
+async function normalFor(game, kickoff) {
+	if (!game.venue.id) return null;
+	const venues = await loadNormals();
+	const v = venues.get(String(game.venue.id));
+	if (!v) return null;
+	const p = (n) => String(n).padStart(2, '0');
+	const day = v.days?.[`${p(kickoff.getMonth() + 1)}-${p(kickoff.getDate())}`];
+	return day ? { high: day.high, low: day.low, rain: day.rain, years: day.n, place: v.name } : null;
 }

@@ -7,7 +7,7 @@
 
 import { weatherLabel, kickoff, countdown, temp, teamColor, logoUrl } from '../util/fmt.js';
 import { matchupSlug } from '../sound.js';
-import { seriesUrl, seriesLine } from '../series.js';
+import { seriesUrl, seriesLine, lineText } from '../series.js';
 
 export function cardFor(game, { issue = null, favorites = new Set(), myTeamId = null } = {}) {
 	const el = document.createElement('article');
@@ -194,18 +194,31 @@ function meta(game) {
 	wx.textContent = '…';
 	m.append(wx);
 
-	if (game.odds?.details) {
+	// Prefer the multi-book average; fall back to ESPN's single live quote.
+	// A finished game only ever has the average, because ESPN drops odds at
+	// the whistle — and that average IS the closing line.
+	const avg = lineText(game);
+	if (avg) {
 		const o = document.createElement('div');
 		o.className = 'odds';
-		const line = game.odds.overUnder
+		o.textContent = avg.text;
+		const who = document.createElement('span');
+		who.className = 'odds-book';
+		if (avg.closing) who.classList.add('is-closing');
+		who.textContent = avg.label;
+		o.append(' ', who);
+		m.append(o);
+	} else if (game.odds?.details) {
+		const o = document.createElement('div');
+		o.className = 'odds';
+		o.textContent = game.odds.overUnder
 			? `${game.odds.details} · O/U ${game.odds.overUnder}`
 			: game.odds.details;
-		o.textContent = line;
 		if (game.odds.provider) {
 			const who = document.createElement('span');
 			who.className = 'odds-book';
 			// One book is a quote, not a consensus. Say whose it is.
-			who.textContent = game.odds.books > 1 ? `avg of ${game.odds.books}` : game.odds.provider;
+			who.textContent = game.odds.provider;
 			o.append(' ', who);
 		}
 		m.append(o);
@@ -258,6 +271,18 @@ export function paintWeather(cardEl, fc) {
 			`<span class="wx-icon">${icon}</span> ${escapeHtml(label)} · ` +
 			`<strong>${temp(fc.high)}</strong>/${temp(fc.low)} · ` +
 			`${fc.precip ?? 0}% precip · ${Math.round(fc.wind ?? 0)} mph`;
+		return;
+	}
+
+	// A normal is a description of the past, not a prediction. Label it so, and
+	// never let it wear the same clothes as a real forecast.
+	if (fc.status === 'normal') {
+		wx.classList.add('wx-normal');
+		wx.innerHTML =
+			`<span class="wx-icon">📅</span> Usually <strong>${temp(fc.high)}</strong>/${temp(fc.low)} · ` +
+			`rain on ${fc.rain}% of days` +
+			`<span class="wx-tag">10-yr normal</span>`;
+		wx.title = `Average for this date at ${fc.place}, 2015–2024. Forecast opens ${fc.days - 16} days from now.`;
 		return;
 	}
 	wx.classList.add('wx-muted');
