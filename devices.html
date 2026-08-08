@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>GameDay — device harness</title>
+		<meta name="robots" content="noindex" />
+		<style>
+			body { margin: 0; padding: 12px; background: #555; font: 12px system-ui; display: flex; gap: 14px; align-items: flex-start; }
+			figure { margin: 0; }
+			figcaption { color: #fff; padding: 4px 0; font-weight: 600; }
+			iframe { border: 0; background: #fff; display: block; }
+		</style>
+	</head>
+	<body>
+		<figure><figcaption>375 × 812 — iPhone SE/mini</figcaption><iframe data-src="index.html?year=2026&amp;week=6" width="375" height="812"></iframe></figure>
+		<figure><figcaption>390 × 844 — iPhone 14</figcaption><iframe data-src="index.html?year=2026&amp;week=6" width="390" height="844"></iframe></figure>
+		<figure><figcaption>430 × 844 — Pro Max</figcaption><iframe data-src="index.html?year=2026&amp;week=6" width="430" height="844"></iframe></figure>
+		<figure><figcaption>375 — roadmap</figcaption><iframe data-src="roadmap.html" width="375" height="812"></iframe></figure>
+		<figure><figcaption>375 — compare</figcaption><iframe data-src="compare.html" width="375" height="812"></iframe></figure>
+		<script>
+			// Load one at a time. Three iframes pulling ten ES modules each at once
+			// overwhelms `python3 -m http.server` and some module requests never
+			// land — the app then never boots, which looks exactly like an app bug
+			// and is not one.
+			(async () => {
+				for (const f of document.querySelectorAll('iframe')) {
+					f.src = f.dataset.src;
+					await new Promise((r) => (f.onload = () => setTimeout(r, 2500)));
+				}
+			})();
+		</script>
+	</body>
+</html>

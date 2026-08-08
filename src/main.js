@@ -112,7 +112,7 @@ async function boot() {
 	try {
 		state.calendar = await fetchCalendar(state.year);
 	} catch (err) {
-		return fail(`Could not reach the schedule service. ${err.message}`);
+		return fail(`Could not reach the schedule service. ${err.message}`, boot);
 	}
 
 	if (!state.week) state.week = weekFor(state.calendar);
@@ -247,8 +247,10 @@ function step(delta) {
 // ---------- load + render ----------
 
 async function load() {
-	el.status.textContent = 'Loading the slate…';
+	el.status.textContent = '';
+	el.status.classList.remove('error');
 	el.slate.setAttribute('aria-busy', 'true');
+	el.slate.replaceChildren(skeleton());
 	writeUrl();
 	updateWeekLabel();
 
@@ -274,7 +276,7 @@ async function load() {
 				? `Ranked by ${ranks.poll}${ranks.occurrence ? ` · ${ranks.occurrence}` : ''}`
 				: '';
 	} catch (err) {
-		return fail(`Could not load week ${state.week}. ${err.message}`);
+		return fail(`Could not load week ${state.week}. ${err.message}`, load);
 	}
 
 	el.slate.removeAttribute('aria-busy');
@@ -485,11 +487,44 @@ document.addEventListener('visibilitychange', () => {
 
 setInterval(paintLive, 5000); // keep the "updated Ns ago" honest
 
-function fail(msg) {
+/**
+ * Show a failure the reader can act on.
+ *
+ * ESPN is free, undocumented and unauthenticated; it will hiccup, and it will
+ * do it on the busiest Saturday of the year. Leaving a sentence and nothing to
+ * click is not an error state, it is a dead end.
+ */
+function fail(msg, retry) {
 	el.slate.removeAttribute('aria-busy');
 	el.slate.replaceChildren();
-	el.status.textContent = msg;
+	el.status.replaceChildren();
 	el.status.classList.add('error');
+	el.status.append(document.createTextNode(msg));
+
+	if (!retry) return;
+	const btn = document.createElement('button');
+	btn.className = 'retry';
+	btn.type = 'button';
+	btn.textContent = 'Try again';
+	btn.addEventListener('click', () => {
+		el.status.classList.remove('error');
+		el.status.textContent = 'Retrying…';
+		retry();
+	});
+	el.status.append(btn);
+}
+
+/** Placeholder cards, so a slow week looks like it is arriving, not broken. */
+function skeleton(n = 6) {
+	const frag = document.createDocumentFragment();
+	for (let i = 0; i < n; i++) {
+		const s = document.createElement('div');
+		s.className = 'game skeleton';
+		s.setAttribute('aria-hidden', 'true');
+		s.innerHTML = '<span class="sk sk-head"></span><span class="sk sk-row"></span><span class="sk sk-row"></span><span class="sk sk-meta"></span>';
+		frag.append(s);
+	}
+	return frag;
 }
 
 boot();

@@ -75,6 +75,7 @@ ESPN's JSON — so replacing it with [CollegeFootballData](https://collegefootba
 index.html            the app
 compare.html          2018 vs 2026, side by side (showcase)
 roadmap.html          countdown to kickoff + the backlog, rendered from data/roadmap.json
+devices.html          dev harness: the pages iframed at phone widths
 assets/app.css        one stylesheet
 src/
   main.js             state, URL sync, filters, event wiring
@@ -121,6 +122,12 @@ legacy/               the 2018 app, unmodified, plus a fixture that revives it
 - **Kickoffs that admit what they don't know.** ESPN parks unscheduled games at
   midnight UTC; 23 of 28 Power 4 games in Week 6 are still TBA. Those read
   *"Time TBA"* rather than a fabricated 12:00 AM.
+- **Built for a phone.** The masthead collapses to two rows and sticks to the
+  top, the week nav travels with you, and both dialogs become bottom sheets.
+  Checked at 375 / 390 / 430 — open `devices.html` to see all three at once.
+- **Failure you can act on.** Skeleton cards while a week loads, and a real
+  *Try again* button when a fetch fails. ESPN is free and unauthenticated; it
+  will hiccup on the busiest Saturday of the year.
 - **Search** across teams, stadiums and cities. **Star a team** by double-clicking
   it (stored locally).
 - **Linkable state** — `?year=&week=&conf=&q=&sort=&fav=&nocupcakes=` .

@@ -316,6 +316,70 @@ button:focus-visible {
 	color: var(--live);
 }
 
+.retry {
+	margin-left: 0.6rem;
+	padding: 0.3rem 0.8rem;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.retry:hover {
+	background: var(--live);
+	border-color: var(--live);
+	color: #fff;
+}
+
+/* ---------- loading skeleton ---------- */
+
+.skeleton {
+	gap: 0.7rem;
+	padding: 0.85rem;
+	pointer-events: none;
+}
+
+.skeleton:hover {
+	transform: none;
+	box-shadow: var(--shadow);
+}
+
+.sk {
+	display: block;
+	border-radius: 5px;
+	background: linear-gradient(90deg, var(--surface-2) 25%, var(--line) 37%, var(--surface-2) 63%);
+	background-size: 400% 100%;
+	animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.sk-head {
+	width: 55%;
+	height: 0.8rem;
+}
+
+.sk-row {
+	width: 85%;
+	height: 1.3rem;
+}
+
+.sk-meta {
+	width: 70%;
+	height: 0.8rem;
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
 /* ---------- slate ---------- */
 
 .slate {
@@ -1073,6 +1137,198 @@ kbd {
 	border-radius: 4px;
 	background: var(--surface);
 	font-size: 0.75rem;
+}
+
+/* ---------- phones ---------- */
+/*
+ * The desktop layout put roughly 500px of masthead and controls above the
+ * first card. On an 812px phone that is a screenful of chrome before a single
+ * game — wrong for the thing you actually open in a parking lot. Everything
+ * here buys back vertical space, and the week nav follows you down the page.
+ */
+
+@media (max-width: 640px) {
+	body {
+		padding: 0 0.9rem 3rem;
+	}
+
+	/*
+	 * Two explicit rows instead of letting flex wrap decide. Left to itself the
+	 * team pill wrapped ABOVE the title, because the masthead aligns to
+	 * flex-end and the pill column was taller. A grid says what it means.
+	 *   row 1:  GameDay            ● Georgia
+	 *   row 2:  ‹      Week 6      ›
+	 */
+	.masthead {
+		position: sticky;
+		top: 0;
+		z-index: 20;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-items: center;
+		row-gap: 0.5rem;
+		column-gap: 0.75rem;
+		padding: 0.75rem 0 0.6rem;
+		background: var(--bg);
+		border-bottom-width: 1px;
+	}
+
+	.head-right {
+		display: contents; /* let the pill and the nav sit in the grid directly */
+	}
+
+	.brand {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.brand h1 {
+		font-size: 1.5rem;
+	}
+
+	/* Decorative, and the title already says it. */
+	.tagline {
+		display: none;
+	}
+
+	.myteam {
+		grid-column: 2;
+		grid-row: 1;
+		justify-self: end;
+	}
+
+	.weeknav {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		justify-content: space-between;
+	}
+
+	.weekbox {
+		flex: 1;
+	}
+
+	.myteam {
+		padding: 0.3rem 0.6rem;
+		font-size: 0.78rem;
+	}
+
+	.weeknav button {
+		width: 1.9rem;
+		height: 1.9rem;
+		font-size: 1.1rem;
+	}
+
+	.weekbox span {
+		font-size: 0.9rem;
+	}
+
+	.weekbox small {
+		display: none;
+	}
+
+	.controls {
+		gap: 0.55rem 0.7rem;
+		margin-top: 0.8rem;
+	}
+
+	.ctl {
+		flex: 1 1 0;
+		min-width: 0;
+	}
+
+	.ctl-grow {
+		flex-basis: 100%;
+	}
+
+	.ctl-label {
+		font-size: 0.66rem;
+	}
+
+	.ctl select,
+	.ctl input[type="search"] {
+		width: 100%;
+		padding: 0.45rem 0.55rem;
+		font-size: 0.88rem;
+	}
+
+	.ctl-check {
+		flex: 0 0 auto;
+		padding-bottom: 0;
+		font-size: 0.85rem;
+	}
+
+	/* Counts read as a footer to the controls, not a right-hand column. */
+	.tally {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.35rem 0.6rem;
+		width: 100%;
+		margin-left: 0;
+		padding-bottom: 0;
+	}
+
+	.slate {
+		grid-template-columns: 1fr;
+		gap: 0.7rem;
+		margin-top: 0.85rem;
+	}
+
+	.game-head {
+		padding: 0.5rem 0.7rem;
+		font-size: 0.78rem;
+	}
+
+	.team {
+		padding: 0.5rem 0.7rem 0.5rem 0;
+	}
+
+	.game-meta,
+	.sound {
+		padding: 0.55rem 0.7rem;
+	}
+
+	/* Full-bleed sheets read better than floating boxes on a phone. */
+	.issue,
+	.picker {
+		width: 100vw;
+		max-width: 100vw;
+		max-height: 92vh;
+		margin: auto auto 0;
+		border-radius: 14px 14px 0 0;
+		border-bottom: 0;
+	}
+
+	.issue-body {
+		padding: 1.5rem 1rem 2rem;
+	}
+
+	.issue-title {
+		font-size: 1.3rem;
+	}
+
+	.picker-body {
+		max-height: 92vh;
+		padding: 1.25rem 1rem 1rem;
+	}
+
+	.foot {
+		margin-top: 2rem;
+	}
+}
+
+/* Very small phones — the last things that can go. */
+@media (max-width: 380px) {
+	.myteam {
+		max-width: 8.5rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.record {
+		display: none;
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -120,6 +120,13 @@
 					"est": 1,
 					"status": "done",
 					"note": "Link-out, not a scrape: their robots.txt Disallows /api/ and their pages send no CORS headers. Slugs come from the sitemap they publish; 138/138 FBS teams mapped by tools/build-winsipedia.py."
+				},
+				{
+					"id": "S15",
+					"title": "devices.html \u2014 a mobile harness that actually works",
+					"est": 0.25,
+					"status": "done",
+					"note": "Window resizing did not give a true mobile viewport (page kept rendering at 1153px), so the harness iframes the pages at 375/390/430 instead. It loads them ONE AT A TIME: three iframes pulling ten ES modules at once overwhelms python -m http.server, some module requests never land, and the app then never boots \u2014 which looks exactly like an app bug and is not one."
 				}
 			]
 		},
@@ -187,16 +194,16 @@
 					"id": "A3",
 					"title": "Mobile layout pass",
 					"est": 1.5,
-					"status": "next",
-					"note": "Never opened below 1288px. This gets read on a phone in a parking lot.",
+					"status": "done",
+					"note": "Desktop layout put ~500px of masthead and controls above the first card \u2014 a screenful of chrome on an 812px phone. Masthead is now an explicit 2-row grid (title + team pill, then the week nav) and sticks to the top; controls and cards tighten; dialogs become bottom sheets. Verified at 375 / 390 / 430 including both modals. No horizontal overflow anywhere.",
 					"required": true
 				},
 				{
 					"id": "A4",
 					"title": "Loading skeletons and an error retry path",
 					"est": 1,
-					"status": "next",
-					"note": "A failed ESPN call currently leaves a sentence and nothing to click.",
+					"status": "done",
+					"note": "Shimmer skeleton cards while a week loads, and a real \"Try again\" button on failure that re-runs the failed step. ESPN is free, undocumented and unauthenticated \u2014 it will hiccup, and a sentence with nothing to click is a dead end, not an error state.",
 					"required": true
 				},
 				{
@@ -211,8 +218,8 @@
 					"id": "A6",
 					"title": "Final pass on the compare page copy",
 					"est": 0.5,
-					"status": "next",
-					"note": "Now that keys are redacted, the '3 \u2192 0' row is true at HEAD. Say so precisely."
+					"status": "done",
+					"note": "Done alongside the key redaction \u2014 the 3 -> 0 row now states that HEAD is clean and history is not."
 				}
 			]
 		},
