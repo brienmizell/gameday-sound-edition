@@ -5,7 +5,7 @@
 // concept of navigation at all.
 
 import { CONFERENCES, fetchCalendar, fetchWeek, weekFor, inConference } from './api/espn.js';
-import { fetchRankings, applyRankings, byRanking, byKickoff } from './api/rankings.js';
+import { fetchRankings, applyRankings, weekHasOwnRanks, byRanking, byKickoff } from './api/rankings.js';
 import { forecastFor } from './api/weather.js';
 import { cardFor, paintWeather, patchCard } from './ui/card.js';
 import { loadIndex, matchupSlug, loadIssue } from './sound.js';
@@ -254,18 +254,19 @@ async function load() {
 	try {
 		const [games, ranks] = await Promise.all([fetchWeek(state.year, state.week), fetchRankings(), loadIndex()]);
 
-		// The rankings endpoint only serves the CURRENT poll. Stamping it onto a
-		// past season would print 2026 ranks on a 2018 game — for completed weeks
-		// ESPN already supplies the ranks that were true at the time, so leave
-		// those alone and let anyone it left unranked stay unranked.
-		const current = state.year === SEASON;
-		state.games = current ? applyRankings(games, ranks.byTeam) : games;
-		state.poll = current ? ranks.poll : null;
-		el.poll.textContent = current && ranks.poll
-			? `Ranked by ${ranks.poll}${ranks.occurrence ? ` · ${ranks.occurrence}` : ''}`
-			: state.year === SEASON
-				? ''
-				: `${state.year} season · ranks as they stood`;
+		// The rankings endpoint serves only the CURRENT poll, so it may only be
+		// used on a week that has no poll of its own. A played week carries the
+		// ranks that were true at the time and those win — otherwise browsing
+		// 2018 prints 2026 ranks, which is how a phantom "#18 Tennessee" landed
+		// on a 4-5 team in Week 10 of 2018.
+		const own = weekHasOwnRanks(games);
+		state.games = own ? games : applyRankings(games, ranks.byTeam);
+		state.poll = own ? null : ranks.poll;
+		el.poll.textContent = own
+			? `${state.year} Week ${state.week} · ranks as they stood`
+			: ranks.poll
+				? `Ranked by ${ranks.poll}${ranks.occurrence ? ` · ${ranks.occurrence}` : ''}`
+				: '';
 	} catch (err) {
 		return fail(`Could not load week ${state.week}. ${err.message}`);
 	}

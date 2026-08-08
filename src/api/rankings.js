@@ -66,9 +66,31 @@ export async function fetchRankings() {
 	return cached;
 }
 
-/** Stamp poll ranks onto games that the scoreboard left unranked. */
+/**
+ * Does this week carry its own poll snapshot?
+ *
+ * ESPN fills `curatedRank.current` with 99 — its unranked sentinel — for every
+ * team in a week that has not been played. Once the week happens, it backfills
+ * the ranks that were true at the time. So a single rank in 1–25 anywhere in
+ * the week means ESPN is telling us what the poll actually said that week.
+ *
+ * This is deliberately a question about the DATA, not about the date. A
+ * season-equality check would still be wrong in November, when looking back at
+ * Week 3 of the same season would paint Week 3 with today's poll.
+ */
+export function weekHasOwnRanks(games) {
+	return games.some((g) => [g.home.rank, g.away.rank].some((r) => r != null && r >= 1 && r <= 25));
+}
+
+/**
+ * Overlay the current poll — ONLY for a week that has no ranks of its own.
+ *
+ * For a week already played, ESPN's own ranks are the historical truth and win.
+ * For a week not yet played, there is no historical truth to protect, and
+ * today's poll is the only useful answer to "how do these teams stack up".
+ */
 export function applyRankings(games, byTeam) {
-	if (!byTeam.size) return games;
+	if (!byTeam.size || weekHasOwnRanks(games)) return games;
 	for (const g of games) {
 		for (const t of [g.home, g.away]) {
 			if (t.rank == null && t.id) {

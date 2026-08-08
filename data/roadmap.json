@@ -109,10 +109,10 @@
 				},
 				{
 					"id": "S13",
-					"title": "Fix cross-season ranks leaking into past weeks",
-					"est": 0.25,
+					"title": "Use each week's own poll, not today's",
+					"est": 0.5,
 					"status": "done",
-					"note": "Viewing 2018 was stamping the 2026 preseason poll onto teams ESPN left unranked. Poll ranks now apply only to the current season."
+					"note": "Browsing 2018 was printing 2026 preseason ranks on teams ESPN left unranked \u2014 a 4-5 Tennessee showed as #18 because that is its 2026 preseason spot, sitting next to a genuinely #18 Mississippi State. Fixed by asking the DATA, not the date: ESPN fills 99 for every team in an unplayed week and backfills real ranks once it is played, so a rank in 1-25 anywhere in the week means that week has its own poll and it wins. A season-equality check would still have been wrong in November, looking back at Week 3."
 				}
 			]
 		},
