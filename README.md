@@ -179,3 +179,23 @@ the deployed site keeps its no-keys property and the key never enters the repo.
 
 Original: Brien Mizell and Evan Procter, DigitalCrafts, October 2018.
 Rebuild: 2026, targeting the August 22 kickoff.
+
+---
+
+## Secrets
+
+The deployed site holds none — every key is used at build time by `tools/` and
+only static JSON is committed.
+
+To guard that, enable the pre-commit hook once per clone:
+
+```sh
+git config core.hooksPath tools/githooks
+```
+
+It blocks a commit containing a credential *before it exists*. This is not
+belt-and-braces over GitHub push protection — push protection is enabled here
+and **does not block Google API keys**. Verified on 2026-08-09: a well-formed
+decoy key pushed to a throwaway branch was accepted, and the alert fired only
+after it landed. Post-push detection is a smoke alarm; the hook is the thing
+that stops the fire.

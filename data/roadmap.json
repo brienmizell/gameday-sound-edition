@@ -188,10 +188,11 @@
 				},
 				{
 					"id": "K3",
-					"title": "Turn on push protection so this cannot recur",
+					"title": "Block secrets locally (push protection does not)",
 					"est": 0.25,
-					"status": "next",
-					"required": true
+					"status": "done",
+					"required": true,
+					"note": "The premise was wrong. Push protection was ALREADY enabled, including on 2026-08-07 when the Google key was pushed anyway. Tested with a well-formed random 39-char decoy on a throwaway branch: the push was ACCEPTED and an alert fired only afterwards. Google API keys are scanned, not push-blocked.\nReal fix: tools/githooks/pre-commit, which runs before the commit exists. Enable per clone with `git config core.hooksPath tools/githooks`. Verified against Google, AWS and Anthropic key shapes and a staged .env (all blocked), and against the REDACTED_ placeholders and ordinary code (both allowed)."
 				},
 				{
 					"id": "K1b",
