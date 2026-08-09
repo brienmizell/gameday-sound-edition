@@ -32,136 +32,156 @@
 			"blurb": "Done on 2026-08-07. Listed so the burn-down is honest about where the line started.",
 			"tasks": [
 				{
-					"id": "S1",
+					"id": "SHIPPED-1",
 					"title": "Rebuild on keyless APIs (ESPN + Open-Meteo)",
 					"est": 4,
 					"status": "done",
-					"note": "Kills the dead CORS proxy, dead Dark Sky, and 3 committed keys at once."
+					"note": "Kills the dead CORS proxy, dead Dark Sky, and 3 committed keys at once.",
+					"legacyId": "S1"
 				},
 				{
-					"id": "S2",
+					"id": "SHIPPED-2",
 					"title": "Week navigation across the full season calendar",
 					"est": 1.5,
 					"status": "done",
-					"note": "The Prev/Next buttons that were commented out in 2018."
+					"note": "The Prev/Next buttons that were commented out in 2018.",
+					"legacyId": "S2"
 				},
 				{
-					"id": "S3",
+					"id": "SHIPPED-3",
 					"title": "Power 4 default + all 11 FBS conferences",
 					"est": 1,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S3"
 				},
 				{
-					"id": "S4",
+					"id": "SHIPPED-4",
 					"title": "Cupcake detection (FCS opponent or 21+ line)",
 					"est": 1,
 					"status": "done",
-					"note": "Week 1 Power 4 is 44 of 60."
+					"note": "Week 1 Power 4 is 44 of 60.",
+					"legacyId": "S4"
 				},
 				{
-					"id": "S5",
+					"id": "SHIPPED-5",
 					"title": "Weather matched to the game's date, honest past the horizon",
 					"est": 2,
 					"status": "done",
-					"note": "Fixes the daily.data[4] bug."
+					"note": "Fixes the daily.data[4] bug.",
+					"legacyId": "S5"
 				},
 				{
-					"id": "S6",
+					"id": "SHIPPED-6",
 					"title": "Sort by ranking, CFP \u2192 AP \u2192 Coaches",
 					"est": 2,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S6"
 				},
 				{
-					"id": "S7",
+					"id": "SHIPPED-7",
 					"title": "Team picker, pinned team, localStorage",
 					"est": 2.5,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S7"
 				},
 				{
-					"id": "S8",
+					"id": "SHIPPED-8",
 					"title": "TBA kickoffs instead of a fabricated midnight",
 					"est": 0.5,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S8"
 				},
 				{
-					"id": "S9",
+					"id": "SHIPPED-9",
 					"title": "The Sound seam: schema, validator, issue reader",
 					"est": 3,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S9"
 				},
 				{
-					"id": "S10",
+					"id": "SHIPPED-10",
 					"title": "Revive the 2018 app + the compare page",
 					"est": 2.5,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S10"
 				},
 				{
-					"id": "S11",
+					"id": "SHIPPED-11",
 					"title": "New repo, old repo pointing forward",
 					"est": 1,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S11"
 				},
 				{
-					"id": "S12",
+					"id": "SHIPPED-12",
 					"title": "Redact the three 2018 keys at HEAD",
 					"est": 0.5,
-					"status": "done"
+					"status": "done",
+					"legacyId": "S12"
 				},
 				{
-					"id": "S13",
+					"id": "SHIPPED-13",
 					"title": "Use each week's own poll, not today's",
 					"est": 0.5,
 					"status": "done",
-					"note": "Browsing 2018 was printing 2026 preseason ranks on teams ESPN left unranked \u2014 a 4-5 Tennessee showed as #18 because that is its 2026 preseason spot, sitting next to a genuinely #18 Mississippi State. Fixed by asking the DATA, not the date: ESPN fills 99 for every team in an unplayed week and backfills real ranks once it is played, so a rank in 1-25 anywhere in the week means that week has its own poll and it wins. A season-equality check would still have been wrong in November, looking back at Week 3."
+					"note": "Browsing 2018 was printing 2026 preseason ranks on teams ESPN left unranked \u2014 a 4-5 Tennessee showed as #18 because that is its 2026 preseason spot, sitting next to a genuinely #18 Mississippi State. Fixed by asking the DATA, not the date: ESPN fills 99 for every team in an unplayed week and backfills real ranks once it is played, so a rank in 1-25 anywhere in the week means that week has its own poll and it wins. A season-equality check would still have been wrong in November, looking back at Week 3.",
+					"legacyId": "S13"
 				},
 				{
-					"id": "S14",
+					"id": "SHIPPED-14",
 					"title": "Winsipedia head-to-head link on every card",
 					"est": 1,
 					"status": "done",
-					"note": "Link-out, not a scrape: their robots.txt Disallows /api/ and their pages send no CORS headers. Slugs come from the sitemap they publish; 138/138 FBS teams mapped by tools/build-winsipedia.py."
+					"note": "Link-out, not a scrape: their robots.txt Disallows /api/ and their pages send no CORS headers. Slugs come from the sitemap they publish; 138/138 FBS teams mapped by tools/build-winsipedia.py.",
+					"legacyId": "S14"
 				},
 				{
-					"id": "S15",
+					"id": "SHIPPED-15",
 					"title": "devices.html \u2014 a mobile harness that actually works",
 					"est": 0.25,
 					"status": "done",
-					"note": "Window resizing did not give a true mobile viewport (page kept rendering at 1153px), so the harness iframes the pages at 375/390/430 instead. It loads them ONE AT A TIME: three iframes pulling ten ES modules at once overwhelms python -m http.server, some module requests never land, and the app then never boots \u2014 which looks exactly like an app bug and is not one."
+					"note": "Window resizing did not give a true mobile viewport (page kept rendering at 1153px), so the harness iframes the pages at 375/390/430 instead. It loads them ONE AT A TIME: three iframes pulling ten ES modules at once overwhelms python -m http.server, some module requests never land, and the app then never boots \u2014 which looks exactly like an app bug and is not one.",
+					"legacyId": "S15"
 				},
 				{
-					"id": "S16",
+					"id": "SHIPPED-16",
 					"title": "Catch CFBD answering \"unknown team\" as \"never met\"",
 					"est": 0.75,
 					"status": "done",
-					"note": "/teams/matchup returns team1=null and 0-0-0 for a team it cannot resolve \u2014 byte-identical to its answer for two teams that genuinely never played. Confirmed by querying a made-up school and getting the same response. The first run wrote 30 false 'never met' rows. Fixed by resolving both names against CFBD's own /teams roster BEFORE asking, so zero games is only recorded as 'First meeting' when both schools are known; anything unresolved is stored as resolved:false and renders nothing."
+					"note": "/teams/matchup returns team1=null and 0-0-0 for a team it cannot resolve \u2014 byte-identical to its answer for two teams that genuinely never played. Confirmed by querying a made-up school and getting the same response. The first run wrote 30 false 'never met' rows. Fixed by resolving both names against CFBD's own /teams roster BEFORE asking, so zero games is only recorded as 'First meeting' when both schools are known; anything unresolved is stored as resolved:false and renders nothing.",
+					"legacyId": "S16"
 				},
 				{
-					"id": "S17",
+					"id": "SHIPPED-17",
 					"title": "Label the odds with whose book they are",
 					"est": 0.25,
 					"status": "done",
-					"note": "ESPN carries exactly one book (DraftKings) and the card was printing its number bare, which reads as a consensus. It is now tagged with the book's name, and would read 'avg of N' if more than one ever appears."
+					"note": "ESPN carries exactly one book (DraftKings) and the card was printing its number bare, which reads as a consensus. It is now tagged with the book's name, and would read 'avg of N' if more than one ever appears.",
+					"legacyId": "S17"
 				},
 				{
-					"id": "S18",
+					"id": "SHIPPED-18",
 					"title": "Preflight the CFBD quota before spending it",
 					"est": 0.25,
 					"status": "done",
-					"note": "/info returns 200 even at quota 0, so it is a free meter. The builder now reads remainingCalls BEFORE it starts and refuses rather than walking into a wall. Reading X-CallLimit-Remaining off a response only tells you after the call is already spent."
+					"note": "/info returns 200 even at quota 0, so it is a free meter. The builder now reads remainingCalls BEFORE it starts and refuses rather than walking into a wall. Reading X-CallLimit-Remaining off a response only tells you after the call is already spent.",
+					"legacyId": "S18"
 				},
 				{
-					"id": "S19",
+					"id": "SHIPPED-19",
 					"title": "Climate normals for games past the forecast horizon",
 					"est": 1.5,
 					"status": "done",
-					"note": "Brien's ask. Open-Meteo's archive API is keyless and CORS-open, and ONE call returns a decade (3,653 days, ~104 KB) per venue. tools/build-normals.py reduces that to a per-date normal \u2014 mean high, mean low, and the share of days with measurable rain \u2014 over a +/-3 day window so one freak afternoon cannot define a date. Cards past the 16-day horizon now read 'Usually 76/57, rain on 40% of days' instead of only 'forecast opens in N days'. Labelled 10-YR NORMAL and styled quieter, because it is history, not a prediction."
+					"note": "Brien's ask. Open-Meteo's archive API is keyless and CORS-open, and ONE call returns a decade (3,653 days, ~104 KB) per venue. tools/build-normals.py reduces that to a per-date normal \u2014 mean high, mean low, and the share of days with measurable rain \u2014 over a +/-3 day window so one freak afternoon cannot define a date. Cards past the 16-day horizon now read 'Usually 76/57, rain on 40% of days' instead of only 'forecast opens in N days'. Labelled 10-YR NORMAL and styled quieter, because it is history, not a prediction.",
+					"legacyId": "S19"
 				},
 				{
-					"id": "S20",
+					"id": "SHIPPED-20",
 					"title": "Treat a rate-limit WINDOW as different from a throttle",
 					"est": 0.5,
 					"status": "done",
-					"note": "Open-Meteo answers a spent hour with 'Hourly API request limit exceeded' \u2014 so backing off 20/40/60/80s stays inside the same hour and cannot help. Exactly the mistake already fixed for CFBD's monthly quota, repeated because I did not carry the lesson across. The normals builder now stops on an hour/day window and says to re-run later; only a short burst-throttle is waited out. 62 of 144 venues built; it resumes."
+					"note": "Open-Meteo answers a spent hour with 'Hourly API request limit exceeded' \u2014 so backing off 20/40/60/80s stays inside the same hour and cannot help. Exactly the mistake already fixed for CFBD's monthly quota, repeated because I did not carry the lesson across. The normals builder now stops on an hour/day window and says to re-run later; only a short burst-throttle is waited out. 62 of 144 venues built; it resumes.",
+					"legacyId": "S20"
 				}
 			]
 		},
@@ -171,36 +191,40 @@
 			"blurb": "A Google API key sat in a public repo for eight years. Revoked 2026-08-08 and verified inert.",
 			"tasks": [
 				{
-					"id": "K1",
+					"id": "LOCK-1",
 					"title": "Revoke the 2018 Google API key in Google Cloud Console",
 					"est": 0.25,
 					"status": "done",
 					"note": "Revoked by Brien 2026-08-08 and verified inert: a Geocoding request now returns REQUEST_DENIED. See K1b \u2014 the error names billing, not an invalid key.",
-					"required": true
+					"required": true,
+					"legacyId": "K1"
 				},
 				{
-					"id": "K2",
+					"id": "LOCK-2",
 					"title": "Close the GitHub secret-scanning alert as revoked",
 					"est": 0.1,
 					"status": "done",
 					"note": "Closed as revoked via the API, with the verification recorded in the resolution comment.",
-					"required": true
+					"required": true,
+					"legacyId": "K2"
 				},
 				{
-					"id": "K3",
+					"id": "LOCK-3",
 					"title": "Block secrets locally (push protection does not)",
 					"est": 0.25,
 					"status": "done",
 					"required": true,
-					"note": "The premise was wrong. Push protection was ALREADY enabled, including on 2026-08-07 when the Google key was pushed anyway. Tested with a well-formed random 39-char decoy on a throwaway branch: the push was ACCEPTED and an alert fired only afterwards. Google API keys are scanned, not push-blocked.\nReal fix: tools/githooks/pre-commit, which runs before the commit exists. Enable per clone with `git config core.hooksPath tools/githooks`. Verified against Google, AWS and Anthropic key shapes and a staged .env (all blocked), and against the REDACTED_ placeholders and ordinary code (both allowed)."
+					"note": "The premise was wrong. Push protection was ALREADY enabled, including on 2026-08-07 when the Google key was pushed anyway. Tested with a well-formed random 39-char decoy on a throwaway branch: the push was ACCEPTED and an alert fired only afterwards. Google API keys are scanned, not push-blocked.\nReal fix: tools/githooks/pre-commit, which runs before the commit exists. Enable per clone with `git config core.hooksPath tools/githooks`. Verified against Google, AWS and Anthropic key shapes and a staged .env (all blocked), and against the REDACTED_ placeholders and ordinary code (both allowed).",
+					"legacyId": "K3"
 				},
 				{
-					"id": "K1b",
+					"id": "LOCK-4",
 					"title": "Delete the 2018 key from Google Cloud project 599067003646",
 					"est": 0.1,
 					"status": "done",
 					"required": true,
-					"note": "DONE and verified 2026-08-09. Brien deleted the key from Google Cloud project 599067003646. Probing an API the key was never scoped for now returns 'API Key not found. Please pass a valid API key.' \u2014 where it previously leaked 'has not been used in project 599067003646', which had proved the credential still resolved. Google no longer recognises it. The 2018 exposure is closed: key deleted, HEAD redacted, GitHub alert resolved as revoked, history left intact as the record."
+					"note": "DONE and verified 2026-08-09. Brien deleted the key from Google Cloud project 599067003646. Probing an API the key was never scoped for now returns 'API Key not found. Please pass a valid API key.' \u2014 where it previously leaked 'has not been used in project 599067003646', which had proved the credential still resolved. Google no longer recognises it. The 2018 exposure is closed: key deleted, HEAD redacted, GitHub alert resolved as revoked, history left intact as the record.",
+					"legacyId": "K1b"
 				}
 			]
 		},
@@ -210,51 +234,57 @@
 			"blurb": "The season starts whether or not this is done. These are the things that break or embarrass on day one.",
 			"tasks": [
 				{
-					"id": "A1",
+					"id": "KICK-1",
 					"title": "Deploy to GitHub Pages",
 					"est": 0.5,
 					"status": "done",
 					"note": "Live at https://brienmizell.github.io/gameday-sound-edition/ \u2014 every route verified 200 and rendering. Static, keyless, no build step, so Pages needs no workflow.",
-					"required": true
+					"required": true,
+					"legacyId": "A1"
 				},
 				{
-					"id": "A2",
+					"id": "KICK-2",
 					"title": "Live score refresh while games are in progress",
 					"est": 2,
 					"status": "done",
 					"note": "Polls every 30s ONLY while a game on screen is in progress, and only while the tab is visible. Patches cards in place rather than re-rendering, so scroll position and any open issue dialog survive; a changed score flashes.",
-					"required": true
+					"required": true,
+					"legacyId": "A2"
 				},
 				{
-					"id": "A3",
+					"id": "KICK-3",
 					"title": "Mobile layout pass",
 					"est": 1.5,
 					"status": "done",
 					"note": "Desktop layout put ~500px of masthead and controls above the first card \u2014 a screenful of chrome on an 812px phone. Masthead is now an explicit 2-row grid (title + team pill, then the week nav) and sticks to the top; controls and cards tighten; dialogs become bottom sheets. Verified at 375 / 390 / 430 including both modals. No horizontal overflow anywhere.",
-					"required": true
+					"required": true,
+					"legacyId": "A3"
 				},
 				{
-					"id": "A4",
+					"id": "KICK-4",
 					"title": "Loading skeletons and an error retry path",
 					"est": 1,
 					"status": "done",
 					"note": "Shimmer skeleton cards while a week loads, and a real \"Try again\" button on failure that re-runs the failed step. ESPN is free, undocumented and unauthenticated \u2014 it will hiccup, and a sentence with nothing to click is a dead end, not an error state.",
-					"required": true
+					"required": true,
+					"legacyId": "A4"
 				},
 				{
-					"id": "A5",
+					"id": "KICK-5",
 					"title": "Register in bookmarks.json + rerun dashboard.py",
 					"est": 0.25,
 					"status": "done",
 					"note": "GameDay group added to ~/jobsearch/bookmarks.json (site, roadmap, compare, repo) and dashboard.py rerun; hq.html and brien-services-bookmarks.html both picked it up.",
-					"required": true
+					"required": true,
+					"legacyId": "A5"
 				},
 				{
-					"id": "A6",
+					"id": "KICK-6",
 					"title": "Final pass on the compare page copy",
 					"est": 0.5,
 					"status": "done",
-					"note": "Done alongside the key redaction \u2014 the 3 -> 0 row now states that HEAD is clean and history is not."
+					"note": "Done alongside the key redaction \u2014 the 3 -> 0 row now states that HEAD is clean and history is not.",
+					"legacyId": "A6"
 				}
 			]
 		},
@@ -264,66 +294,74 @@
 			"blurb": "The Conference Series has been an open promise since 2026-08-02, docked by Brien to kickoff week, SEC first. Shipping the schedule app alone does not discharge it.",
 			"tasks": [
 				{
-					"id": "M1",
+					"id": "SOUND-1",
 					"title": "Scaffold gameday/ inside ~/musicsystem on the Mini",
 					"est": 3,
 					"status": "done",
 					"note": "Committed to the Mini as 03b3930: docs/GAMEDAY.md (the charter, format named THE COLLISION), docs/atlas/gameday-canon.md (the bench, places.md form), tools/gameday.py (fetches, joins, stops at a fact card, writes no prose). Filed as queue entry 27. Verified: week 6 ranks Georgia at Alabama first and the card pulls the series from the app's published JSON.",
-					"required": true
+					"required": true,
+					"legacyId": "M1"
 				},
 				{
-					"id": "M2",
+					"id": "SOUND-2",
 					"title": "Finish the SEC canon (10 of 16 written)",
 					"est": 2,
 					"status": "next",
 					"note": "Built as docs/atlas/gameday-canon.md, NOT canon.yml: curated knowledge in that repo lives as prose in docs/atlas/, per places.md. Ten SEC schools have entries. Five are named holes: Arkansas, Kentucky, Oklahoma, South Carolina, Texas. Auburn and Missouri are filed as explicit placeholders rather than researched. Every other conference is unwritten.",
-					"required": true
+					"required": true,
+					"legacyId": "M2"
 				},
 				{
-					"id": "M3",
+					"id": "SOUND-3",
 					"title": "Write ONE issue by hand, end to end",
 					"est": 4,
 					"status": "next",
 					"note": "THE ORIGINAL ASK. Brien's first message wanted the team history, then the musical history, then a playlist written up the way the music app writes stories. The team history ships on the cards and the musical history is benched, but no issue has been written and no playlist pressed, so the thing he actually asked for is NOT delivered. Blocked on the ledger playcount join: without it the ledger floor cannot be verified and gameday.py says so out loud.",
-					"required": true
+					"required": true,
+					"legacyId": "M3"
 				},
 				{
-					"id": "M4",
+					"id": "SOUND-4",
 					"title": "push_gameday.py \u2014 place the playlist deterministically",
 					"est": 1.5,
 					"status": "next",
 					"note": "spotify_push.py, never the generative connector. The July matchday run is the evidence.",
-					"required": true
+					"required": true,
+					"legacyId": "M4"
 				},
 				{
-					"id": "M5",
+					"id": "SOUND-5",
 					"title": "Emit the issue JSON, delete the sample, view it in the card",
 					"est": 0.5,
 					"status": "next",
-					"required": true
+					"required": true,
+					"legacyId": "M5"
 				},
 				{
-					"id": "M6",
+					"id": "SOUND-6",
 					"title": "Decide the matchup-of-the-week rule",
 					"est": 1,
 					"status": "next",
-					"note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md."
+					"note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md.",
+					"legacyId": "M6"
 				},
 				{
-					"id": "M7",
+					"id": "SOUND-7",
 					"title": "Series numbers from CFBD at build time",
 					"est": 2,
 					"status": "done",
 					"owner": "brien",
-					"note": "Weeks 1 and 6 built and committed (157 pairs) \u2014 the card reads 'Alabama leads 45-26-3'. The remaining weeks are NOT built: a --all run spent the whole monthly CFBD quota. Resume with --week N once it resets; finished pairs are skipped."
+					"note": "Weeks 1 and 6 built and committed (157 pairs) \u2014 the card reads 'Alabama leads 45-26-3'. The remaining weeks are NOT built: a --all run spent the whole monthly CFBD quota. Resume with --week N once it resets; finished pairs are skipped.",
+					"legacyId": "M7"
 				},
 				{
-					"id": "M8",
+					"id": "SOUND-8",
 					"title": "Reconcile with the parallel Mini session",
 					"est": 0.5,
 					"status": "next",
 					"required": true,
-					"note": "A second session (Claude Fable 5) is building the ladder's suppliers on the Mini and this board cannot see it: tools/gameday_acquire.py is committed (T1, Wikidata P69) and tools/gameday_rungs.py is untracked in-flight (T0 and T2). It reads docs/GAMEDAY.md and defers to it, so the split is clean, but two sessions on the same rung would not be. Agree who does the ledger join before either starts it."
+					"note": "A second session (Claude Fable 5) is building the ladder's suppliers on the Mini and this board cannot see it: tools/gameday_acquire.py is committed (T1, Wikidata P69) and tools/gameday_rungs.py is untracked in-flight (T0 and T2). It reads docs/GAMEDAY.md and defers to it, so the split is clean, but two sessions on the same rung would not be. Agree who does the ledger join before either starts it.",
+					"legacyId": "M8"
 				}
 			]
 		},
@@ -333,74 +371,85 @@
 			"blurb": "Real features, but the season does not wait on them and none of them breaks day one.",
 			"tasks": [
 				{
-					"id": "B10",
+					"id": "LATER-1",
 					"title": "Rewrite onto bulk /games",
 					"est": 2.5,
 					"status": "done",
 					"required": false,
-					"note": "tools/build-bulk.py. 158 calls covered 1869-2026 and found 19,217 all-time pairs; series.json now has all 893 matchups on the 2026 schedule, up from 157. Cross-validated against the old per-matchup data: 124 of 124 summaries identical, and the bulk version is MORE complete (it caught the 2025 SEC Championship as Georgia/Alabama's last meeting, which /teams/matchup missed). The costly pair table is cached in data/pairs-alltime.json, so --emit-only rebuilds for zero calls."
+					"note": "tools/build-bulk.py. 158 calls covered 1869-2026 and found 19,217 all-time pairs; series.json now has all 893 matchups on the 2026 schedule, up from 157. Cross-validated against the old per-matchup data: 124 of 124 summaries identical, and the bulk version is MORE complete (it caught the 2025 SEC Championship as Georgia/Alabama's last meeting, which /teams/matchup missed). The costly pair table is cached in data/pairs-alltime.json, so --emit-only rebuilds for zero calls.",
+					"legacyId": "B10"
 				},
 				{
-					"id": "B1",
+					"id": "LATER-2",
 					"title": "Rivalry and trophy-game labels",
 					"est": 1.5,
 					"status": "next",
-					"note": "Iron Bowl, Red River, The Game. A hand-kept list; ESPN does not mark them."
+					"note": "Iron Bowl, Red River, The Game. A hand-kept list; ESPN does not mark them.",
+					"legacyId": "B1"
 				},
 				{
-					"id": "B2",
+					"id": "LATER-3",
 					"title": "Team season view \u2014 click a team, get its year",
 					"est": 3,
-					"status": "next"
+					"status": "next",
+					"legacyId": "B2"
 				},
 				{
-					"id": "B3",
+					"id": "LATER-4",
 					"title": "Conference standings",
 					"est": 2,
-					"status": "next"
+					"status": "next",
+					"legacyId": "B3"
 				},
 				{
-					"id": "B4",
+					"id": "LATER-5",
 					"title": "Bowls and the playoff (seasontype=3)",
 					"est": 2,
 					"status": "next",
-					"note": "Needed by mid-December, not August."
+					"note": "Needed by mid-December, not August.",
+					"legacyId": "B4"
 				},
 				{
-					"id": "B5",
+					"id": "LATER-6",
 					"title": "Previous seasons (year selector)",
 					"est": 1.5,
 					"status": "next",
-					"note": "ESPN serves 2018 fine \u2014 the compare page already proves it."
+					"note": "ESPN serves 2018 fine \u2014 the compare page already proves it.",
+					"legacyId": "B5"
 				},
 				{
-					"id": "B6",
+					"id": "LATER-7",
 					"title": "Automate the weekly Sound pipeline",
 					"est": 5,
 					"status": "next",
-					"note": "Only after 3\u20134 issues have been written by hand."
+					"note": "Only after 3\u20134 issues have been written by hand.",
+					"legacyId": "B6"
 				},
 				{
-					"id": "B7",
+					"id": "LATER-8",
 					"title": "Shareable matchup card image",
 					"est": 2.5,
-					"status": "next"
+					"status": "next",
+					"legacyId": "B7"
 				},
 				{
-					"id": "B8",
+					"id": "LATER-9",
 					"title": "Offline / PWA",
 					"est": 2,
-					"status": "next"
+					"status": "next",
+					"legacyId": "B8"
 				},
 				{
-					"id": "B9",
+					"id": "LATER-10",
 					"title": "Average + closing betting lines",
 					"est": 1,
 					"status": "done",
 					"owner": "brien",
-					"note": "ONE call per season. data/lines.json holds 2025 (809 games, all closing) and 2026. Averages one vote per BOOK \u2014 CFBD lists 'DraftKings' and 'Draft Kings' separately and averaging both double-weights it. A finished game's number cannot move again, so it IS the closing line, and the card labels it so."
+					"note": "ONE call per season. data/lines.json holds 2025 (809 games, all closing) and 2026. Averages one vote per BOOK \u2014 CFBD lists 'DraftKings' and 'Draft Kings' separately and averaging both double-weights it. A finished game's number cannot move again, so it IS the closing line, and the card labels it so.",
+					"legacyId": "B9"
 				}
 			]
 		}
-	]
+	],
+	"_ids": "Ids are phase-word prefixed so they read on sight: SOUND-3 is the third Sound Edition item. legacyId keeps the original short code (M3, K1b) because commit messages cite those."
 }

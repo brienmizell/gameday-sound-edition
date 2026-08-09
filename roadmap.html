@@ -190,6 +190,18 @@
 				text-align: center;
 			}
 			.t-title { font-size: 0.94rem; font-weight: 550; }
+			.t-id {
+				display: inline-block;
+				margin-right: 0.5rem;
+				padding: 0.05rem 0.4rem;
+				border-radius: 4px;
+				background: var(--surface-2);
+				color: var(--text-muted);
+				font-size: 0.7rem;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				vertical-align: 1px;
+			}
 			.is-done .t-title { text-decoration: line-through; text-decoration-thickness: 1px; }
 			.t-note { grid-column: 2; color: var(--text-secondary); font-size: 0.82rem; }
 			.t-right { grid-row: span 2; text-align: right; white-space: nowrap; }
@@ -381,7 +393,7 @@
 				return `<li class="task${st === 'done' ? ' is-done' : ''}" style="--st:${color}">
 					<button class="mark" data-id="${t.id}" type="button"
 						aria-label="Toggle ${esc(t.title)}" title="${esc(meta.label)}">${meta.icon}</button>
-					<div class="t-title">${esc(t.title)}${t.required ? '<span class="pill-req">required</span>' : ''}</div>
+					<div class="t-title"><span class="t-id" title="${t.legacyId ? 'was ' + esc(t.legacyId) : ''}">${esc(t.id)}</span>${esc(t.title)}${t.required ? '<span class="pill-req">required</span>' : ''}</div>
 					<div class="t-right">
 						<span class="t-est">${fmt(t.est)} h</span>
 						<span class="t-status">${esc(meta.label)}</span>
