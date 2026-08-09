@@ -1,0 +1,81 @@
+#!/bin/bash
+# Block credentials before they are ever committed.
+#
+# WHY THIS EXISTS RATHER THAN RELYING ON GITHUB
+# ----------------------------------------------
+# GitHub push protection is enabled on this repo — and was already enabled on
+# 2026-08-07 when a 2018 Google API key was pushed to it anyway. Tested again
+# on 2026-08-09 with a well-formed decoy: the push was ALLOWED, and an alert
+# fired only AFTER it landed. Google API keys are scanned, not push-blocked.
+#
+# Post-push detection is a smoke alarm. This is the thing that stops the fire:
+# it runs locally, before the commit exists, so nothing reaches a remote.
+#
+# Install (once per clone):
+#     git config core.hooksPath tools/githooks
+#
+# Bypass deliberately, when you know what you are doing:
+#     git commit --no-verify
+
+set -uo pipefail
+
+# Only look at what is actually being committed, and only at added lines.
+staged=$(git diff --cached --name-only --diff-filter=ACM)
+[ -z "$staged" ] && exit 0
+
+fail=0
+report() {
+	if [ "$fail" -eq 0 ]; then
+		echo ""
+		echo "  ✋ COMMIT BLOCKED — something in here looks like a credential."
+		echo ""
+	fi
+	fail=1
+	echo "     $1"
+	echo "        $2"
+	echo ""
+}
+
+# Patterns worth stopping. Deliberately conservative: a false positive costs
+# you one --no-verify, a false negative costs a key rotation and a public leak.
+check() {
+	local label="$1" pattern="$2"
+	while IFS= read -r file; do
+		# Skip this hook and anything already redacted on purpose.
+		case "$file" in tools/githooks/*) continue ;; esac
+		local hits
+		hits=$(git diff --cached -U0 -- "$file" \
+			| grep -E '^\+' | grep -vE '^\+\+\+' \
+			| grep -oE "$pattern" \
+			| grep -viE 'redacted|placeholder|example|paste_your|xxxxx' \
+			| head -2)
+		if [ -n "$hits" ]; then
+			# Show the shape, never the value.
+			local shown
+			shown=$(echo "$hits" | head -1 | cut -c1-10)
+			report "$label in $file" "match begins \"${shown}\" (value withheld)"
+		fi
+	done <<< "$staged"
+}
+
+check "Google API key"      'AIzaSy[A-Za-z0-9_-]{33}'
+check "AWS access key id"   'AKIA[0-9A-Z]{16}'
+check "GitHub token"        'gh[pousr]_[A-Za-z0-9]{36,}'
+check "Slack token"         'xox[baprs]-[A-Za-z0-9-]{10,}'
+check "Stripe key"          'sk_live_[A-Za-z0-9]{16,}'
+check "OpenAI key"          'sk-[A-Za-z0-9]{32,}'
+check "Anthropic key"       'sk-ant-[A-Za-z0-9_-]{20,}'
+check "private key block"   'BEGIN [A-Z ]*PRIVATE KEY'
+check "generic 32-hex secret" '\b(key|secret|token|apikey|api_key|password)["'"'"']?\s*[:=]\s*["'"'"']?[0-9a-f]{32}\b'
+
+# A .env should never be staged at all — .gitignore covers it, but belt and braces.
+if echo "$staged" | grep -qE '(^|/)\.env$'; then
+	report ".env is staged" "it holds build-time secrets and must never be committed"
+fi
+
+if [ "$fail" -ne 0 ]; then
+	echo "  If this is genuinely not a secret:  git commit --no-verify"
+	echo ""
+	exit 1
+fi
+exit 0
