@@ -267,8 +267,8 @@
 					"id": "M1",
 					"title": "Scaffold gameday/ inside ~/musicsystem on the Mini",
 					"est": 3,
-					"status": "next",
-					"note": "Plus docs/GAMEDAY.md as the format charter.",
+					"status": "now",
+					"note": "Filed as queue entry 27 gameday-the-sound-edition in ~/musicsystem/docs/QUEUE.md on the Mini, with Goal, Why we need it, Clears, and a kickoff command. It passes every queue check in hygiene (ORDER-1a parses, 1b unique and self-cited, 1l exactly one Next pin) and carries no em dashes, per rule 13.\nUNCOMMITTED and blocked: the standing ALL GREEN rule in docs/GIT.md requires hygiene green before a commit, and hygiene is 1 FAILED on SHARE-3. That failure is pre-existing, not mine, and entry 22 blocks-need-a-trigger is the entry that clears it. Brien's call: run 22 first, or override.\nThe real conflict, which the mechanism cannot see: the running order deals 22 first and eight ready entries sit ahead of GameDay. Every one of them can ship in September at no cost. This one is docked to 2026-08-22. The queue can express a GATE but has no DEADLINE, so the scorer will never rank this correctly.",
 					"required": true
 				},
 				{
