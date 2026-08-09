@@ -267,16 +267,16 @@
 					"id": "M1",
 					"title": "Scaffold gameday/ inside ~/musicsystem on the Mini",
 					"est": 3,
-					"status": "now",
-					"note": "Filed as queue entry 27 gameday-the-sound-edition in ~/musicsystem/docs/QUEUE.md on the Mini, with Goal, Why we need it, Clears, and a kickoff command. It passes every queue check in hygiene (ORDER-1a parses, 1b unique and self-cited, 1l exactly one Next pin) and carries no em dashes, per rule 13.\nUNCOMMITTED and blocked: the standing ALL GREEN rule in docs/GIT.md requires hygiene green before a commit, and hygiene is 1 FAILED on SHARE-3. That failure is pre-existing, not mine, and entry 22 blocks-need-a-trigger is the entry that clears it. Brien's call: run 22 first, or override.\nThe real conflict, which the mechanism cannot see: the running order deals 22 first and eight ready entries sit ahead of GameDay. Every one of them can ship in September at no cost. This one is docked to 2026-08-22. The queue can express a GATE but has no DEADLINE, so the scorer will never rank this correctly.",
+					"status": "done",
+					"note": "Committed to the Mini as 03b3930: docs/GAMEDAY.md (the charter, format named THE COLLISION), docs/atlas/gameday-canon.md (the bench, places.md form), tools/gameday.py (fetches, joins, stops at a fact card, writes no prose). Filed as queue entry 27. Verified: week 6 ranks Georgia at Alabama first and the card pulls the series from the app's published JSON.",
 					"required": true
 				},
 				{
 					"id": "M2",
-					"title": "Curate canon.yml for the SEC",
-					"est": 3,
+					"title": "Finish the SEC canon (10 of 16 written)",
+					"est": 2,
 					"status": "next",
-					"note": "~10 lines per program: fight song, the room, the enrolled bands. No database holds this.",
+					"note": "Built as docs/atlas/gameday-canon.md, NOT canon.yml: curated knowledge in that repo lives as prose in docs/atlas/, per places.md. Ten SEC schools have entries. Five are named holes: Arkansas, Kentucky, Oklahoma, South Carolina, Texas. Auburn and Missouri are filed as explicit placeholders rather than researched. Every other conference is unwritten.",
 					"required": true
 				},
 				{
@@ -284,7 +284,7 @@
 					"title": "Write ONE issue by hand, end to end",
 					"est": 4,
 					"status": "next",
-					"note": "Week 1. Proves the format before any automation.",
+					"note": "THE ORIGINAL ASK. Brien's first message wanted the team history, then the musical history, then a playlist written up the way the music app writes stories. The team history ships on the cards and the musical history is benched, but no issue has been written and no playlist pressed, so the thing he actually asked for is NOT delivered. Blocked on the ledger playcount join: without it the ledger floor cannot be verified and gameday.py says so out loud.",
 					"required": true
 				},
 				{
@@ -316,6 +316,14 @@
 					"status": "done",
 					"owner": "brien",
 					"note": "Weeks 1 and 6 built and committed (157 pairs) \u2014 the card reads 'Alabama leads 45-26-3'. The remaining weeks are NOT built: a --all run spent the whole monthly CFBD quota. Resume with --week N once it resets; finished pairs are skipped."
+				},
+				{
+					"id": "M8",
+					"title": "Reconcile with the parallel Mini session",
+					"est": 0.5,
+					"status": "next",
+					"required": true,
+					"note": "A second session (Claude Fable 5) is building the ladder's suppliers on the Mini and this board cannot see it: tools/gameday_acquire.py is committed (T1, Wikidata P69) and tools/gameday_rungs.py is untracked in-flight (T0 and T2). It reads docs/GAMEDAY.md and defers to it, so the split is clean, but two sessions on the same rung would not be. Agree who does the ledger join before either starts it."
 				}
 			]
 		},
