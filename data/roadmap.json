@@ -2,7 +2,7 @@
 	"_note": "The build plan. This file is the record \u2014 the dashboard at roadmap.html only renders it. Edit status here, commit, reload.",
 	"kickoff": "2026-08-22T00:00:00-04:00",
 	"kickoffLabel": "Week 1 \u00b7 Sat 22 Aug 2026",
-	"updated": "2026-08-08",
+	"updated": "2026-08-09",
 	"statuses": {
 		"done": {
 			"label": "Done",
@@ -195,12 +195,12 @@
 				},
 				{
 					"id": "K1b",
-					"title": "Confirm the key is DELETED, not just billing-disabled",
+					"title": "Delete the 2018 key from Google Cloud project 599067003646",
 					"est": 0.1,
 					"status": "blocked",
 					"owner": "brien",
 					"required": true,
-					"note": "Brien's Credentials screenshot shows 'No API keys to display' \u2014 but that was the Home Assistant project, and the 2018 key predates it. The key still resolves: Google refuses on BILLING, not 'API key not valid', so the credential likely still exists in an older project. Use the console project picker (ALL tab) to find the 2018 project and delete the key row. Practical risk is low \u2014 no billing means Maps refuses everything."
+					"note": "NOT a repo task \u2014 the repo side is finished (keys redacted at HEAD in 6803be8, GitHub alert resolved as revoked, no live key at HEAD). This is entirely in Google Cloud.\nThe project was identified by probing APIs the key was never scoped for: Books and Translation both answer 'has not been used in project 599067003646', which leaks the project AND proves the key still resolves \u2014 a DELETED key returns 'API key not valid' instead. Maps only ever said 'enable Billing', which is why deletion looked ambiguous.\nGo to https://console.cloud.google.com/apis/credentials?project=599067003646 and delete the API key row. Then Claude can confirm: the error should change from 'billing'/'not been used in project' to 'API key not valid'."
 				}
 			]
 		},
