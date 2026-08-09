@@ -27,6 +27,290 @@
 	},
 	"phases": [
 		{
+			"id": "security",
+			"title": "Security \u2014 do this first",
+			"blurb": "A Google API key sat in a public repo for eight years. Revoked 2026-08-08 and verified inert.",
+			"tasks": [
+				{
+					"id": "LOCK-1",
+					"title": "Revoke the 2018 Google API key in Google Cloud Console",
+					"est": 0.25,
+					"status": "done",
+					"note": "Revoked by Brien 2026-08-08 and verified inert: a Geocoding request now returns REQUEST_DENIED. See K1b \u2014 the error names billing, not an invalid key.",
+					"required": true,
+					"legacyId": "K1"
+				},
+				{
+					"id": "LOCK-2",
+					"title": "Close the GitHub secret-scanning alert as revoked",
+					"est": 0.1,
+					"status": "done",
+					"note": "Closed as revoked via the API, with the verification recorded in the resolution comment.",
+					"required": true,
+					"legacyId": "K2"
+				},
+				{
+					"id": "LOCK-3",
+					"title": "Block secrets locally (push protection does not)",
+					"est": 0.25,
+					"status": "done",
+					"required": true,
+					"note": "The premise was wrong. Push protection was ALREADY enabled, including on 2026-08-07 when the Google key was pushed anyway. Tested with a well-formed random 39-char decoy on a throwaway branch: the push was ACCEPTED and an alert fired only afterwards. Google API keys are scanned, not push-blocked.\nReal fix: tools/githooks/pre-commit, which runs before the commit exists. Enable per clone with `git config core.hooksPath tools/githooks`. Verified against Google, AWS and Anthropic key shapes and a staged .env (all blocked), and against the REDACTED_ placeholders and ordinary code (both allowed).",
+					"legacyId": "K3"
+				},
+				{
+					"id": "LOCK-4",
+					"title": "Delete the 2018 key from Google Cloud project 599067003646",
+					"est": 0.1,
+					"status": "done",
+					"required": true,
+					"note": "DONE and verified 2026-08-09. Brien deleted the key from Google Cloud project 599067003646. Probing an API the key was never scoped for now returns 'API Key not found. Please pass a valid API key.' \u2014 where it previously leaked 'has not been used in project 599067003646', which had proved the credential still resolved. Google no longer recognises it. The 2018 exposure is closed: key deleted, HEAD redacted, GitHub alert resolved as revoked, history left intact as the record.",
+					"legacyId": "K1b"
+				}
+			],
+			"collapsed": false
+		},
+		{
+			"id": "kickoff",
+			"title": "Must ship before kickoff",
+			"blurb": "The season starts whether or not this is done. These are the things that break or embarrass on day one.",
+			"tasks": [
+				{
+					"id": "KICK-1",
+					"title": "Deploy to GitHub Pages",
+					"est": 0.5,
+					"status": "done",
+					"note": "Live at https://brienmizell.github.io/gameday-sound-edition/ \u2014 every route verified 200 and rendering. Static, keyless, no build step, so Pages needs no workflow.",
+					"required": true,
+					"legacyId": "A1"
+				},
+				{
+					"id": "KICK-2",
+					"title": "Live score refresh while games are in progress",
+					"est": 2,
+					"status": "done",
+					"note": "Polls every 30s ONLY while a game on screen is in progress, and only while the tab is visible. Patches cards in place rather than re-rendering, so scroll position and any open issue dialog survive; a changed score flashes.",
+					"required": true,
+					"legacyId": "A2"
+				},
+				{
+					"id": "KICK-3",
+					"title": "Mobile layout pass",
+					"est": 1.5,
+					"status": "done",
+					"note": "Desktop layout put ~500px of masthead and controls above the first card \u2014 a screenful of chrome on an 812px phone. Masthead is now an explicit 2-row grid (title + team pill, then the week nav) and sticks to the top; controls and cards tighten; dialogs become bottom sheets. Verified at 375 / 390 / 430 including both modals. No horizontal overflow anywhere.",
+					"required": true,
+					"legacyId": "A3"
+				},
+				{
+					"id": "KICK-4",
+					"title": "Loading skeletons and an error retry path",
+					"est": 1,
+					"status": "done",
+					"note": "Shimmer skeleton cards while a week loads, and a real \"Try again\" button on failure that re-runs the failed step. ESPN is free, undocumented and unauthenticated \u2014 it will hiccup, and a sentence with nothing to click is a dead end, not an error state.",
+					"required": true,
+					"legacyId": "A4"
+				},
+				{
+					"id": "KICK-5",
+					"title": "Register in bookmarks.json + rerun dashboard.py",
+					"est": 0.25,
+					"status": "done",
+					"note": "GameDay group added to ~/jobsearch/bookmarks.json (site, roadmap, compare, repo) and dashboard.py rerun; hq.html and brien-services-bookmarks.html both picked it up.",
+					"required": true,
+					"legacyId": "A5"
+				},
+				{
+					"id": "KICK-6",
+					"title": "Final pass on the compare page copy",
+					"est": 0.5,
+					"status": "done",
+					"note": "Done alongside the key redaction \u2014 the 3 -> 0 row now states that HEAD is clean and history is not.",
+					"legacyId": "A6"
+				}
+			],
+			"collapsed": false
+		},
+		{
+			"id": "sound",
+			"title": "The Sound Edition \u2014 the actual point",
+			"blurb": "Listed in the order they should be done, not the order they were filed. The first issue does NOT need the whole SEC canon: Georgia and Alabama are both already benched, and they are the top-ranked matchup.",
+			"tasks": [
+				{
+					"id": "SOUND-1",
+					"title": "Reconcile with the parallel Mini session",
+					"est": 0.5,
+					"status": "next",
+					"required": true,
+					"note": "A second session (Claude Fable 5) is building the ladder's suppliers on the Mini and this board cannot see it: tools/gameday_acquire.py is committed (T1, Wikidata P69) and tools/gameday_rungs.py is untracked in-flight (T0 and T2). It reads docs/GAMEDAY.md and defers to it, so the split is clean, but two sessions on the same rung would not be. Agree who does the ledger join before either starts it.",
+					"legacyId": "M8"
+				},
+				{
+					"id": "SOUND-2",
+					"legacyId": "new-2026-08-09",
+					"title": "Wire the ledger playcount join",
+					"est": 2,
+					"status": "next",
+					"required": true,
+					"note": "THE ACTUAL BLOCKER, and it had no task until now. It was named only inside other tasks' notes, which is how work goes missing. The seating rule needs a playcount per candidate artist to verify the ledger floor (a third of seats carrying a nonzero count, printed). tools/gameday.py prints 'NOT WIRED YET' for exactly this and says no issue should press without it. Coordinate first: the parallel session's gameday_rungs.py already joins credits to artists, so this may be half built.",
+					"after": "the reconcile"
+				},
+				{
+					"id": "SOUND-3",
+					"title": "Write ONE issue by hand, end to end",
+					"est": 4,
+					"status": "next",
+					"note": "THE ORIGINAL ASK. Brien's first message wanted the team history, then the musical history, then a playlist written up the way the music app writes stories. The team history ships on the cards and the musical history is benched, but no issue has been written and no playlist pressed, so the thing he actually asked for is NOT delivered. Blocked on the ledger playcount join: without it the ledger floor cannot be verified and gameday.py says so out loud.",
+					"required": true,
+					"legacyId": "M3",
+					"after": "the ledger join"
+				},
+				{
+					"id": "SOUND-4",
+					"title": "push_gameday.py \u2014 place the playlist deterministically",
+					"est": 1.5,
+					"status": "next",
+					"note": "spotify_push.py, never the generative connector. The July matchday run is the evidence.",
+					"required": true,
+					"legacyId": "M4",
+					"after": "the issue being written"
+				},
+				{
+					"id": "SOUND-5",
+					"title": "Emit the issue JSON, delete the sample, view it in the card",
+					"est": 0.5,
+					"status": "next",
+					"required": true,
+					"legacyId": "M5",
+					"after": "the playlist being pressed"
+				},
+				{
+					"id": "SOUND-6",
+					"title": "Scaffold gameday/ inside ~/musicsystem on the Mini",
+					"est": 3,
+					"status": "done",
+					"note": "Committed to the Mini as 03b3930: docs/GAMEDAY.md (the charter, format named THE COLLISION), docs/atlas/gameday-canon.md (the bench, places.md form), tools/gameday.py (fetches, joins, stops at a fact card, writes no prose). Filed as queue entry 27. Verified: week 6 ranks Georgia at Alabama first and the card pulls the series from the app's published JSON.",
+					"required": true,
+					"legacyId": "M1"
+				},
+				{
+					"id": "SOUND-7",
+					"title": "Series numbers from CFBD at build time",
+					"est": 2,
+					"status": "done",
+					"owner": "brien",
+					"note": "Weeks 1 and 6 built and committed (157 pairs) \u2014 the card reads 'Alabama leads 45-26-3'. The remaining weeks are NOT built: a --all run spent the whole monthly CFBD quota. Resume with --week N once it resets; finished pairs are skipped.",
+					"legacyId": "M7"
+				},
+				{
+					"id": "SOUND-8",
+					"title": "Finish the SEC canon (10 of 16 written)",
+					"est": 2,
+					"status": "next",
+					"note": "Built as docs/atlas/gameday-canon.md, NOT canon.yml: curated knowledge in that repo lives as prose in docs/atlas/, per places.md. Ten SEC schools have entries. Five are named holes: Arkansas, Kentucky, Oklahoma, South Carolina, Texas. Auburn and Missouri are filed as explicit placeholders rather than researched. Every other conference is unwritten.",
+					"required": true,
+					"legacyId": "M2",
+					"after": "the first issue (Georgia and Alabama are already benched)"
+				},
+				{
+					"id": "SOUND-9",
+					"title": "Decide the matchup-of-the-week rule",
+					"est": 1,
+					"status": "next",
+					"note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md.",
+					"legacyId": "M6",
+					"after": "the first issue proving the format"
+				}
+			],
+			"collapsed": false
+		},
+		{
+			"id": "after",
+			"title": "After kickoff",
+			"blurb": "Real features, but the season does not wait on them and none of them breaks day one.",
+			"tasks": [
+				{
+					"id": "LATER-1",
+					"title": "Rewrite onto bulk /games",
+					"est": 2.5,
+					"status": "done",
+					"required": false,
+					"note": "tools/build-bulk.py. 158 calls covered 1869-2026 and found 19,217 all-time pairs; series.json now has all 893 matchups on the 2026 schedule, up from 157. Cross-validated against the old per-matchup data: 124 of 124 summaries identical, and the bulk version is MORE complete (it caught the 2025 SEC Championship as Georgia/Alabama's last meeting, which /teams/matchup missed). The costly pair table is cached in data/pairs-alltime.json, so --emit-only rebuilds for zero calls.",
+					"legacyId": "B10"
+				},
+				{
+					"id": "LATER-2",
+					"title": "Rivalry and trophy-game labels",
+					"est": 1.5,
+					"status": "next",
+					"note": "Iron Bowl, Red River, The Game. A hand-kept list; ESPN does not mark them.",
+					"legacyId": "B1"
+				},
+				{
+					"id": "LATER-3",
+					"title": "Team season view \u2014 click a team, get its year",
+					"est": 3,
+					"status": "next",
+					"legacyId": "B2"
+				},
+				{
+					"id": "LATER-4",
+					"title": "Conference standings",
+					"est": 2,
+					"status": "next",
+					"legacyId": "B3"
+				},
+				{
+					"id": "LATER-5",
+					"title": "Bowls and the playoff (seasontype=3)",
+					"est": 2,
+					"status": "next",
+					"note": "Needed by mid-December, not August.",
+					"legacyId": "B4"
+				},
+				{
+					"id": "LATER-6",
+					"title": "Previous seasons (year selector)",
+					"est": 1.5,
+					"status": "next",
+					"note": "ESPN serves 2018 fine \u2014 the compare page already proves it.",
+					"legacyId": "B5"
+				},
+				{
+					"id": "LATER-7",
+					"title": "Automate the weekly Sound pipeline",
+					"est": 5,
+					"status": "next",
+					"note": "Only after 3\u20134 issues have been written by hand.",
+					"legacyId": "B6"
+				},
+				{
+					"id": "LATER-8",
+					"title": "Shareable matchup card image",
+					"est": 2.5,
+					"status": "next",
+					"legacyId": "B7"
+				},
+				{
+					"id": "LATER-9",
+					"title": "Offline / PWA",
+					"est": 2,
+					"status": "next",
+					"legacyId": "B8"
+				},
+				{
+					"id": "LATER-10",
+					"title": "Average + closing betting lines",
+					"est": 1,
+					"status": "done",
+					"owner": "brien",
+					"note": "ONE call per season. data/lines.json holds 2025 (809 games, all closing) and 2026. Averages one vote per BOOK \u2014 CFBD lists 'DraftKings' and 'Draft Kings' separately and averaging both double-weights it. A finished game's number cannot move again, so it IS the closing line, and the card labels it so.",
+					"legacyId": "B9"
+				}
+			],
+			"collapsed": false
+		},
+		{
 			"id": "shipped",
 			"title": "Shipped",
 			"blurb": "Done on 2026-08-07. Listed so the burn-down is honest about where the line started.",
@@ -183,287 +467,8 @@
 					"note": "Open-Meteo answers a spent hour with 'Hourly API request limit exceeded' \u2014 so backing off 20/40/60/80s stays inside the same hour and cannot help. Exactly the mistake already fixed for CFBD's monthly quota, repeated because I did not carry the lesson across. The normals builder now stops on an hour/day window and says to re-run later; only a short burst-throttle is waited out. 62 of 144 venues built; it resumes.",
 					"legacyId": "S20"
 				}
-			]
-		},
-		{
-			"id": "security",
-			"title": "Security \u2014 do this first",
-			"blurb": "A Google API key sat in a public repo for eight years. Revoked 2026-08-08 and verified inert.",
-			"tasks": [
-				{
-					"id": "LOCK-1",
-					"title": "Revoke the 2018 Google API key in Google Cloud Console",
-					"est": 0.25,
-					"status": "done",
-					"note": "Revoked by Brien 2026-08-08 and verified inert: a Geocoding request now returns REQUEST_DENIED. See K1b \u2014 the error names billing, not an invalid key.",
-					"required": true,
-					"legacyId": "K1"
-				},
-				{
-					"id": "LOCK-2",
-					"title": "Close the GitHub secret-scanning alert as revoked",
-					"est": 0.1,
-					"status": "done",
-					"note": "Closed as revoked via the API, with the verification recorded in the resolution comment.",
-					"required": true,
-					"legacyId": "K2"
-				},
-				{
-					"id": "LOCK-3",
-					"title": "Block secrets locally (push protection does not)",
-					"est": 0.25,
-					"status": "done",
-					"required": true,
-					"note": "The premise was wrong. Push protection was ALREADY enabled, including on 2026-08-07 when the Google key was pushed anyway. Tested with a well-formed random 39-char decoy on a throwaway branch: the push was ACCEPTED and an alert fired only afterwards. Google API keys are scanned, not push-blocked.\nReal fix: tools/githooks/pre-commit, which runs before the commit exists. Enable per clone with `git config core.hooksPath tools/githooks`. Verified against Google, AWS and Anthropic key shapes and a staged .env (all blocked), and against the REDACTED_ placeholders and ordinary code (both allowed).",
-					"legacyId": "K3"
-				},
-				{
-					"id": "LOCK-4",
-					"title": "Delete the 2018 key from Google Cloud project 599067003646",
-					"est": 0.1,
-					"status": "done",
-					"required": true,
-					"note": "DONE and verified 2026-08-09. Brien deleted the key from Google Cloud project 599067003646. Probing an API the key was never scoped for now returns 'API Key not found. Please pass a valid API key.' \u2014 where it previously leaked 'has not been used in project 599067003646', which had proved the credential still resolved. Google no longer recognises it. The 2018 exposure is closed: key deleted, HEAD redacted, GitHub alert resolved as revoked, history left intact as the record.",
-					"legacyId": "K1b"
-				}
-			]
-		},
-		{
-			"id": "kickoff",
-			"title": "Must ship before kickoff",
-			"blurb": "The season starts whether or not this is done. These are the things that break or embarrass on day one.",
-			"tasks": [
-				{
-					"id": "KICK-1",
-					"title": "Deploy to GitHub Pages",
-					"est": 0.5,
-					"status": "done",
-					"note": "Live at https://brienmizell.github.io/gameday-sound-edition/ \u2014 every route verified 200 and rendering. Static, keyless, no build step, so Pages needs no workflow.",
-					"required": true,
-					"legacyId": "A1"
-				},
-				{
-					"id": "KICK-2",
-					"title": "Live score refresh while games are in progress",
-					"est": 2,
-					"status": "done",
-					"note": "Polls every 30s ONLY while a game on screen is in progress, and only while the tab is visible. Patches cards in place rather than re-rendering, so scroll position and any open issue dialog survive; a changed score flashes.",
-					"required": true,
-					"legacyId": "A2"
-				},
-				{
-					"id": "KICK-3",
-					"title": "Mobile layout pass",
-					"est": 1.5,
-					"status": "done",
-					"note": "Desktop layout put ~500px of masthead and controls above the first card \u2014 a screenful of chrome on an 812px phone. Masthead is now an explicit 2-row grid (title + team pill, then the week nav) and sticks to the top; controls and cards tighten; dialogs become bottom sheets. Verified at 375 / 390 / 430 including both modals. No horizontal overflow anywhere.",
-					"required": true,
-					"legacyId": "A3"
-				},
-				{
-					"id": "KICK-4",
-					"title": "Loading skeletons and an error retry path",
-					"est": 1,
-					"status": "done",
-					"note": "Shimmer skeleton cards while a week loads, and a real \"Try again\" button on failure that re-runs the failed step. ESPN is free, undocumented and unauthenticated \u2014 it will hiccup, and a sentence with nothing to click is a dead end, not an error state.",
-					"required": true,
-					"legacyId": "A4"
-				},
-				{
-					"id": "KICK-5",
-					"title": "Register in bookmarks.json + rerun dashboard.py",
-					"est": 0.25,
-					"status": "done",
-					"note": "GameDay group added to ~/jobsearch/bookmarks.json (site, roadmap, compare, repo) and dashboard.py rerun; hq.html and brien-services-bookmarks.html both picked it up.",
-					"required": true,
-					"legacyId": "A5"
-				},
-				{
-					"id": "KICK-6",
-					"title": "Final pass on the compare page copy",
-					"est": 0.5,
-					"status": "done",
-					"note": "Done alongside the key redaction \u2014 the 3 -> 0 row now states that HEAD is clean and history is not.",
-					"legacyId": "A6"
-				}
-			]
-		},
-		{
-			"id": "sound",
-			"title": "The Sound Edition \u2014 the actual point",
-			"blurb": "Listed in the order they should be done, not the order they were filed. The first issue does NOT need the whole SEC canon: Georgia and Alabama are both already benched, and they are the top-ranked matchup.",
-			"tasks": [
-				{
-					"id": "SOUND-1",
-					"title": "Reconcile with the parallel Mini session",
-					"est": 0.5,
-					"status": "next",
-					"required": true,
-					"note": "A second session (Claude Fable 5) is building the ladder's suppliers on the Mini and this board cannot see it: tools/gameday_acquire.py is committed (T1, Wikidata P69) and tools/gameday_rungs.py is untracked in-flight (T0 and T2). It reads docs/GAMEDAY.md and defers to it, so the split is clean, but two sessions on the same rung would not be. Agree who does the ledger join before either starts it.",
-					"legacyId": "M8"
-				},
-				{
-					"id": "SOUND-2",
-					"legacyId": "new-2026-08-09",
-					"title": "Wire the ledger playcount join",
-					"est": 2,
-					"status": "next",
-					"required": true,
-					"note": "THE ACTUAL BLOCKER, and it had no task until now. It was named only inside other tasks' notes, which is how work goes missing. The seating rule needs a playcount per candidate artist to verify the ledger floor (a third of seats carrying a nonzero count, printed). tools/gameday.py prints 'NOT WIRED YET' for exactly this and says no issue should press without it. Coordinate first: the parallel session's gameday_rungs.py already joins credits to artists, so this may be half built.",
-					"after": "the reconcile"
-				},
-				{
-					"id": "SOUND-3",
-					"title": "Write ONE issue by hand, end to end",
-					"est": 4,
-					"status": "next",
-					"note": "THE ORIGINAL ASK. Brien's first message wanted the team history, then the musical history, then a playlist written up the way the music app writes stories. The team history ships on the cards and the musical history is benched, but no issue has been written and no playlist pressed, so the thing he actually asked for is NOT delivered. Blocked on the ledger playcount join: without it the ledger floor cannot be verified and gameday.py says so out loud.",
-					"required": true,
-					"legacyId": "M3",
-					"after": "the ledger join"
-				},
-				{
-					"id": "SOUND-4",
-					"title": "push_gameday.py \u2014 place the playlist deterministically",
-					"est": 1.5,
-					"status": "next",
-					"note": "spotify_push.py, never the generative connector. The July matchday run is the evidence.",
-					"required": true,
-					"legacyId": "M4",
-					"after": "the issue being written"
-				},
-				{
-					"id": "SOUND-5",
-					"title": "Emit the issue JSON, delete the sample, view it in the card",
-					"est": 0.5,
-					"status": "next",
-					"required": true,
-					"legacyId": "M5",
-					"after": "the playlist being pressed"
-				},
-				{
-					"id": "SOUND-6",
-					"title": "Scaffold gameday/ inside ~/musicsystem on the Mini",
-					"est": 3,
-					"status": "done",
-					"note": "Committed to the Mini as 03b3930: docs/GAMEDAY.md (the charter, format named THE COLLISION), docs/atlas/gameday-canon.md (the bench, places.md form), tools/gameday.py (fetches, joins, stops at a fact card, writes no prose). Filed as queue entry 27. Verified: week 6 ranks Georgia at Alabama first and the card pulls the series from the app's published JSON.",
-					"required": true,
-					"legacyId": "M1"
-				},
-				{
-					"id": "SOUND-7",
-					"title": "Series numbers from CFBD at build time",
-					"est": 2,
-					"status": "done",
-					"owner": "brien",
-					"note": "Weeks 1 and 6 built and committed (157 pairs) \u2014 the card reads 'Alabama leads 45-26-3'. The remaining weeks are NOT built: a --all run spent the whole monthly CFBD quota. Resume with --week N once it resets; finished pairs are skipped.",
-					"legacyId": "M7"
-				},
-				{
-					"id": "SOUND-8",
-					"title": "Finish the SEC canon (10 of 16 written)",
-					"est": 2,
-					"status": "next",
-					"note": "Built as docs/atlas/gameday-canon.md, NOT canon.yml: curated knowledge in that repo lives as prose in docs/atlas/, per places.md. Ten SEC schools have entries. Five are named holes: Arkansas, Kentucky, Oklahoma, South Carolina, Texas. Auburn and Missouri are filed as explicit placeholders rather than researched. Every other conference is unwritten.",
-					"required": true,
-					"legacyId": "M2",
-					"after": "the first issue (Georgia and Alabama are already benched)"
-				},
-				{
-					"id": "SOUND-9",
-					"title": "Decide the matchup-of-the-week rule",
-					"est": 1,
-					"status": "next",
-					"note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md.",
-					"legacyId": "M6",
-					"after": "the first issue proving the format"
-				}
-			]
-		},
-		{
-			"id": "after",
-			"title": "After kickoff",
-			"blurb": "Real features, but the season does not wait on them and none of them breaks day one.",
-			"tasks": [
-				{
-					"id": "LATER-1",
-					"title": "Rewrite onto bulk /games",
-					"est": 2.5,
-					"status": "done",
-					"required": false,
-					"note": "tools/build-bulk.py. 158 calls covered 1869-2026 and found 19,217 all-time pairs; series.json now has all 893 matchups on the 2026 schedule, up from 157. Cross-validated against the old per-matchup data: 124 of 124 summaries identical, and the bulk version is MORE complete (it caught the 2025 SEC Championship as Georgia/Alabama's last meeting, which /teams/matchup missed). The costly pair table is cached in data/pairs-alltime.json, so --emit-only rebuilds for zero calls.",
-					"legacyId": "B10"
-				},
-				{
-					"id": "LATER-2",
-					"title": "Rivalry and trophy-game labels",
-					"est": 1.5,
-					"status": "next",
-					"note": "Iron Bowl, Red River, The Game. A hand-kept list; ESPN does not mark them.",
-					"legacyId": "B1"
-				},
-				{
-					"id": "LATER-3",
-					"title": "Team season view \u2014 click a team, get its year",
-					"est": 3,
-					"status": "next",
-					"legacyId": "B2"
-				},
-				{
-					"id": "LATER-4",
-					"title": "Conference standings",
-					"est": 2,
-					"status": "next",
-					"legacyId": "B3"
-				},
-				{
-					"id": "LATER-5",
-					"title": "Bowls and the playoff (seasontype=3)",
-					"est": 2,
-					"status": "next",
-					"note": "Needed by mid-December, not August.",
-					"legacyId": "B4"
-				},
-				{
-					"id": "LATER-6",
-					"title": "Previous seasons (year selector)",
-					"est": 1.5,
-					"status": "next",
-					"note": "ESPN serves 2018 fine \u2014 the compare page already proves it.",
-					"legacyId": "B5"
-				},
-				{
-					"id": "LATER-7",
-					"title": "Automate the weekly Sound pipeline",
-					"est": 5,
-					"status": "next",
-					"note": "Only after 3\u20134 issues have been written by hand.",
-					"legacyId": "B6"
-				},
-				{
-					"id": "LATER-8",
-					"title": "Shareable matchup card image",
-					"est": 2.5,
-					"status": "next",
-					"legacyId": "B7"
-				},
-				{
-					"id": "LATER-9",
-					"title": "Offline / PWA",
-					"est": 2,
-					"status": "next",
-					"legacyId": "B8"
-				},
-				{
-					"id": "LATER-10",
-					"title": "Average + closing betting lines",
-					"est": 1,
-					"status": "done",
-					"owner": "brien",
-					"note": "ONE call per season. data/lines.json holds 2025 (809 games, all closing) and 2026. Averages one vote per BOOK \u2014 CFBD lists 'DraftKings' and 'Draft Kings' separately and averaging both double-weights it. A finished game's number cannot move again, so it IS the closing line, and the card labels it so.",
-					"legacyId": "B9"
-				}
-			]
+			],
+			"collapsed": true
 		}
 	],
 	"_ids": "Ids are phase-word prefixed so they read on sight: SOUND-3 is the third Sound Edition item. legacyId keeps the original short code (M3, K1b) because commit messages cite those."

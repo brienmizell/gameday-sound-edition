@@ -99,6 +99,64 @@
 			.hero-label { font-size: 1.05rem; color: var(--text-secondary); }
 			.hero-when { margin-left: auto; text-align: right; color: var(--text-muted); font-size: 0.85rem; }
 
+			/* ---- what's next: one thing, derived ---- */
+			.whatsnext {
+				padding: 1.25rem 0 1.5rem;
+				border-bottom: 1px solid var(--line);
+			}
+			.wn-label {
+				margin: 0 0 0.5rem;
+				color: var(--text-muted);
+				font-size: 0.74rem;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+			.wn-card {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				gap: 0.5rem 0.75rem;
+			}
+			.wn-id {
+				padding: 0.12rem 0.5rem;
+				border-radius: 4px;
+				background: var(--meter-fill);
+				color: #fff;
+				font-size: 0.74rem;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+			}
+			.wn-title { font-size: 1.25rem; font-weight: 620; letter-spacing: -0.015em; }
+			.wn-est { color: var(--text-muted); font-size: 0.85rem; }
+			.wn-why {
+				margin: 0.5rem 0 0;
+				max-width: 70ch;
+				color: var(--text-secondary);
+				font-size: 0.88rem;
+			}
+			.wn-none { color: var(--good); font-size: 1.05rem; font-weight: 600; }
+
+			/* ---- collapsible phases ---- */
+			.phase > summary {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				gap: 0.6rem;
+				cursor: pointer;
+				list-style: none;
+				padding: 0.3rem 0;
+			}
+			.phase > summary::-webkit-details-marker { display: none; }
+			.phase > summary::before {
+				content: "▸";
+				color: var(--text-muted);
+				font-size: 0.8rem;
+				transition: transform 0.15s;
+			}
+			.phase[open] > summary::before { content: "▾"; }
+			.phase > summary:hover { color: var(--meter-fill); }
+
 			/* ---- stat tiles ---- */
 			.tiles {
 				display: grid;
@@ -163,8 +221,7 @@
 
 			/* ---- phases ---- */
 			.phase { margin-top: 2.5rem; }
-			.phase-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem; }
-			.phase h2 { margin: 0; font-size: 1.12rem; letter-spacing: -0.01em; }
+						.phase h2 { display: inline; margin: 0; font-size: 1.12rem; letter-spacing: -0.01em; }
 			.phase-count { color: var(--text-muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
 			.phase-blurb { margin: 0.4rem 0 1rem; max-width: 68ch; color: var(--text-secondary); font-size: 0.89rem; }
 
@@ -274,6 +331,8 @@
 				<span class="hero-when" id="kickoff-when"></span>
 			</section>
 
+			<section class="whatsnext" id="whatsnext"></section>
+
 			<section class="tiles" id="tiles"></section>
 
 			<section class="meter-block">
@@ -360,6 +419,7 @@
 					})
 					.join('');
 
+				renderNext(tasks);
 				document.getElementById('phases').innerHTML = data.phases.map(phase).join('');
 
 				for (const btn of document.querySelectorAll('.mark')) {
@@ -384,14 +444,50 @@
 			function phase(p) {
 				const open = p.tasks.filter((t) => statusOf(t) !== 'done');
 				const hrs = open.reduce((s, t) => s + t.est, 0);
-				return `<section class="phase">
-					<div class="phase-head">
+				// Collapsed by default only where the JSON says so (the archive).
+				const isOpen = p.collapsed ? '' : ' open';
+				return `<details class="phase"${isOpen}>
+					<summary>
 						<h2>${esc(p.title)}</h2>
 						<span class="phase-count">${p.tasks.length - open.length}/${p.tasks.length} done${hrs ? ` · ${fmt(hrs)} h left` : ''}</span>
-					</div>
+					</summary>
 					<p class="phase-blurb">${esc(p.blurb)}</p>
 					<ul class="tasks">${p.tasks.map(task).join('')}</ul>
-				</section>`;
+				</details>`;
+			}
+
+			/**
+			 * What's next, DERIVED rather than hand-ranked.
+			 *
+			 * The first open required task in phase order. Phase order is already
+			 * the real order (security, kickoff, sound, after) and within a phase
+			 * the array is dependency-ordered, so nothing here needs a priority
+			 * number: a second ranking system could only disagree with the first.
+			 */
+			function whatsNext(tasks) {
+				const open = tasks.filter((t) => statusOf(t) !== 'done');
+				const blocked = open.filter((t) => statusOf(t) === 'blocked' && t.required);
+				const ready = open.filter((t) => t.required && statusOf(t) !== 'blocked');
+				return { pick: ready[0] ?? null, blocked, remaining: ready.length };
+			}
+
+			function renderNext(tasks) {
+				const { pick, blocked, remaining } = whatsNext(tasks);
+				const el = document.getElementById('whatsnext');
+				if (!pick) {
+					el.innerHTML = `<p class="wn-label">What's next</p>
+						<p class="wn-none">Nothing required is open. ${blocked.length ? `${blocked.length} blocked on Brien.` : 'All clear.'}</p>`;
+					return;
+				}
+				el.innerHTML = `<p class="wn-label">What's next</p>
+					<div class="wn-card">
+						<span class="wn-id">${esc(pick.id)}</span>
+						<span class="wn-title">${esc(pick.title)}</span>
+						<span class="wn-est">${fmt(pick.est)} h · ${remaining - 1} required after it</span>
+					</div>
+					${pick.after ? `<p class="wn-why">Nothing precedes it. Everything else waits on ${esc(pick.after)}.</p>`
+						: `<p class="wn-why">${esc((pick.note || '').split('. ')[0])}.</p>`}
+					${blocked.length ? `<p class="wn-why">Also blocked on you: ${blocked.map((b) => esc(b.id)).join(', ')}.</p>` : ''}`;
 			}
 
 			function task(t) {
