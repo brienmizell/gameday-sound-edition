@@ -204,6 +204,14 @@
 			}
 			.is-done .t-title { text-decoration: line-through; text-decoration-thickness: 1px; }
 			.t-note { grid-column: 2; color: var(--text-secondary); font-size: 0.82rem; }
+			.t-after {
+				grid-column: 2;
+				margin-bottom: 0.15rem;
+				color: var(--text-muted);
+				font-size: 0.76rem;
+				font-style: italic;
+			}
+			.t-after::before { content: "↳ "; font-style: normal; }
 			.t-right { grid-row: span 2; text-align: right; white-space: nowrap; }
 			.t-est { color: var(--text-muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
 			.t-status {
@@ -398,6 +406,7 @@
 						<span class="t-est">${fmt(t.est)} h</span>
 						<span class="t-status">${esc(meta.label)}</span>
 					</div>
+					${t.after ? `<div class="t-after">after ${esc(t.after)}</div>` : ''}
 					${t.note ? `<div class="t-note">${esc(t.note)}</div>` : ''}
 				</li>`;
 			}

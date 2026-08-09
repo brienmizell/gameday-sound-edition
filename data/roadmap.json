@@ -291,25 +291,26 @@
 		{
 			"id": "sound",
 			"title": "The Sound Edition \u2014 the actual point",
-			"blurb": "The Conference Series has been an open promise since 2026-08-02, docked by Brien to kickoff week, SEC first. Shipping the schedule app alone does not discharge it.",
+			"blurb": "Listed in the order they should be done, not the order they were filed. The first issue does NOT need the whole SEC canon: Georgia and Alabama are both already benched, and they are the top-ranked matchup.",
 			"tasks": [
 				{
 					"id": "SOUND-1",
-					"title": "Scaffold gameday/ inside ~/musicsystem on the Mini",
-					"est": 3,
-					"status": "done",
-					"note": "Committed to the Mini as 03b3930: docs/GAMEDAY.md (the charter, format named THE COLLISION), docs/atlas/gameday-canon.md (the bench, places.md form), tools/gameday.py (fetches, joins, stops at a fact card, writes no prose). Filed as queue entry 27. Verified: week 6 ranks Georgia at Alabama first and the card pulls the series from the app's published JSON.",
+					"title": "Reconcile with the parallel Mini session",
+					"est": 0.5,
+					"status": "next",
 					"required": true,
-					"legacyId": "M1"
+					"note": "A second session (Claude Fable 5) is building the ladder's suppliers on the Mini and this board cannot see it: tools/gameday_acquire.py is committed (T1, Wikidata P69) and tools/gameday_rungs.py is untracked in-flight (T0 and T2). It reads docs/GAMEDAY.md and defers to it, so the split is clean, but two sessions on the same rung would not be. Agree who does the ledger join before either starts it.",
+					"legacyId": "M8"
 				},
 				{
 					"id": "SOUND-2",
-					"title": "Finish the SEC canon (10 of 16 written)",
+					"legacyId": "new-2026-08-09",
+					"title": "Wire the ledger playcount join",
 					"est": 2,
 					"status": "next",
-					"note": "Built as docs/atlas/gameday-canon.md, NOT canon.yml: curated knowledge in that repo lives as prose in docs/atlas/, per places.md. Ten SEC schools have entries. Five are named holes: Arkansas, Kentucky, Oklahoma, South Carolina, Texas. Auburn and Missouri are filed as explicit placeholders rather than researched. Every other conference is unwritten.",
 					"required": true,
-					"legacyId": "M2"
+					"note": "THE ACTUAL BLOCKER, and it had no task until now. It was named only inside other tasks' notes, which is how work goes missing. The seating rule needs a playcount per candidate artist to verify the ledger floor (a third of seats carrying a nonzero count, printed). tools/gameday.py prints 'NOT WIRED YET' for exactly this and says no issue should press without it. Coordinate first: the parallel session's gameday_rungs.py already joins credits to artists, so this may be half built.",
+					"after": "the reconcile"
 				},
 				{
 					"id": "SOUND-3",
@@ -318,7 +319,8 @@
 					"status": "next",
 					"note": "THE ORIGINAL ASK. Brien's first message wanted the team history, then the musical history, then a playlist written up the way the music app writes stories. The team history ships on the cards and the musical history is benched, but no issue has been written and no playlist pressed, so the thing he actually asked for is NOT delivered. Blocked on the ledger playcount join: without it the ledger floor cannot be verified and gameday.py says so out loud.",
 					"required": true,
-					"legacyId": "M3"
+					"legacyId": "M3",
+					"after": "the ledger join"
 				},
 				{
 					"id": "SOUND-4",
@@ -327,7 +329,8 @@
 					"status": "next",
 					"note": "spotify_push.py, never the generative connector. The July matchday run is the evidence.",
 					"required": true,
-					"legacyId": "M4"
+					"legacyId": "M4",
+					"after": "the issue being written"
 				},
 				{
 					"id": "SOUND-5",
@@ -335,15 +338,17 @@
 					"est": 0.5,
 					"status": "next",
 					"required": true,
-					"legacyId": "M5"
+					"legacyId": "M5",
+					"after": "the playlist being pressed"
 				},
 				{
 					"id": "SOUND-6",
-					"title": "Decide the matchup-of-the-week rule",
-					"est": 1,
-					"status": "next",
-					"note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md.",
-					"legacyId": "M6"
+					"title": "Scaffold gameday/ inside ~/musicsystem on the Mini",
+					"est": 3,
+					"status": "done",
+					"note": "Committed to the Mini as 03b3930: docs/GAMEDAY.md (the charter, format named THE COLLISION), docs/atlas/gameday-canon.md (the bench, places.md form), tools/gameday.py (fetches, joins, stops at a fact card, writes no prose). Filed as queue entry 27. Verified: week 6 ranks Georgia at Alabama first and the card pulls the series from the app's published JSON.",
+					"required": true,
+					"legacyId": "M1"
 				},
 				{
 					"id": "SOUND-7",
@@ -356,12 +361,22 @@
 				},
 				{
 					"id": "SOUND-8",
-					"title": "Reconcile with the parallel Mini session",
-					"est": 0.5,
+					"title": "Finish the SEC canon (10 of 16 written)",
+					"est": 2,
 					"status": "next",
+					"note": "Built as docs/atlas/gameday-canon.md, NOT canon.yml: curated knowledge in that repo lives as prose in docs/atlas/, per places.md. Ten SEC schools have entries. Five are named holes: Arkansas, Kentucky, Oklahoma, South Carolina, Texas. Auburn and Missouri are filed as explicit placeholders rather than researched. Every other conference is unwritten.",
 					"required": true,
-					"note": "A second session (Claude Fable 5) is building the ladder's suppliers on the Mini and this board cannot see it: tools/gameday_acquire.py is committed (T1, Wikidata P69) and tools/gameday_rungs.py is untracked in-flight (T0 and T2). It reads docs/GAMEDAY.md and defers to it, so the split is clean, but two sessions on the same rung would not be. Agree who does the ledger join before either starts it.",
-					"legacyId": "M8"
+					"legacyId": "M2",
+					"after": "the first issue (Georgia and Alabama are already benched)"
+				},
+				{
+					"id": "SOUND-9",
+					"title": "Decide the matchup-of-the-week rule",
+					"est": 1,
+					"status": "next",
+					"note": "Ranking, rivalry, or best music? Open question 1 in SOUND_EDITION.md.",
+					"legacyId": "M6",
+					"after": "the first issue proving the format"
 				}
 			]
 		},
