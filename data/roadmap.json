@@ -197,10 +197,9 @@
 					"id": "K1b",
 					"title": "Delete the 2018 key from Google Cloud project 599067003646",
 					"est": 0.1,
-					"status": "blocked",
-					"owner": "brien",
+					"status": "done",
 					"required": true,
-					"note": "NOT a repo task \u2014 the repo side is finished (keys redacted at HEAD in 6803be8, GitHub alert resolved as revoked, no live key at HEAD). This is entirely in Google Cloud.\nThe project was identified by probing APIs the key was never scoped for: Books and Translation both answer 'has not been used in project 599067003646', which leaks the project AND proves the key still resolves \u2014 a DELETED key returns 'API key not valid' instead. Maps only ever said 'enable Billing', which is why deletion looked ambiguous.\nGo to https://console.cloud.google.com/apis/credentials?project=599067003646 and delete the API key row. Then Claude can confirm: the error should change from 'billing'/'not been used in project' to 'API key not valid'."
+					"note": "DONE and verified 2026-08-09. Brien deleted the key from Google Cloud project 599067003646. Probing an API the key was never scoped for now returns 'API Key not found. Please pass a valid API key.' \u2014 where it previously leaked 'has not been used in project 599067003646', which had proved the credential still resolved. Google no longer recognises it. The 2018 exposure is closed: key deleted, HEAD redacted, GitHub alert resolved as revoked, history left intact as the record."
 				}
 			]
 		},
