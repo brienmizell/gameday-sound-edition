@@ -1,0 +1,1 @@
+const a = "AKIAIOSFODNN7EXAMPLE1";
